@@ -11,8 +11,8 @@
 
 using System;
 using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
 using Hetzner.Cloud.Client;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Hetzner.Cloud.Extensions
 {

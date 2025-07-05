@@ -10,15 +10,17 @@
 #nullable enable
 
 using System;
-using System.IO;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Hetzner.Cloud.Model;
-using System.Runtime.CompilerServices;
 using Action = Hetzner.Cloud.Model.Action;
 
 [assembly: InternalsVisibleTo("Hetzner.Cloud.Test")]
@@ -48,7 +50,7 @@ namespace Hetzner.Cloud.Client
         /// <param name="options"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static bool TryDeserialize<T>(string json, JsonSerializerOptions options, [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
+        public static bool TryDeserialize<T>(string json, JsonSerializerOptions options, [NotNullWhen(true)] out T? result)
         {
             try
             {
@@ -70,7 +72,7 @@ namespace Hetzner.Cloud.Client
         /// <param name="options"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static bool TryDeserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options, [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
+        public static bool TryDeserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options, [NotNullWhen(true)] out T? result)
         {
             try
             {
@@ -218,7 +220,7 @@ namespace Hetzner.Cloud.Client
                 return string.Join(",", entries);
             }
 
-            return Convert.ToString(obj, System.Globalization.CultureInfo.InvariantCulture);
+            return Convert.ToString(obj, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -263,7 +265,7 @@ namespace Hetzner.Cloud.Client
         /// <returns>Encoded string.</returns>
         public static string Base64Encode(string text)
         {
-            return Convert.ToBase64String(global::System.Text.Encoding.UTF8.GetBytes(text));
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(text));
         }
 
         /// <summary>
