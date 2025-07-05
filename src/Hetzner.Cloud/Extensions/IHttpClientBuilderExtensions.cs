@@ -12,9 +12,11 @@
 using System;
 using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Polly.Timeout;
-using Polly.Extensions.Http;
 using Polly;
+using Polly.CircuitBreaker;
+using Polly.Extensions.Http;
+using Polly.Retry;
+using Polly.Timeout;
 
 namespace Hetzner.Cloud.Extensions
 {
@@ -63,7 +65,7 @@ namespace Hetzner.Cloud.Extensions
             return client;
         }
 
-        private static Polly.Retry.AsyncRetryPolicy<HttpResponseMessage> RetryPolicy(int retries)
+        private static AsyncRetryPolicy<HttpResponseMessage> RetryPolicy(int retries)
             => HttpPolicyExtensions
                 .HandleTransientHttpError()
                 .Or<TimeoutRejectedException>()
@@ -72,7 +74,7 @@ namespace Hetzner.Cloud.Extensions
         private static AsyncTimeoutPolicy<HttpResponseMessage> TimeoutPolicy(TimeSpan timeout)
             => Policy.TimeoutAsync<HttpResponseMessage>(timeout);
 
-        private static Polly.CircuitBreaker.AsyncCircuitBreakerPolicy<HttpResponseMessage> CircuitBreakerPolicy(
+        private static AsyncCircuitBreakerPolicy<HttpResponseMessage> CircuitBreakerPolicy(
             PolicyBuilder<HttpResponseMessage> builder, int handledEventsAllowedBeforeBreaking, TimeSpan durationOfBreak)
                 => builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking, durationOfBreak);
     }

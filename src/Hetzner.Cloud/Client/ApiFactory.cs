@@ -1,6 +1,6 @@
 using System;
-using Microsoft.Extensions.DependencyInjection;
 using Hetzner.Cloud.Api;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Hetzner.Cloud.Client
 {
