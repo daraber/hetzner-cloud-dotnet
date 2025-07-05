@@ -19,6 +19,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using Hetzner.Cloud.Model;
 using System.Runtime.CompilerServices;
+using Action = Hetzner.Cloud.Model.Action;
 
 [assembly: InternalsVisibleTo("Hetzner.Cloud.Test")]
 
