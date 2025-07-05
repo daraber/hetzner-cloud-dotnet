@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/volumes/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeVolumeProtectionRequest : IValidatableObject
+    public partial class ChangeVolumeProtectionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeVolumeProtectionRequest" /> class.
         /// </summary>
         /// <param name="delete">If true, prevents the Volume from being deleted</param>
         [JsonConstructor]
-        internal ChangeVolumeProtectionRequest(Option<bool?> delete = default)
+        public ChangeVolumeProtectionRequest(Option<bool?> delete = default)
         {
             DeleteOption = delete;
             OnCreated();
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeVolumeProtectionRequest" />
     /// </summary>
-    internal class ChangeVolumeProtectionRequestJsonConverter : JsonConverter<ChangeVolumeProtectionRequest>
+    public class ChangeVolumeProtectionRequestJsonConverter : JsonConverter<ChangeVolumeProtectionRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeVolumeProtectionRequest" />
@@ -171,5 +171,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeVolumeProtectionRequest))]
-    internal partial class ChangeVolumeProtectionRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeVolumeProtectionRequestSerializationContext : JsonSerializerContext { }
 }

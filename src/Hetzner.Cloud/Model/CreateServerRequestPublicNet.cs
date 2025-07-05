@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Public Network options
     /// </summary>
-    internal partial class CreateServerRequestPublicNet : IValidatableObject
+    public partial class CreateServerRequestPublicNet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateServerRequestPublicNet" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ipv4">ID of the ipv4 Primary IP to use. If omitted and enable_ipv4 is true, a new ipv4 Primary IP will automatically be created.</param>
         /// <param name="ipv6">ID of the ipv6 Primary IP to use. If omitted and enable_ipv6 is true, a new ipv6 Primary IP will automatically be created.</param>
         [JsonConstructor]
-        internal CreateServerRequestPublicNet(Option<bool?> enableIpv4 = default, Option<bool?> enableIpv6 = default, Option<int?> ipv4 = default, Option<int?> ipv6 = default)
+        public CreateServerRequestPublicNet(Option<bool?> enableIpv4 = default, Option<bool?> enableIpv6 = default, Option<int?> ipv4 = default, Option<int?> ipv6 = default)
         {
             EnableIpv4Option = enableIpv4;
             EnableIpv6Option = enableIpv6;
@@ -136,7 +136,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateServerRequestPublicNet" />
     /// </summary>
-    internal class CreateServerRequestPublicNetJsonConverter : JsonConverter<CreateServerRequestPublicNet>
+    public class CreateServerRequestPublicNetJsonConverter : JsonConverter<CreateServerRequestPublicNet>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateServerRequestPublicNet" />
@@ -251,5 +251,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateServerRequestPublicNet))]
-    internal partial class CreateServerRequestPublicNetSerializationContext : JsonSerializerContext { }
+    public partial class CreateServerRequestPublicNetSerializationContext : JsonSerializerContext { }
 }

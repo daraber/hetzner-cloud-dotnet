@@ -181,5 +181,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Architecture))]
-    internal partial class ArchitectureSerializationContext : JsonSerializerContext { }
+    public partial class ArchitectureSerializationContext : JsonSerializerContext { }
 }

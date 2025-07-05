@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/images/{id}
     /// </summary>
-    internal partial class GetImageResponse : IValidatableObject
+    public partial class GetImageResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetImageResponse" /> class.
         /// </summary>
         /// <param name="image">image</param>
         [JsonConstructor]
-        internal GetImageResponse(Option<Image?> image = default)
+        public GetImageResponse(Option<Image?> image = default)
         {
             ImageOption = image;
             OnCreated();
@@ -84,7 +84,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetImageResponse" />
     /// </summary>
-    internal class GetImageResponseJsonConverter : JsonConverter<GetImageResponse>
+    public class GetImageResponseJsonConverter : JsonConverter<GetImageResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetImageResponse" />
@@ -175,5 +175,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetImageResponse))]
-    internal partial class GetImageResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetImageResponseSerializationContext : JsonSerializerContext { }
 }

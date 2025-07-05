@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/volumes/{id}/actions/resize
     /// </summary>
-    internal partial class ResizeVolumeRequest : IValidatableObject
+    public partial class ResizeVolumeRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResizeVolumeRequest" /> class.
         /// </summary>
         /// <param name="size">New Volume size in GB (must be greater than current size)</param>
         [JsonConstructor]
-        internal ResizeVolumeRequest(decimal size)
+        public ResizeVolumeRequest(decimal size)
         {
             Size = size;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ResizeVolumeRequest" />
     /// </summary>
-    internal class ResizeVolumeRequestJsonConverter : JsonConverter<ResizeVolumeRequest>
+    public class ResizeVolumeRequestJsonConverter : JsonConverter<ResizeVolumeRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ResizeVolumeRequest" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ResizeVolumeRequest))]
-    internal partial class ResizeVolumeRequestSerializationContext : JsonSerializerContext { }
+    public partial class ResizeVolumeRequestSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/remove_target
     /// </summary>
-    internal partial class RemoveTargetResponse : IValidatableObject
+    public partial class RemoveTargetResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoveTargetResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal RemoveTargetResponse(Action action)
+        public RemoveTargetResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RemoveTargetResponse" />
     /// </summary>
-    internal class RemoveTargetResponseJsonConverter : JsonConverter<RemoveTargetResponse>
+    public class RemoveTargetResponseJsonConverter : JsonConverter<RemoveTargetResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RemoveTargetResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RemoveTargetResponse))]
-    internal partial class RemoveTargetResponseSerializationContext : JsonSerializerContext { }
+    public partial class RemoveTargetResponseSerializationContext : JsonSerializerContext { }
 }

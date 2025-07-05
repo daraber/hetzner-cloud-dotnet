@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/floating_ips/{id}/actions/change_dns_ptr | Request for POST https://api.hetzner.cloud/v1/primary_ips/{id}/actions/change_dns_ptr
     /// </summary>
-    internal partial class DnsPtr : IValidatableObject
+    public partial class DnsPtr : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DnsPtr" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="varDnsPtr">Domain Name to point to.  PTR record content used for reverse DNS.  | DNS pointer for the specific IP address</param>
         /// <param name="ip">Single IPv4 or IPv6 address to create pointer for.  | Single IPv6 address of this Server for which the reverse DNS entry has been set up</param>
         [JsonConstructor]
-        internal DnsPtr(string varDnsPtr, string ip)
+        public DnsPtr(string varDnsPtr, string ip)
         {
             VarDnsPtr = varDnsPtr;
             Ip = ip;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DnsPtr" />
     /// </summary>
-    internal class DnsPtrJsonConverter : JsonConverter<DnsPtr>
+    public class DnsPtrJsonConverter : JsonConverter<DnsPtr>
     {
         /// <summary>
         /// Deserializes json to <see cref="DnsPtr" />
@@ -195,5 +195,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DnsPtr))]
-    internal partial class DnsPtrSerializationContext : JsonSerializerContext { }
+    public partial class DnsPtrSerializationContext : JsonSerializerContext { }
 }

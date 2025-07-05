@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Resolved label selector target Servers. Only present for type \&quot;label_selector\&quot;.
     /// </summary>
-    internal partial class LoadBalancerSelectedTarget : IValidatableObject
+    public partial class LoadBalancerSelectedTarget : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerSelectedTarget" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="type">Type of the resource. Here always \&quot;server\&quot;.</param>
         /// <param name="usePrivateIp">Use the private network IP instead of the public IP. Only present for target types \&quot;server\&quot; and \&quot;label_selector\&quot;. (default to false)</param>
         [JsonConstructor]
-        internal LoadBalancerSelectedTarget(Option<List<LoadBalancerTargetHealthStatus>?> healthStatus = default, Option<ResourceId?> server = default, Option<string?> type = default, Option<bool?> usePrivateIp = default)
+        public LoadBalancerSelectedTarget(Option<List<LoadBalancerTargetHealthStatus>?> healthStatus = default, Option<ResourceId?> server = default, Option<string?> type = default, Option<bool?> usePrivateIp = default)
         {
             HealthStatusOption = healthStatus;
             ServerOption = server;
@@ -136,7 +136,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerSelectedTarget" />
     /// </summary>
-    internal class LoadBalancerSelectedTargetJsonConverter : JsonConverter<LoadBalancerSelectedTarget>
+    public class LoadBalancerSelectedTargetJsonConverter : JsonConverter<LoadBalancerSelectedTarget>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerSelectedTarget" />
@@ -264,5 +264,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerSelectedTarget))]
-    internal partial class LoadBalancerSelectedTargetSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerSelectedTargetSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/ssh_keys/{id}
     /// </summary>
-    internal partial class GetSshKeyResponse : IValidatableObject
+    public partial class GetSshKeyResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSshKeyResponse" /> class.
         /// </summary>
         /// <param name="sshKey">sshKey</param>
         [JsonConstructor]
-        internal GetSshKeyResponse(SshKey sshKey)
+        public GetSshKeyResponse(SshKey sshKey)
         {
             SshKey = sshKey;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetSshKeyResponse" />
     /// </summary>
-    internal class GetSshKeyResponseJsonConverter : JsonConverter<GetSshKeyResponse>
+    public class GetSshKeyResponseJsonConverter : JsonConverter<GetSshKeyResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetSshKeyResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetSshKeyResponse))]
-    internal partial class GetSshKeyResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetSshKeyResponseSerializationContext : JsonSerializerContext { }
 }

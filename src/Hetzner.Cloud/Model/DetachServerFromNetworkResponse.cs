@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/detach_from_network
     /// </summary>
-    internal partial class DetachServerFromNetworkResponse : IValidatableObject
+    public partial class DetachServerFromNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DetachServerFromNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DetachServerFromNetworkResponse(Action action)
+        public DetachServerFromNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DetachServerFromNetworkResponse" />
     /// </summary>
-    internal class DetachServerFromNetworkResponseJsonConverter : JsonConverter<DetachServerFromNetworkResponse>
+    public class DetachServerFromNetworkResponseJsonConverter : JsonConverter<DetachServerFromNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DetachServerFromNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DetachServerFromNetworkResponse))]
-    internal partial class DetachServerFromNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class DetachServerFromNetworkResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// CreateServerRequestFirewalls
     /// </summary>
-    internal partial class CreateServerRequestFirewalls : IValidatableObject
+    public partial class CreateServerRequestFirewalls : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateServerRequestFirewalls" /> class.
         /// </summary>
         /// <param name="firewall">ID of the Firewall</param>
         [JsonConstructor]
-        internal CreateServerRequestFirewalls(long firewall)
+        public CreateServerRequestFirewalls(long firewall)
         {
             Firewall = firewall;
             OnCreated();
@@ -78,7 +78,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateServerRequestFirewalls" />
     /// </summary>
-    internal class CreateServerRequestFirewallsJsonConverter : JsonConverter<CreateServerRequestFirewalls>
+    public class CreateServerRequestFirewallsJsonConverter : JsonConverter<CreateServerRequestFirewalls>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateServerRequestFirewalls" />
@@ -165,5 +165,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateServerRequestFirewalls))]
-    internal partial class CreateServerRequestFirewallsSerializationContext : JsonSerializerContext { }
+    public partial class CreateServerRequestFirewallsSerializationContext : JsonSerializerContext { }
 }

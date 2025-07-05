@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/poweroff
     /// </summary>
-    internal partial class PowerOffServerResponse : IValidatableObject
+    public partial class PowerOffServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PowerOffServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal PowerOffServerResponse(Action action)
+        public PowerOffServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="PowerOffServerResponse" />
     /// </summary>
-    internal class PowerOffServerResponseJsonConverter : JsonConverter<PowerOffServerResponse>
+    public class PowerOffServerResponseJsonConverter : JsonConverter<PowerOffServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="PowerOffServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(PowerOffServerResponse))]
-    internal partial class PowerOffServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class PowerOffServerResponseSerializationContext : JsonSerializerContext { }
 }

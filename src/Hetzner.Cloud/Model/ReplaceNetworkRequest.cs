@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/networks/{id}
     /// </summary>
-    internal partial class ReplaceNetworkRequest : IValidatableObject
+    public partial class ReplaceNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceNetworkRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New [Network](#networks) name.</param>
         [JsonConstructor]
-        internal ReplaceNetworkRequest(Option<bool?> exposeRoutesToVswitch = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceNetworkRequest(Option<bool?> exposeRoutesToVswitch = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             ExposeRoutesToVswitchOption = exposeRoutesToVswitch;
             LabelsOption = labels;
@@ -122,7 +122,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceNetworkRequest" />
     /// </summary>
-    internal class ReplaceNetworkRequestJsonConverter : JsonConverter<ReplaceNetworkRequest>
+    public class ReplaceNetworkRequestJsonConverter : JsonConverter<ReplaceNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceNetworkRequest" />
@@ -235,5 +235,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceNetworkRequest))]
-    internal partial class ReplaceNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceNetworkRequestSerializationContext : JsonSerializerContext { }
 }

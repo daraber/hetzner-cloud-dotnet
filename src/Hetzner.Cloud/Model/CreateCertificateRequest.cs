@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/certificates
     /// </summary>
-    internal partial class CreateCertificateRequest : IValidatableObject
+    public partial class CreateCertificateRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCertificateRequest" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="privateKey">Certificate key in PEM format. Required for type &#x60;uploaded&#x60; Certificates.</param>
         /// <param name="type">Choose between uploading a Certificate in PEM format or requesting a managed *Let&#39;s Encrypt* Certificate. (default to TypeEnum.Uploaded)</param>
         [JsonConstructor]
-        internal CreateCertificateRequest(string name, Option<string?> certificate = default, Option<List<string>?> domainNames = default, Option<Dictionary<string, string>?> labels = default, Option<string?> privateKey = default, Option<TypeEnum?> type = default)
+        public CreateCertificateRequest(string name, Option<string?> certificate = default, Option<List<string>?> domainNames = default, Option<Dictionary<string, string>?> labels = default, Option<string?> privateKey = default, Option<TypeEnum?> type = default)
         {
             Name = name;
             CertificateOption = certificate;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Choose between uploading a Certificate in PEM format or requesting a managed *Let&#39;s Encrypt* Certificate.
         /// </summary>
         /// <value>Choose between uploading a Certificate in PEM format or requesting a managed *Let&#39;s Encrypt* Certificate.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Managed for value: managed
@@ -237,7 +237,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateCertificateRequest" />
     /// </summary>
-    internal class CreateCertificateRequestJsonConverter : JsonConverter<CreateCertificateRequest>
+    public class CreateCertificateRequestJsonConverter : JsonConverter<CreateCertificateRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateCertificateRequest" />
@@ -395,5 +395,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateCertificateRequest))]
-    internal partial class CreateCertificateRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateCertificateRequestSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/attach_to_network
     /// </summary>
-    internal partial class AttachLoadBalancerToNetworkResponse : IValidatableObject
+    public partial class AttachLoadBalancerToNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachLoadBalancerToNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AttachLoadBalancerToNetworkResponse(Action action)
+        public AttachLoadBalancerToNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachLoadBalancerToNetworkResponse" />
     /// </summary>
-    internal class AttachLoadBalancerToNetworkResponseJsonConverter : JsonConverter<AttachLoadBalancerToNetworkResponse>
+    public class AttachLoadBalancerToNetworkResponseJsonConverter : JsonConverter<AttachLoadBalancerToNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachLoadBalancerToNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachLoadBalancerToNetworkResponse))]
-    internal partial class AttachLoadBalancerToNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class AttachLoadBalancerToNetworkResponseSerializationContext : JsonSerializerContext { }
 }

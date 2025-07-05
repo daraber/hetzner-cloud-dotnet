@@ -10,16 +10,16 @@
 #nullable enable
 
 using System;
-using Hetzner.Cloud.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Hetzner.Cloud.Client;
 
 namespace Hetzner.Cloud.Extensions
 {
     /// <summary>
     /// Extension methods for IHostBuilder
     /// </summary>
-    internal static class IHostBuilderExtensions
+    public static class IHostBuilderExtensions
     {
         /// <summary>
         /// Add the api to your host builder.

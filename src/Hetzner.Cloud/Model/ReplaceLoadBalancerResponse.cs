@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/load_balancers/{id}
     /// </summary>
-    internal partial class ReplaceLoadBalancerResponse : IValidatableObject
+    public partial class ReplaceLoadBalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceLoadBalancerResponse" /> class.
         /// </summary>
         /// <param name="loadBalancer">loadBalancer</param>
         [JsonConstructor]
-        internal ReplaceLoadBalancerResponse(LoadBalancer loadBalancer)
+        public ReplaceLoadBalancerResponse(LoadBalancer loadBalancer)
         {
             LoadBalancer = loadBalancer;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceLoadBalancerResponse" />
     /// </summary>
-    internal class ReplaceLoadBalancerResponseJsonConverter : JsonConverter<ReplaceLoadBalancerResponse>
+    public class ReplaceLoadBalancerResponseJsonConverter : JsonConverter<ReplaceLoadBalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceLoadBalancerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceLoadBalancerResponse))]
-    internal partial class ReplaceLoadBalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceLoadBalancerResponseSerializationContext : JsonSerializerContext { }
 }

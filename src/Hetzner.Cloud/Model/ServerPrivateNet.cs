@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ServerPrivateNet
     /// </summary>
-    internal partial class ServerPrivateNet : IValidatableObject
+    public partial class ServerPrivateNet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerPrivateNet" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="macAddress">The server MAC address on the network.</param>
         /// <param name="network">The Network ID the server is attached to.</param>
         [JsonConstructor]
-        internal ServerPrivateNet(Option<List<string>?> aliasIps = default, Option<string?> ip = default, Option<string?> macAddress = default, Option<long?> network = default)
+        public ServerPrivateNet(Option<List<string>?> aliasIps = default, Option<string?> ip = default, Option<string?> macAddress = default, Option<long?> network = default)
         {
             AliasIpsOption = aliasIps;
             IpOption = ip;
@@ -140,7 +140,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ServerPrivateNet" />
     /// </summary>
-    internal class ServerPrivateNetJsonConverter : JsonConverter<ServerPrivateNet>
+    public class ServerPrivateNetJsonConverter : JsonConverter<ServerPrivateNet>
     {
         /// <summary>
         /// Deserializes json to <see cref="ServerPrivateNet" />
@@ -266,5 +266,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ServerPrivateNet))]
-    internal partial class ServerPrivateNetSerializationContext : JsonSerializerContext { }
+    public partial class ServerPrivateNetSerializationContext : JsonSerializerContext { }
 }

@@ -11,20 +11,20 @@
 
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Text.Json.Serialization.Metadata;
+using System.Net.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Hetzner.Cloud.Api;
 using Hetzner.Cloud.Model;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Hetzner.Cloud.Client
 {
     /// <summary>
     /// Provides hosting configuration for Hetzner.Cloud
     /// </summary>
-    internal class HostConfiguration
+    public class HostConfiguration
     {
         private readonly IServiceCollection _services;
         private readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions();
@@ -319,7 +319,7 @@ namespace Hetzner.Cloud.Client
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider = new(_jsonOptions);
             _services.AddSingleton(jsonSerializerOptionsProvider);
 
-            _jsonOptions.TypeInfoResolver = JsonTypeInfoResolver.Combine(
+            _jsonOptions.TypeInfoResolver = System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
                 new ActionSerializationContext(),
                 new ActionOptionalSerializationContext(),
                 new AddRouteToNetworkResponseSerializationContext(),
@@ -590,7 +590,7 @@ namespace Hetzner.Cloud.Client
                 new UpdateLoadBalancerServiceHealthCheckHttpSerializationContext(),
                 new UpdateServiceResponseSerializationContext(),
                 new VolumeSerializationContext(),
-                new DefaultJsonTypeInfoResolver()
+                new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver()
             );
 
             _services.AddSingleton<IApiFactory, ApiFactory>();

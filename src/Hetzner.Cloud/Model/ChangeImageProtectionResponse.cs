@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/images/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeImageProtectionResponse : IValidatableObject
+    public partial class ChangeImageProtectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeImageProtectionResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeImageProtectionResponse(Action action)
+        public ChangeImageProtectionResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeImageProtectionResponse" />
     /// </summary>
-    internal class ChangeImageProtectionResponseJsonConverter : JsonConverter<ChangeImageProtectionResponse>
+    public class ChangeImageProtectionResponseJsonConverter : JsonConverter<ChangeImageProtectionResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeImageProtectionResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeImageProtectionResponse))]
-    internal partial class ChangeImageProtectionResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeImageProtectionResponseSerializationContext : JsonSerializerContext { }
 }

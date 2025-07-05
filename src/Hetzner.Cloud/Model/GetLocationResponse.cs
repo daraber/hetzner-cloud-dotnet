@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/locations/{id}
     /// </summary>
-    internal partial class GetLocationResponse : IValidatableObject
+    public partial class GetLocationResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLocationResponse" /> class.
         /// </summary>
         /// <param name="location">location</param>
         [JsonConstructor]
-        internal GetLocationResponse(Location location)
+        public GetLocationResponse(Location location)
         {
             Location = location;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetLocationResponse" />
     /// </summary>
-    internal class GetLocationResponseJsonConverter : JsonConverter<GetLocationResponse>
+    public class GetLocationResponseJsonConverter : JsonConverter<GetLocationResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetLocationResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetLocationResponse))]
-    internal partial class GetLocationResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetLocationResponseSerializationContext : JsonSerializerContext { }
 }

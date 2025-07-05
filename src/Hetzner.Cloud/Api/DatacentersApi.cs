@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IDatacentersApi : IApi
+    public interface IDatacentersApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -91,7 +91,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetDatacenterApiResponse"/>
     /// </summary>
-    internal interface IGetDatacenterApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetDatacenterResponse?>
+    public interface IGetDatacenterApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetDatacenterResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -103,7 +103,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListDatacentersApiResponse"/>
     /// </summary>
-    internal interface IListDatacentersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListDatacentersResponse?>
+    public interface IListDatacentersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListDatacentersResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -115,7 +115,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class DatacentersApiEvents
+    public class DatacentersApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -161,7 +161,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class DatacentersApi : IDatacentersApi
+    public sealed partial class DatacentersApi : IDatacentersApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -349,7 +349,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetDatacenterApiResponse"/>
         /// </summary>
-        internal partial class GetDatacenterApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetDatacenterApiResponse
+        public partial class GetDatacenterApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetDatacenterApiResponse
         {
             /// <summary>
             /// The logger
@@ -617,7 +617,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListDatacentersApiResponse"/>
         /// </summary>
-        internal partial class ListDatacentersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListDatacentersApiResponse
+        public partial class ListDatacentersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListDatacentersApiResponse
         {
             /// <summary>
             /// The logger

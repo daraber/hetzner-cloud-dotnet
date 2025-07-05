@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/reboot
     /// </summary>
-    internal partial class SoftRebootServerResponse : IValidatableObject
+    public partial class SoftRebootServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SoftRebootServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal SoftRebootServerResponse(Action action)
+        public SoftRebootServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="SoftRebootServerResponse" />
     /// </summary>
-    internal class SoftRebootServerResponseJsonConverter : JsonConverter<SoftRebootServerResponse>
+    public class SoftRebootServerResponseJsonConverter : JsonConverter<SoftRebootServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="SoftRebootServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(SoftRebootServerResponse))]
-    internal partial class SoftRebootServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class SoftRebootServerResponseSerializationContext : JsonSerializerContext { }
 }

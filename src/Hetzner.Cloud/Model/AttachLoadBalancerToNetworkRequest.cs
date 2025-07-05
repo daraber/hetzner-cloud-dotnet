@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/attach_to_network
     /// </summary>
-    internal partial class AttachLoadBalancerToNetworkRequest : IValidatableObject
+    public partial class AttachLoadBalancerToNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachLoadBalancerToNetworkRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="network">ID of an existing network to attach the Load Balancer to</param>
         /// <param name="ip">IP to request to be assigned to this Load Balancer; if you do not provide this then you will be auto assigned an IP address</param>
         [JsonConstructor]
-        internal AttachLoadBalancerToNetworkRequest(long network, Option<string?> ip = default)
+        public AttachLoadBalancerToNetworkRequest(long network, Option<string?> ip = default)
         {
             Network = network;
             IpOption = ip;
@@ -97,7 +97,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachLoadBalancerToNetworkRequest" />
     /// </summary>
-    internal class AttachLoadBalancerToNetworkRequestJsonConverter : JsonConverter<AttachLoadBalancerToNetworkRequest>
+    public class AttachLoadBalancerToNetworkRequestJsonConverter : JsonConverter<AttachLoadBalancerToNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachLoadBalancerToNetworkRequest" />
@@ -197,5 +197,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachLoadBalancerToNetworkRequest))]
-    internal partial class AttachLoadBalancerToNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class AttachLoadBalancerToNetworkRequestSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/attach_to_network
     /// </summary>
-    internal partial class AttachServerToNetworkResponse : IValidatableObject
+    public partial class AttachServerToNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachServerToNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AttachServerToNetworkResponse(Action action)
+        public AttachServerToNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachServerToNetworkResponse" />
     /// </summary>
-    internal class AttachServerToNetworkResponseJsonConverter : JsonConverter<AttachServerToNetworkResponse>
+    public class AttachServerToNetworkResponseJsonConverter : JsonConverter<AttachServerToNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachServerToNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachServerToNetworkResponse))]
-    internal partial class AttachServerToNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class AttachServerToNetworkResponseSerializationContext : JsonSerializerContext { }
 }

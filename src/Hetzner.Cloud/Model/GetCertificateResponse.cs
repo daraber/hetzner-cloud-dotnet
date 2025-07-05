@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/certificates/{id}
     /// </summary>
-    internal partial class GetCertificateResponse : IValidatableObject
+    public partial class GetCertificateResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetCertificateResponse" /> class.
         /// </summary>
         /// <param name="certificate">certificate</param>
         [JsonConstructor]
-        internal GetCertificateResponse(Certificate certificate)
+        public GetCertificateResponse(Certificate certificate)
         {
             Certificate = certificate;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetCertificateResponse" />
     /// </summary>
-    internal class GetCertificateResponseJsonConverter : JsonConverter<GetCertificateResponse>
+    public class GetCertificateResponseJsonConverter : JsonConverter<GetCertificateResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetCertificateResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetCertificateResponse))]
-    internal partial class GetCertificateResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetCertificateResponseSerializationContext : JsonSerializerContext { }
 }

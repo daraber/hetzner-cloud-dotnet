@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/datacenters
     /// </summary>
-    internal partial class ListDatacentersResponse : IValidatableObject
+    public partial class ListDatacentersResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListDatacentersResponse" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="recommendation">Recommended [Datacenter](#datacenters) for creating new resources.</param>
         [JsonConstructor]
-        internal ListDatacentersResponse(List<Datacenter> datacenters, Meta meta, long recommendation)
+        public ListDatacentersResponse(List<Datacenter> datacenters, Meta meta, long recommendation)
         {
             Datacenters = datacenters;
             Meta = meta;
@@ -98,7 +98,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListDatacentersResponse" />
     /// </summary>
-    internal class ListDatacentersResponseJsonConverter : JsonConverter<ListDatacentersResponse>
+    public class ListDatacentersResponseJsonConverter : JsonConverter<ListDatacentersResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListDatacentersResponse" />
@@ -215,5 +215,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListDatacentersResponse))]
-    internal partial class ListDatacentersResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListDatacentersResponseSerializationContext : JsonSerializerContext { }
 }

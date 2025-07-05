@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A service for a Load Balancer.
     /// </summary>
-    internal partial class LoadBalancerService : IValidatableObject
+    public partial class LoadBalancerService : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerService" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="proxyprotocol">Is Proxyprotocol enabled or not</param>
         /// <param name="http">http</param>
         [JsonConstructor]
-        internal LoadBalancerService(int destinationPort, LoadBalancerServiceHealthCheck healthCheck, int listenPort, ProtocolEnum protocol, bool proxyprotocol, Option<Http?> http = default)
+        public LoadBalancerService(int destinationPort, LoadBalancerServiceHealthCheck healthCheck, int listenPort, ProtocolEnum protocol, bool proxyprotocol, Option<Http?> http = default)
         {
             DestinationPort = destinationPort;
             HealthCheck = healthCheck;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Protocol of the Load Balancer
         /// </summary>
         /// <value>Protocol of the Load Balancer</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Http for value: http
@@ -218,7 +218,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerService" />
     /// </summary>
-    internal class LoadBalancerServiceJsonConverter : JsonConverter<LoadBalancerService>
+    public class LoadBalancerServiceJsonConverter : JsonConverter<LoadBalancerService>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerService" />
@@ -374,5 +374,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerService))]
-    internal partial class LoadBalancerServiceSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerServiceSerializationContext : JsonSerializerContext { }
 }

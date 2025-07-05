@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/firewalls/{id}
     /// </summary>
-    internal partial class ReplaceFirewallRequest : IValidatableObject
+    public partial class ReplaceFirewallRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceFirewallRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">Name of the [Firewall](#firewalls).  Limited to a maximum of 128 characters.  Must be unique per Project. </param>
         [JsonConstructor]
-        internal ReplaceFirewallRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceFirewallRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceFirewallRequest" />
     /// </summary>
-    internal class ReplaceFirewallRequestJsonConverter : JsonConverter<ReplaceFirewallRequest>
+    public class ReplaceFirewallRequestJsonConverter : JsonConverter<ReplaceFirewallRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceFirewallRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceFirewallRequest))]
-    internal partial class ReplaceFirewallRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceFirewallRequestSerializationContext : JsonSerializerContext { }
 }

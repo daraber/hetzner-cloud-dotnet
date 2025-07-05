@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/networks/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeNetworkProtectionRequest : IValidatableObject
+    public partial class ChangeNetworkProtectionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeNetworkProtectionRequest" /> class.
         /// </summary>
         /// <param name="delete">Delete protection setting.  If true, prevents the [Network](#networks) from being deleted. </param>
         [JsonConstructor]
-        internal ChangeNetworkProtectionRequest(Option<bool?> delete = default)
+        public ChangeNetworkProtectionRequest(Option<bool?> delete = default)
         {
             DeleteOption = delete;
             OnCreated();
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeNetworkProtectionRequest" />
     /// </summary>
-    internal class ChangeNetworkProtectionRequestJsonConverter : JsonConverter<ChangeNetworkProtectionRequest>
+    public class ChangeNetworkProtectionRequestJsonConverter : JsonConverter<ChangeNetworkProtectionRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeNetworkProtectionRequest" />
@@ -171,5 +171,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeNetworkProtectionRequest))]
-    internal partial class ChangeNetworkProtectionRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeNetworkProtectionRequestSerializationContext : JsonSerializerContext { }
 }

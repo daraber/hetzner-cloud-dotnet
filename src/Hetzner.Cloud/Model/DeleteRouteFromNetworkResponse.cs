@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/networks/{id}/actions/delete_route
     /// </summary>
-    internal partial class DeleteRouteFromNetworkResponse : IValidatableObject
+    public partial class DeleteRouteFromNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteRouteFromNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DeleteRouteFromNetworkResponse(Action action)
+        public DeleteRouteFromNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeleteRouteFromNetworkResponse" />
     /// </summary>
-    internal class DeleteRouteFromNetworkResponseJsonConverter : JsonConverter<DeleteRouteFromNetworkResponse>
+    public class DeleteRouteFromNetworkResponseJsonConverter : JsonConverter<DeleteRouteFromNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeleteRouteFromNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeleteRouteFromNetworkResponse))]
-    internal partial class DeleteRouteFromNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class DeleteRouteFromNetworkResponseSerializationContext : JsonSerializerContext { }
 }

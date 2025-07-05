@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/volumes/{id}
     /// </summary>
-    internal partial class GetVolumeResponse : IValidatableObject
+    public partial class GetVolumeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetVolumeResponse" /> class.
         /// </summary>
         /// <param name="volume">volume</param>
         [JsonConstructor]
-        internal GetVolumeResponse(Volume volume)
+        public GetVolumeResponse(Volume volume)
         {
             Volume = volume;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetVolumeResponse" />
     /// </summary>
-    internal class GetVolumeResponseJsonConverter : JsonConverter<GetVolumeResponse>
+    public class GetVolumeResponseJsonConverter : JsonConverter<GetVolumeResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetVolumeResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetVolumeResponse))]
-    internal partial class GetVolumeResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetVolumeResponseSerializationContext : JsonSerializerContext { }
 }

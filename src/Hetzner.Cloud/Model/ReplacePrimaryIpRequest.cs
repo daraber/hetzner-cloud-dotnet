@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/primary_ips/{id}
     /// </summary>
-    internal partial class ReplacePrimaryIpRequest : IValidatableObject
+    public partial class ReplacePrimaryIpRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacePrimaryIpRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">Name of the Resource. Must be unique per Project.</param>
         [JsonConstructor]
-        internal ReplacePrimaryIpRequest(Option<bool?> autoDelete = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplacePrimaryIpRequest(Option<bool?> autoDelete = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             AutoDeleteOption = autoDelete;
             LabelsOption = labels;
@@ -122,7 +122,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplacePrimaryIpRequest" />
     /// </summary>
-    internal class ReplacePrimaryIpRequestJsonConverter : JsonConverter<ReplacePrimaryIpRequest>
+    public class ReplacePrimaryIpRequestJsonConverter : JsonConverter<ReplacePrimaryIpRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplacePrimaryIpRequest" />
@@ -235,5 +235,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplacePrimaryIpRequest))]
-    internal partial class ReplacePrimaryIpRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplacePrimaryIpRequestSerializationContext : JsonSerializerContext { }
 }

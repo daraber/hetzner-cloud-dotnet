@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/certificates/{id}
     /// </summary>
-    internal partial class ReplaceCertificateRequest : IValidatableObject
+    public partial class ReplaceCertificateRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceCertificateRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New Certificate name</param>
         [JsonConstructor]
-        internal ReplaceCertificateRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceCertificateRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceCertificateRequest" />
     /// </summary>
-    internal class ReplaceCertificateRequestJsonConverter : JsonConverter<ReplaceCertificateRequest>
+    public class ReplaceCertificateRequestJsonConverter : JsonConverter<ReplaceCertificateRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceCertificateRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceCertificateRequest))]
-    internal partial class ReplaceCertificateRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceCertificateRequestSerializationContext : JsonSerializerContext { }
 }

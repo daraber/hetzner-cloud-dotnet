@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/floating_ips/{id}
     /// </summary>
-    internal partial class ReplaceFloatingIpResponse : IValidatableObject
+    public partial class ReplaceFloatingIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceFloatingIpResponse" /> class.
         /// </summary>
         /// <param name="floatingIp">floatingIp</param>
         [JsonConstructor]
-        internal ReplaceFloatingIpResponse(FloatingIp floatingIp)
+        public ReplaceFloatingIpResponse(FloatingIp floatingIp)
         {
             FloatingIp = floatingIp;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceFloatingIpResponse" />
     /// </summary>
-    internal class ReplaceFloatingIpResponseJsonConverter : JsonConverter<ReplaceFloatingIpResponse>
+    public class ReplaceFloatingIpResponseJsonConverter : JsonConverter<ReplaceFloatingIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceFloatingIpResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceFloatingIpResponse))]
-    internal partial class ReplaceFloatingIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceFloatingIpResponseSerializationContext : JsonSerializerContext { }
 }

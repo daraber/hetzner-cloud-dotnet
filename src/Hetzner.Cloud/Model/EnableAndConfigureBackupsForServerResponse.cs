@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/enable_backup
     /// </summary>
-    internal partial class EnableAndConfigureBackupsForServerResponse : IValidatableObject
+    public partial class EnableAndConfigureBackupsForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnableAndConfigureBackupsForServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal EnableAndConfigureBackupsForServerResponse(Action action)
+        public EnableAndConfigureBackupsForServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="EnableAndConfigureBackupsForServerResponse" />
     /// </summary>
-    internal class EnableAndConfigureBackupsForServerResponseJsonConverter : JsonConverter<EnableAndConfigureBackupsForServerResponse>
+    public class EnableAndConfigureBackupsForServerResponseJsonConverter : JsonConverter<EnableAndConfigureBackupsForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="EnableAndConfigureBackupsForServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(EnableAndConfigureBackupsForServerResponse))]
-    internal partial class EnableAndConfigureBackupsForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class EnableAndConfigureBackupsForServerResponseSerializationContext : JsonSerializerContext { }
 }

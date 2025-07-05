@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IPrimaryIpsApi : IApi
+    public interface IPrimaryIpsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -318,7 +318,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAssignPrimaryIpToResourceApiResponse"/>
     /// </summary>
-    internal interface IAssignPrimaryIpToResourceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AssignPrimaryIpToResourceResponse?>
+    public interface IAssignPrimaryIpToResourceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AssignPrimaryIpToResourceResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -330,7 +330,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangePrimaryIpProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangePrimaryIpProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangePrimaryIpProtectionResponse?>
+    public interface IChangePrimaryIpProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangePrimaryIpProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -342,7 +342,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeReverseDnsRecordsForPrimaryIpApiResponse"/>
     /// </summary>
-    internal interface IChangeReverseDnsRecordsForPrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsRecordsForPrimaryIpResponse?>
+    public interface IChangeReverseDnsRecordsForPrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsRecordsForPrimaryIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -354,7 +354,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreatePrimaryIpApiResponse"/>
     /// </summary>
-    internal interface ICreatePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreatePrimaryIpResponse?>
+    public interface ICreatePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreatePrimaryIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -366,7 +366,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeletePrimaryIpApiResponse"/>
     /// </summary>
-    internal interface IDeletePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeletePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -378,7 +378,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetPrimaryIpApiResponse"/>
     /// </summary>
-    internal interface IGetPrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetPrimaryIpResponse?>
+    public interface IGetPrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetPrimaryIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -390,7 +390,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetPrimaryIpActionApiResponse"/>
     /// </summary>
-    internal interface IGetPrimaryIpActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetPrimaryIpActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -402,7 +402,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListPrimaryIpActionsApiResponse"/>
     /// </summary>
-    internal interface IListPrimaryIpActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListPrimaryIpActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -414,7 +414,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListPrimaryIpsApiResponse"/>
     /// </summary>
-    internal interface IListPrimaryIpsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPrimaryIpsResponse?>
+    public interface IListPrimaryIpsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPrimaryIpsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -426,7 +426,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplacePrimaryIpApiResponse"/>
     /// </summary>
-    internal interface IReplacePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplacePrimaryIpResponse?>
+    public interface IReplacePrimaryIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplacePrimaryIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -438,7 +438,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IUnassignPrimaryIpFromResourceApiResponse"/>
     /// </summary>
-    internal interface IUnassignPrimaryIpFromResourceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UnassignPrimaryIpFromResourceResponse?>
+    public interface IUnassignPrimaryIpFromResourceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UnassignPrimaryIpFromResourceResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -450,7 +450,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class PrimaryIpsApiEvents
+    public class PrimaryIpsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -676,7 +676,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class PrimaryIpsApi : IPrimaryIpsApi
+    public sealed partial class PrimaryIpsApi : IPrimaryIpsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -897,7 +897,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AssignPrimaryIpToResourceApiResponse"/>
         /// </summary>
-        internal partial class AssignPrimaryIpToResourceApiResponse : Hetzner.Cloud.Client.ApiResponse, IAssignPrimaryIpToResourceApiResponse
+        public partial class AssignPrimaryIpToResourceApiResponse : Hetzner.Cloud.Client.ApiResponse, IAssignPrimaryIpToResourceApiResponse
         {
             /// <summary>
             /// The logger
@@ -1148,7 +1148,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangePrimaryIpProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangePrimaryIpProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangePrimaryIpProtectionApiResponse
+        public partial class ChangePrimaryIpProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangePrimaryIpProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1399,7 +1399,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeReverseDnsRecordsForPrimaryIpApiResponse"/>
         /// </summary>
-        internal partial class ChangeReverseDnsRecordsForPrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsRecordsForPrimaryIpApiResponse
+        public partial class ChangeReverseDnsRecordsForPrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsRecordsForPrimaryIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -1643,7 +1643,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreatePrimaryIpApiResponse"/>
         /// </summary>
-        internal partial class CreatePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreatePrimaryIpApiResponse
+        public partial class CreatePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreatePrimaryIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -1852,7 +1852,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeletePrimaryIpApiResponse"/>
         /// </summary>
-        internal partial class DeletePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeletePrimaryIpApiResponse
+        public partial class DeletePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeletePrimaryIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -2038,7 +2038,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetPrimaryIpApiResponse"/>
         /// </summary>
-        internal partial class GetPrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPrimaryIpApiResponse
+        public partial class GetPrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPrimaryIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -2256,7 +2256,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetPrimaryIpActionApiResponse"/>
         /// </summary>
-        internal partial class GetPrimaryIpActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPrimaryIpActionApiResponse
+        public partial class GetPrimaryIpActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPrimaryIpActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2533,7 +2533,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListPrimaryIpActionsApiResponse"/>
         /// </summary>
-        internal partial class ListPrimaryIpActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPrimaryIpActionsApiResponse
+        public partial class ListPrimaryIpActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPrimaryIpActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2827,7 +2827,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListPrimaryIpsApiResponse"/>
         /// </summary>
-        internal partial class ListPrimaryIpsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPrimaryIpsApiResponse
+        public partial class ListPrimaryIpsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPrimaryIpsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3078,7 +3078,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplacePrimaryIpApiResponse"/>
         /// </summary>
-        internal partial class ReplacePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplacePrimaryIpApiResponse
+        public partial class ReplacePrimaryIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplacePrimaryIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -3296,7 +3296,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="UnassignPrimaryIpFromResourceApiResponse"/>
         /// </summary>
-        internal partial class UnassignPrimaryIpFromResourceApiResponse : Hetzner.Cloud.Client.ApiResponse, IUnassignPrimaryIpFromResourceApiResponse
+        public partial class UnassignPrimaryIpFromResourceApiResponse : Hetzner.Cloud.Client.ApiResponse, IUnassignPrimaryIpFromResourceApiResponse
         {
             /// <summary>
             /// The logger

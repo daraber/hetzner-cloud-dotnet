@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface INetworksApi : IApi
+    public interface INetworksApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -422,7 +422,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAddRouteToNetworkApiResponse"/>
     /// </summary>
-    internal interface IAddRouteToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddRouteToNetworkResponse?>
+    public interface IAddRouteToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddRouteToNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -434,7 +434,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAddSubnetToNetworkApiResponse"/>
     /// </summary>
-    internal interface IAddSubnetToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddSubnetToNetworkResponse?>
+    public interface IAddSubnetToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddSubnetToNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -446,7 +446,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeIpRangeOfNetworkApiResponse"/>
     /// </summary>
-    internal interface IChangeIpRangeOfNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeIpRangeOfNetworkResponse?>
+    public interface IChangeIpRangeOfNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeIpRangeOfNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -458,7 +458,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeNetworkProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeNetworkProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeNetworkProtectionResponse?>
+    public interface IChangeNetworkProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeNetworkProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -470,7 +470,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateNetworkApiResponse"/>
     /// </summary>
-    internal interface ICreateNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateNetworkResponse?>
+    public interface ICreateNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -482,7 +482,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteNetworkApiResponse"/>
     /// </summary>
-    internal interface IDeleteNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -494,7 +494,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteRouteFromNetworkApiResponse"/>
     /// </summary>
-    internal interface IDeleteRouteFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteRouteFromNetworkResponse?>
+    public interface IDeleteRouteFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteRouteFromNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -506,7 +506,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteSubnetFromNetworkApiResponse"/>
     /// </summary>
-    internal interface IDeleteSubnetFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteSubnetFromNetworkResponse?>
+    public interface IDeleteSubnetFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteSubnetFromNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -518,7 +518,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForNetworkApiResponse"/>
     /// </summary>
-    internal interface IGetActionForNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForNetworkResponse?>
+    public interface IGetActionForNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -530,7 +530,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetNetworkApiResponse"/>
     /// </summary>
-    internal interface IGetNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetNetworkResponse?>
+    public interface IGetNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -542,7 +542,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetNetworkActionApiResponse"/>
     /// </summary>
-    internal interface IGetNetworkActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetNetworkActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -554,7 +554,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForNetworkApiResponse"/>
     /// </summary>
-    internal interface IListActionsForNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForNetworkResponse?>
+    public interface IListActionsForNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -566,7 +566,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListNetworkActionsApiResponse"/>
     /// </summary>
-    internal interface IListNetworkActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListNetworkActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -578,7 +578,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListNetworksApiResponse"/>
     /// </summary>
-    internal interface IListNetworksApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListNetworksResponse?>
+    public interface IListNetworksApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListNetworksResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -590,7 +590,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceNetworkApiResponse"/>
     /// </summary>
-    internal interface IReplaceNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceNetworkResponse?>
+    public interface IReplaceNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -602,7 +602,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class NetworksApiEvents
+    public class NetworksApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -908,7 +908,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class NetworksApi : INetworksApi
+    public sealed partial class NetworksApi : INetworksApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -1129,7 +1129,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AddRouteToNetworkApiResponse"/>
         /// </summary>
-        internal partial class AddRouteToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddRouteToNetworkApiResponse
+        public partial class AddRouteToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddRouteToNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -1380,7 +1380,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AddSubnetToNetworkApiResponse"/>
         /// </summary>
-        internal partial class AddSubnetToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddSubnetToNetworkApiResponse
+        public partial class AddSubnetToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddSubnetToNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -1631,7 +1631,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeIpRangeOfNetworkApiResponse"/>
         /// </summary>
-        internal partial class ChangeIpRangeOfNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeIpRangeOfNetworkApiResponse
+        public partial class ChangeIpRangeOfNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeIpRangeOfNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -1882,7 +1882,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeNetworkProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeNetworkProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeNetworkProtectionApiResponse
+        public partial class ChangeNetworkProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeNetworkProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2126,7 +2126,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateNetworkApiResponse"/>
         /// </summary>
-        internal partial class CreateNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateNetworkApiResponse
+        public partial class CreateNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2335,7 +2335,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteNetworkApiResponse"/>
         /// </summary>
-        internal partial class DeleteNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteNetworkApiResponse
+        public partial class DeleteNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2554,7 +2554,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteRouteFromNetworkApiResponse"/>
         /// </summary>
-        internal partial class DeleteRouteFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteRouteFromNetworkApiResponse
+        public partial class DeleteRouteFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteRouteFromNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2805,7 +2805,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteSubnetFromNetworkApiResponse"/>
         /// </summary>
-        internal partial class DeleteSubnetFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteSubnetFromNetworkApiResponse
+        public partial class DeleteSubnetFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteSubnetFromNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -3030,7 +3030,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForNetworkApiResponse"/>
         /// </summary>
-        internal partial class GetActionForNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForNetworkApiResponse
+        public partial class GetActionForNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -3248,7 +3248,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetNetworkApiResponse"/>
         /// </summary>
-        internal partial class GetNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetNetworkApiResponse
+        public partial class GetNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -3466,7 +3466,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetNetworkActionApiResponse"/>
         /// </summary>
-        internal partial class GetNetworkActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetNetworkActionApiResponse
+        public partial class GetNetworkActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetNetworkActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -3741,7 +3741,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForNetworkApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForNetworkApiResponse
+        public partial class ListActionsForNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -4018,7 +4018,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListNetworkActionsApiResponse"/>
         /// </summary>
-        internal partial class ListNetworkActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListNetworkActionsApiResponse
+        public partial class ListNetworkActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListNetworkActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -4286,7 +4286,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListNetworksApiResponse"/>
         /// </summary>
-        internal partial class ListNetworksApiResponse : Hetzner.Cloud.Client.ApiResponse, IListNetworksApiResponse
+        public partial class ListNetworksApiResponse : Hetzner.Cloud.Client.ApiResponse, IListNetworksApiResponse
         {
             /// <summary>
             /// The logger
@@ -4537,7 +4537,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceNetworkApiResponse"/>
         /// </summary>
-        internal partial class ReplaceNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceNetworkApiResponse
+        public partial class ReplaceNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceNetworkApiResponse
         {
             /// <summary>
             /// The logger

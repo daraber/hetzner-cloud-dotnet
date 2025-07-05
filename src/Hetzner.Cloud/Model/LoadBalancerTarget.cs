@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A target of a Load Balancer.
     /// </summary>
-    internal partial class LoadBalancerTarget : IValidatableObject
+    public partial class LoadBalancerTarget : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerTarget" /> class.
@@ -42,7 +42,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="targets">List of resolved label selector target Servers. Only present for type \&quot;label_selector\&quot;.</param>
         /// <param name="usePrivateIp">Use the private network IP instead of the public IP. Only present for target types \&quot;server\&quot; and \&quot;label_selector\&quot;. (default to false)</param>
         [JsonConstructor]
-        internal LoadBalancerTarget(TypeEnum type, Option<List<LoadBalancerTargetHealthStatus>?> healthStatus = default, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default, Option<List<LoadBalancerSelectedTarget>?> targets = default, Option<bool?> usePrivateIp = default)
+        public LoadBalancerTarget(TypeEnum type, Option<List<LoadBalancerTargetHealthStatus>?> healthStatus = default, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default, Option<List<LoadBalancerSelectedTarget>?> targets = default, Option<bool?> usePrivateIp = default)
         {
             Type = type;
             HealthStatusOption = healthStatus;
@@ -60,7 +60,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the resource
         /// </summary>
         /// <value>Type of the resource</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Ip for value: ip
@@ -258,7 +258,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerTarget" />
     /// </summary>
-    internal class LoadBalancerTargetJsonConverter : JsonConverter<LoadBalancerTarget>
+    public class LoadBalancerTargetJsonConverter : JsonConverter<LoadBalancerTarget>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerTarget" />
@@ -432,5 +432,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerTarget))]
-    internal partial class LoadBalancerTargetSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerTargetSerializationContext : JsonSerializerContext { }
 }

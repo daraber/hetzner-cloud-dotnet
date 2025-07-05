@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/add_to_placement_group
     /// </summary>
-    internal partial class AddServerToPlacementGroupRequest : IValidatableObject
+    public partial class AddServerToPlacementGroupRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddServerToPlacementGroupRequest" /> class.
         /// </summary>
         /// <param name="placementGroup">ID of Placement Group the Server should be added to</param>
         [JsonConstructor]
-        internal AddServerToPlacementGroupRequest(long placementGroup)
+        public AddServerToPlacementGroupRequest(long placementGroup)
         {
             PlacementGroup = placementGroup;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AddServerToPlacementGroupRequest" />
     /// </summary>
-    internal class AddServerToPlacementGroupRequestJsonConverter : JsonConverter<AddServerToPlacementGroupRequest>
+    public class AddServerToPlacementGroupRequestJsonConverter : JsonConverter<AddServerToPlacementGroupRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AddServerToPlacementGroupRequest" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AddServerToPlacementGroupRequest))]
-    internal partial class AddServerToPlacementGroupRequestSerializationContext : JsonSerializerContext { }
+    public partial class AddServerToPlacementGroupRequestSerializationContext : JsonSerializerContext { }
 }

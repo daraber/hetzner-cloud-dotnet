@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// PrimaryIP
     /// </summary>
-    internal partial class PrimaryIP : IValidatableObject
+    public partial class PrimaryIP : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PrimaryIP" /> class.
@@ -48,7 +48,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="assigneeId">ID of resource the [Primary IP](#primary-ips) is assigned to.  &#x60;null&#x60; if the [Primary IP](#primary-ips) is not assigned. </param>
         /// <param name="autoDelete">Auto deletion state.  If enabled the [Primary IP](#primary-ips) will be deleted once the assigned resource gets deleted.  (default to false)</param>
         [JsonConstructor]
-        internal PrimaryIP(AssigneeTypeEnum assigneeType, bool blocked, string created, Datacenter datacenter, List<DnsPtr> dnsPtr, long id, string ip, Dictionary<string, string> labels, string name, Protection protection, IpType type, long? assigneeId = default, bool autoDelete = false)
+        public PrimaryIP(AssigneeTypeEnum assigneeType, bool blocked, string created, Datacenter datacenter, List<DnsPtr> dnsPtr, long id, string ip, Dictionary<string, string> labels, string name, Protection protection, IpType type, long? assigneeId = default, bool autoDelete = false)
         {
             AssigneeType = assigneeType;
             Blocked = blocked;
@@ -72,7 +72,7 @@ namespace Hetzner.Cloud.Model
         /// Type of resource the [Primary IP](#primary-ips) can get assigned to. 
         /// </summary>
         /// <value>Type of resource the [Primary IP](#primary-ips) can get assigned to. </value>
-        internal enum AssigneeTypeEnum
+        public enum AssigneeTypeEnum
         {
             /// <summary>
             /// Enum Server for value: server
@@ -263,7 +263,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="PrimaryIP" />
     /// </summary>
-    internal class PrimaryIPJsonConverter : JsonConverter<PrimaryIP>
+    public class PrimaryIPJsonConverter : JsonConverter<PrimaryIP>
     {
         /// <summary>
         /// Deserializes json to <see cref="PrimaryIP" />
@@ -520,5 +520,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(PrimaryIP))]
-    internal partial class PrimaryIPSerializationContext : JsonSerializerContext { }
+    public partial class PrimaryIPSerializationContext : JsonSerializerContext { }
 }

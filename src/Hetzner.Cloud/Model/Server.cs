@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Servers are virtual machines that can be provisioned.
     /// </summary>
-    internal partial class Server : IValidatableObject
+    public partial class Server : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Server" /> class.
@@ -57,7 +57,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="placementGroup">placementGroup</param>
         /// <param name="volumes">IDs of Volumes assigned to this Server</param>
         [JsonConstructor]
-        internal Server(string created, Datacenter datacenter, long id, Dictionary<string, string> labels, bool locked, string name, int primaryDiskSize, List<ServerPrivateNet> privateNet, ServerProtection protection, ServerPublicNet publicNet, bool rescueEnabled, ServerType serverType, StatusEnum status, string? backupWindow = default, ImageOptional? image = default, long? includedTraffic = default, long? ingoingTraffic = default, IsoOptional? iso = default, Option<List<long>?> loadBalancers = default, long? outgoingTraffic = default, Option<PlacementGroupNullable?> placementGroup = default, Option<List<long>?> volumes = default)
+        public Server(string created, Datacenter datacenter, long id, Dictionary<string, string> labels, bool locked, string name, int primaryDiskSize, List<ServerPrivateNet> privateNet, ServerProtection protection, ServerPublicNet publicNet, bool rescueEnabled, ServerType serverType, StatusEnum status, string? backupWindow = default, ImageOptional? image = default, long? includedTraffic = default, long? ingoingTraffic = default, IsoOptional? iso = default, Option<List<long>?> loadBalancers = default, long? outgoingTraffic = default, Option<PlacementGroupNullable?> placementGroup = default, Option<List<long>?> volumes = default)
         {
             Created = created;
             Datacenter = datacenter;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
         /// Status of the Server
         /// </summary>
         /// <value>Status of the Server</value>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Deleting for value: deleting
@@ -484,7 +484,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Server" />
     /// </summary>
-    internal class ServerJsonConverter : JsonConverter<Server>
+    public class ServerJsonConverter : JsonConverter<Server>
     {
         /// <summary>
         /// Deserializes json to <see cref="Server" />
@@ -860,5 +860,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Server))]
-    internal partial class ServerSerializationContext : JsonSerializerContext { }
+    public partial class ServerSerializationContext : JsonSerializerContext { }
 }

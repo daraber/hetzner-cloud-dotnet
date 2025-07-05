@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/isos
     /// </summary>
-    internal partial class ListIsosResponse : IValidatableObject
+    public partial class ListIsosResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListIsosResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="isos">isos</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListIsosResponse(List<Iso> isos, Meta meta)
+        public ListIsosResponse(List<Iso> isos, Meta meta)
         {
             Isos = isos;
             Meta = meta;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListIsosResponse" />
     /// </summary>
-    internal class ListIsosResponseJsonConverter : JsonConverter<ListIsosResponse>
+    public class ListIsosResponseJsonConverter : JsonConverter<ListIsosResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListIsosResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListIsosResponse))]
-    internal partial class ListIsosResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListIsosResponseSerializationContext : JsonSerializerContext { }
 }

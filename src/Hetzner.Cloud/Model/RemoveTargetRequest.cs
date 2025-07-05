@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/remove_target
     /// </summary>
-    internal partial class RemoveTargetRequest : IValidatableObject
+    public partial class RemoveTargetRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoveTargetRequest" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labelSelector">labelSelector</param>
         /// <param name="server">server</param>
         [JsonConstructor]
-        internal RemoveTargetRequest(TypeEnum type, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
+        public RemoveTargetRequest(TypeEnum type, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
         {
             Type = type;
             IpOption = ip;
@@ -54,7 +54,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the resource
         /// </summary>
         /// <value>Type of the resource</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Ip for value: ip
@@ -207,7 +207,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RemoveTargetRequest" />
     /// </summary>
-    internal class RemoveTargetRequestJsonConverter : JsonConverter<RemoveTargetRequest>
+    public class RemoveTargetRequestJsonConverter : JsonConverter<RemoveTargetRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="RemoveTargetRequest" />
@@ -342,5 +342,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RemoveTargetRequest))]
-    internal partial class RemoveTargetRequestSerializationContext : JsonSerializerContext { }
+    public partial class RemoveTargetRequestSerializationContext : JsonSerializerContext { }
 }

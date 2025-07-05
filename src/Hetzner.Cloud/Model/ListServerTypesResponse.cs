@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/server_types
     /// </summary>
-    internal partial class ListServerTypesResponse : IValidatableObject
+    public partial class ListServerTypesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListServerTypesResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="serverTypes">serverTypes</param>
         [JsonConstructor]
-        internal ListServerTypesResponse(Meta meta, List<ServerType> serverTypes)
+        public ListServerTypesResponse(Meta meta, List<ServerType> serverTypes)
         {
             Meta = meta;
             ServerTypes = serverTypes;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListServerTypesResponse" />
     /// </summary>
-    internal class ListServerTypesResponseJsonConverter : JsonConverter<ListServerTypesResponse>
+    public class ListServerTypesResponseJsonConverter : JsonConverter<ListServerTypesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListServerTypesResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListServerTypesResponse))]
-    internal partial class ListServerTypesResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListServerTypesResponseSerializationContext : JsonSerializerContext { }
 }

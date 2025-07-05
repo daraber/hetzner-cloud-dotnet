@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ListPricesResponsePricing
     /// </summary>
-    internal partial class ListPricesResponsePricing : IValidatableObject
+    public partial class ListPricesResponsePricing : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricing" /> class.
@@ -45,7 +45,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="vatRate">VAT rate used for calculating prices with VAT.</param>
         /// <param name="volume">volume</param>
         [JsonConstructor]
-        internal ListPricesResponsePricing(string currency, ListPricesResponsePricingFloatingIp floatingIp, List<ListPricesResponsePricingFloatingIps> floatingIps, ListPricesResponsePricingImage image, List<ListPricesResponsePricingLoadBalancerTypes> loadBalancerTypes, List<ListPricesResponsePricingPrimaryIps> primaryIps, ListPricesResponsePricingServerBackup serverBackup, List<ListPricesResponsePricingServerTypes> serverTypes, decimal vatRate, ListPricesResponsePricingVolume volume)
+        public ListPricesResponsePricing(string currency, ListPricesResponsePricingFloatingIp floatingIp, List<ListPricesResponsePricingFloatingIps> floatingIps, ListPricesResponsePricingImage image, List<ListPricesResponsePricingLoadBalancerTypes> loadBalancerTypes, List<ListPricesResponsePricingPrimaryIps> primaryIps, ListPricesResponsePricingServerBackup serverBackup, List<ListPricesResponsePricingServerTypes> serverTypes, decimal vatRate, ListPricesResponsePricingVolume volume)
         {
             Currency = currency;
             FloatingIp = floatingIp;
@@ -167,7 +167,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricing" />
     /// </summary>
-    internal class ListPricesResponsePricingJsonConverter : JsonConverter<ListPricesResponsePricing>
+    public class ListPricesResponsePricingJsonConverter : JsonConverter<ListPricesResponsePricing>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricing" />
@@ -390,5 +390,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricing))]
-    internal partial class ListPricesResponsePricingSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingSerializationContext : JsonSerializerContext { }
 }

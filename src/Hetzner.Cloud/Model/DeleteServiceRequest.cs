@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/delete_service
     /// </summary>
-    internal partial class DeleteServiceRequest : IValidatableObject
+    public partial class DeleteServiceRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteServiceRequest" /> class.
         /// </summary>
         /// <param name="listenPort">The listen port of the service you want to delete</param>
         [JsonConstructor]
-        internal DeleteServiceRequest(int listenPort)
+        public DeleteServiceRequest(int listenPort)
         {
             ListenPort = listenPort;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeleteServiceRequest" />
     /// </summary>
-    internal class DeleteServiceRequestJsonConverter : JsonConverter<DeleteServiceRequest>
+    public class DeleteServiceRequestJsonConverter : JsonConverter<DeleteServiceRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeleteServiceRequest" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeleteServiceRequest))]
-    internal partial class DeleteServiceRequestSerializationContext : JsonSerializerContext { }
+    public partial class DeleteServiceRequestSerializationContext : JsonSerializerContext { }
 }

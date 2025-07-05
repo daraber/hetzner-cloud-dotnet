@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/add_target
     /// </summary>
-    internal partial class AddTargetResponse : IValidatableObject
+    public partial class AddTargetResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddTargetResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AddTargetResponse(Action action)
+        public AddTargetResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AddTargetResponse" />
     /// </summary>
-    internal class AddTargetResponseJsonConverter : JsonConverter<AddTargetResponse>
+    public class AddTargetResponseJsonConverter : JsonConverter<AddTargetResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AddTargetResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AddTargetResponse))]
-    internal partial class AddTargetResponseSerializationContext : JsonSerializerContext { }
+    public partial class AddTargetResponseSerializationContext : JsonSerializerContext { }
 }

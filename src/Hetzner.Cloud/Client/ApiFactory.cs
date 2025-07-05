@@ -1,13 +1,13 @@
 using System;
-using Hetzner.Cloud.Api;
 using Microsoft.Extensions.DependencyInjection;
+using Hetzner.Cloud.Api;
 
 namespace Hetzner.Cloud.Client
 {
     /// <summary>
     /// An IApiFactory interface
     /// </summary>
-    internal interface IApiFactory
+    public interface IApiFactory
     {
         /// <summary>
         /// A method to create an IApi of type IResult
@@ -20,7 +20,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// An ApiFactory
     /// </summary>
-    internal class ApiFactory : IApiFactory
+    public class ApiFactory : IApiFactory
     {
         /// <summary>
         /// The service provider

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Price of [Volumes](#volumes).
     /// </summary>
-    internal partial class ListPricesResponsePricingVolume : IValidatableObject
+    public partial class ListPricesResponsePricingVolume : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingVolume" /> class.
         /// </summary>
         /// <param name="pricePerGbMonth">pricePerGbMonth</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingVolume(Price pricePerGbMonth)
+        public ListPricesResponsePricingVolume(Price pricePerGbMonth)
         {
             PricePerGbMonth = pricePerGbMonth;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingVolume" />
     /// </summary>
-    internal class ListPricesResponsePricingVolumeJsonConverter : JsonConverter<ListPricesResponsePricingVolume>
+    public class ListPricesResponsePricingVolumeJsonConverter : JsonConverter<ListPricesResponsePricingVolume>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingVolume" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingVolume))]
-    internal partial class ListPricesResponsePricingVolumeSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingVolumeSerializationContext : JsonSerializerContext { }
 }

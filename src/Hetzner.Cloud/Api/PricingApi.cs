@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IPricingApi : IApi
+    public interface IPricingApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -60,7 +60,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListPricesApiResponse"/>
     /// </summary>
-    internal interface IListPricesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPricesResponse?>
+    public interface IListPricesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPricesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -72,7 +72,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class PricingApiEvents
+    public class PricingApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -98,7 +98,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class PricingApi : IPricingApi
+    public sealed partial class PricingApi : IPricingApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -275,7 +275,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListPricesApiResponse"/>
         /// </summary>
-        internal partial class ListPricesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPricesApiResponse
+        public partial class ListPricesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPricesApiResponse
         {
             /// <summary>
             /// The logger

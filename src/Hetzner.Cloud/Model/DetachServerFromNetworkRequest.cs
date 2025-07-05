@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/detach_from_network
     /// </summary>
-    internal partial class DetachServerFromNetworkRequest : IValidatableObject
+    public partial class DetachServerFromNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DetachServerFromNetworkRequest" /> class.
         /// </summary>
         /// <param name="network">ID of an existing network to detach the Server from</param>
         [JsonConstructor]
-        internal DetachServerFromNetworkRequest(long network)
+        public DetachServerFromNetworkRequest(long network)
         {
             Network = network;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DetachServerFromNetworkRequest" />
     /// </summary>
-    internal class DetachServerFromNetworkRequestJsonConverter : JsonConverter<DetachServerFromNetworkRequest>
+    public class DetachServerFromNetworkRequestJsonConverter : JsonConverter<DetachServerFromNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="DetachServerFromNetworkRequest" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DetachServerFromNetworkRequest))]
-    internal partial class DetachServerFromNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class DetachServerFromNetworkRequestSerializationContext : JsonSerializerContext { }
 }

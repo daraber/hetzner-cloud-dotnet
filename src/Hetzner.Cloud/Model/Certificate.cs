@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// TLS/SSL Certificates prove the identity of a Server and are used to encrypt client traffic.
     /// </summary>
-    internal partial class Certificate : IValidatableObject
+    public partial class Certificate : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate" /> class.
@@ -47,7 +47,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="status">status</param>
         /// <param name="type">Type of the Certificate</param>
         [JsonConstructor]
-        internal Certificate(string created, List<string> domainNames, long id, Dictionary<string, string> labels, string name, List<Resource> usedBy, string? varCertificate = default, string? fingerprint = default, string? notValidAfter = default, string? notValidBefore = default, Option<CertificateStatus?> status = default, Option<TypeEnum?> type = default)
+        public Certificate(string created, List<string> domainNames, long id, Dictionary<string, string> labels, string name, List<Resource> usedBy, string? varCertificate = default, string? fingerprint = default, string? notValidAfter = default, string? notValidBefore = default, Option<CertificateStatus?> status = default, Option<TypeEnum?> type = default)
         {
             Created = created;
             DomainNames = domainNames;
@@ -70,7 +70,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the Certificate
         /// </summary>
         /// <value>Type of the Certificate</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Managed for value: managed
@@ -285,7 +285,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Certificate" />
     /// </summary>
-    internal class CertificateJsonConverter : JsonConverter<Certificate>
+    public class CertificateJsonConverter : JsonConverter<Certificate>
     {
         /// <summary>
         /// Deserializes json to <see cref="Certificate" />
@@ -519,5 +519,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Certificate))]
-    internal partial class CertificateSerializationContext : JsonSerializerContext { }
+    public partial class CertificateSerializationContext : JsonSerializerContext { }
 }

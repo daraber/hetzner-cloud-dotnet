@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/change_alias_ips
     /// </summary>
-    internal partial class ChangeAliasIpsOfNetworkResponse : IValidatableObject
+    public partial class ChangeAliasIpsOfNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeAliasIpsOfNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeAliasIpsOfNetworkResponse(Action action)
+        public ChangeAliasIpsOfNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeAliasIpsOfNetworkResponse" />
     /// </summary>
-    internal class ChangeAliasIpsOfNetworkResponseJsonConverter : JsonConverter<ChangeAliasIpsOfNetworkResponse>
+    public class ChangeAliasIpsOfNetworkResponseJsonConverter : JsonConverter<ChangeAliasIpsOfNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeAliasIpsOfNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeAliasIpsOfNetworkResponse))]
-    internal partial class ChangeAliasIpsOfNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeAliasIpsOfNetworkResponseSerializationContext : JsonSerializerContext { }
 }

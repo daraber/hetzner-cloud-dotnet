@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/networks/{id}
     /// </summary>
-    internal partial class ReplaceNetworkResponse : IValidatableObject
+    public partial class ReplaceNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceNetworkResponse" /> class.
         /// </summary>
         /// <param name="network">network</param>
         [JsonConstructor]
-        internal ReplaceNetworkResponse(Option<Network?> network = default)
+        public ReplaceNetworkResponse(Option<Network?> network = default)
         {
             NetworkOption = network;
             OnCreated();
@@ -84,7 +84,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceNetworkResponse" />
     /// </summary>
-    internal class ReplaceNetworkResponseJsonConverter : JsonConverter<ReplaceNetworkResponse>
+    public class ReplaceNetworkResponseJsonConverter : JsonConverter<ReplaceNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceNetworkResponse" />
@@ -175,5 +175,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceNetworkResponse))]
-    internal partial class ReplaceNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceNetworkResponseSerializationContext : JsonSerializerContext { }
 }

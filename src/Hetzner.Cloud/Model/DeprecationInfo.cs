@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Describes if, when and how the resource is deprecated. If this field is set to &#x60;null&#x60; the resource is not deprecated. If a value is set, it is considered deprecated. 
     /// </summary>
-    internal partial class DeprecationInfo : IValidatableObject
+    public partial class DeprecationInfo : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeprecationInfo" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="announced">Date of the deprecation announcement. </param>
         /// <param name="unavailableAfter">Date of the deprecated resource removal.  Once this date is reached, the resource will not be returned by resource type \&quot;list\&quot; endpoint, and the resource can not be used to create new resources. For example, if this is an image, you can not create new servers with this image after the mentioned date. </param>
         [JsonConstructor]
-        internal DeprecationInfo(string announced, string unavailableAfter)
+        public DeprecationInfo(string announced, string unavailableAfter)
         {
             Announced = announced;
             UnavailableAfter = unavailableAfter;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeprecationInfo" />
     /// </summary>
-    internal class DeprecationInfoJsonConverter : JsonConverter<DeprecationInfo>
+    public class DeprecationInfoJsonConverter : JsonConverter<DeprecationInfo>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeprecationInfo" />
@@ -195,5 +195,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeprecationInfo))]
-    internal partial class DeprecationInfoSerializationContext : JsonSerializerContext { }
+    public partial class DeprecationInfoSerializationContext : JsonSerializerContext { }
 }

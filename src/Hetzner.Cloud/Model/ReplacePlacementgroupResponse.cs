@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/placement_groups/{id}
     /// </summary>
-    internal partial class ReplacePlacementgroupResponse : IValidatableObject
+    public partial class ReplacePlacementgroupResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacePlacementgroupResponse" /> class.
         /// </summary>
         /// <param name="placementGroup">placementGroup</param>
         [JsonConstructor]
-        internal ReplacePlacementgroupResponse(PlacementGroup placementGroup)
+        public ReplacePlacementgroupResponse(PlacementGroup placementGroup)
         {
             PlacementGroup = placementGroup;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplacePlacementgroupResponse" />
     /// </summary>
-    internal class ReplacePlacementgroupResponseJsonConverter : JsonConverter<ReplacePlacementgroupResponse>
+    public class ReplacePlacementgroupResponseJsonConverter : JsonConverter<ReplacePlacementgroupResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplacePlacementgroupResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplacePlacementgroupResponse))]
-    internal partial class ReplacePlacementgroupResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplacePlacementgroupResponseSerializationContext : JsonSerializerContext { }
 }

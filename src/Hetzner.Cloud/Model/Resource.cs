@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Resource
     /// </summary>
-    internal partial class Resource : IValidatableObject
+    public partial class Resource : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Resource" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="id">ID of the Resource. | ID of resource referenced</param>
         /// <param name="type">Type of the Resource. | Type of resource referenced</param>
         [JsonConstructor]
-        internal Resource(long id, string type)
+        public Resource(long id, string type)
         {
             Id = id;
             Type = type;
@@ -96,7 +96,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Resource" />
     /// </summary>
-    internal class ResourceJsonConverter : JsonConverter<Resource>
+    public class ResourceJsonConverter : JsonConverter<Resource>
     {
         /// <summary>
         /// Deserializes json to <see cref="Resource" />
@@ -198,5 +198,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Resource))]
-    internal partial class ResourceSerializationContext : JsonSerializerContext { }
+    public partial class ResourceSerializationContext : JsonSerializerContext { }
 }

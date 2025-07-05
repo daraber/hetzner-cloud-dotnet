@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// FloatingIp
     /// </summary>
-    internal partial class FloatingIp : IValidatableObject
+    public partial class FloatingIp : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FloatingIp" /> class.
@@ -47,7 +47,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="description">Description of the Resource.</param>
         /// <param name="server">[Server](#servers) the [Floating IP](#floating-ips) is assigned to.  &#x60;null&#x60; if not assigned. </param>
         [JsonConstructor]
-        internal FloatingIp(bool blocked, string created, List<DnsPtr> dnsPtr, Location homeLocation, long id, string ip, Dictionary<string, string> labels, string name, Protection protection, IpType type, string? description = default, long? server = default)
+        public FloatingIp(bool blocked, string created, List<DnsPtr> dnsPtr, Location homeLocation, long id, string ip, Dictionary<string, string> labels, string name, Protection protection, IpType type, string? description = default, long? server = default)
         {
             Blocked = blocked;
             Created = created;
@@ -199,7 +199,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="FloatingIp" />
     /// </summary>
-    internal class FloatingIpJsonConverter : JsonConverter<FloatingIp>
+    public class FloatingIpJsonConverter : JsonConverter<FloatingIp>
     {
         /// <summary>
         /// Deserializes json to <see cref="FloatingIp" />
@@ -442,5 +442,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(FloatingIp))]
-    internal partial class FloatingIpSerializationContext : JsonSerializerContext { }
+    public partial class FloatingIpSerializationContext : JsonSerializerContext { }
 }

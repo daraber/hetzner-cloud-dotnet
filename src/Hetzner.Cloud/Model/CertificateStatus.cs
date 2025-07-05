@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Current status of a type &#x60;managed&#x60; Certificate, always *null* for type &#x60;uploaded&#x60; Certificates
     /// </summary>
-    internal partial class CertificateStatus : IValidatableObject
+    public partial class CertificateStatus : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateStatus" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="issuance">Status of the issuance process of the Certificate</param>
         /// <param name="renewal">Status of the renewal process of the Certificate.</param>
         [JsonConstructor]
-        internal CertificateStatus(Option<CertificateStatusError?> error = default, Option<IssuanceEnum?> issuance = default, Option<RenewalEnum?> renewal = default)
+        public CertificateStatus(Option<CertificateStatusError?> error = default, Option<IssuanceEnum?> issuance = default, Option<RenewalEnum?> renewal = default)
         {
             ErrorOption = error;
             IssuanceOption = issuance;
@@ -52,7 +52,7 @@ namespace Hetzner.Cloud.Model
         /// Status of the issuance process of the Certificate
         /// </summary>
         /// <value>Status of the issuance process of the Certificate</value>
-        internal enum IssuanceEnum
+        public enum IssuanceEnum
         {
             /// <summary>
             /// Enum Completed for value: completed
@@ -148,7 +148,7 @@ namespace Hetzner.Cloud.Model
         /// Status of the renewal process of the Certificate.
         /// </summary>
         /// <value>Status of the renewal process of the Certificate.</value>
-        internal enum RenewalEnum
+        public enum RenewalEnum
         {
             /// <summary>
             /// Enum Failed for value: failed
@@ -296,7 +296,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CertificateStatus" />
     /// </summary>
-    internal class CertificateStatusJsonConverter : JsonConverter<CertificateStatus>
+    public class CertificateStatusJsonConverter : JsonConverter<CertificateStatus>
     {
         /// <summary>
         /// Deserializes json to <see cref="CertificateStatus" />
@@ -406,5 +406,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CertificateStatus))]
-    internal partial class CertificateStatusSerializationContext : JsonSerializerContext { }
+    public partial class CertificateStatusSerializationContext : JsonSerializerContext { }
 }

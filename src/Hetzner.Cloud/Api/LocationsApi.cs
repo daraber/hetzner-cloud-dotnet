@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface ILocationsApi : IApi
+    public interface ILocationsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -91,7 +91,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetLocationApiResponse"/>
     /// </summary>
-    internal interface IGetLocationApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLocationResponse?>
+    public interface IGetLocationApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLocationResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -103,7 +103,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListLocationsApiResponse"/>
     /// </summary>
-    internal interface IListLocationsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLocationsResponse?>
+    public interface IListLocationsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLocationsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -115,7 +115,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class LocationsApiEvents
+    public class LocationsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -161,7 +161,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class LocationsApi : ILocationsApi
+    public sealed partial class LocationsApi : ILocationsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -349,7 +349,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetLocationApiResponse"/>
         /// </summary>
-        internal partial class GetLocationApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLocationApiResponse
+        public partial class GetLocationApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLocationApiResponse
         {
             /// <summary>
             /// The logger
@@ -617,7 +617,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListLocationsApiResponse"/>
         /// </summary>
-        internal partial class ListLocationsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLocationsApiResponse
+        public partial class ListLocationsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLocationsApiResponse
         {
             /// <summary>
             /// The logger

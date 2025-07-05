@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/floating_ips/{id}/actions/unassign
     /// </summary>
-    internal partial class UnassignFloatingIpResponse : IValidatableObject
+    public partial class UnassignFloatingIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UnassignFloatingIpResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal UnassignFloatingIpResponse(Action action)
+        public UnassignFloatingIpResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="UnassignFloatingIpResponse" />
     /// </summary>
-    internal class UnassignFloatingIpResponseJsonConverter : JsonConverter<UnassignFloatingIpResponse>
+    public class UnassignFloatingIpResponseJsonConverter : JsonConverter<UnassignFloatingIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="UnassignFloatingIpResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(UnassignFloatingIpResponse))]
-    internal partial class UnassignFloatingIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class UnassignFloatingIpResponseSerializationContext : JsonSerializerContext { }
 }

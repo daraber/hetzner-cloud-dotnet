@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/primary_ips
     /// </summary>
-    internal partial class ListPrimaryIpsResponse : IValidatableObject
+    public partial class ListPrimaryIpsResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPrimaryIpsResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="primaryIps">primaryIps</param>
         [JsonConstructor]
-        internal ListPrimaryIpsResponse(Meta meta, List<PrimaryIP> primaryIps)
+        public ListPrimaryIpsResponse(Meta meta, List<PrimaryIP> primaryIps)
         {
             Meta = meta;
             PrimaryIps = primaryIps;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPrimaryIpsResponse" />
     /// </summary>
-    internal class ListPrimaryIpsResponseJsonConverter : JsonConverter<ListPrimaryIpsResponse>
+    public class ListPrimaryIpsResponseJsonConverter : JsonConverter<ListPrimaryIpsResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPrimaryIpsResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPrimaryIpsResponse))]
-    internal partial class ListPrimaryIpsResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListPrimaryIpsResponseSerializationContext : JsonSerializerContext { }
 }

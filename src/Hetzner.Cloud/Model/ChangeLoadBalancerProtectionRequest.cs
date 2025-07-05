@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeLoadBalancerProtectionRequest : IValidatableObject
+    public partial class ChangeLoadBalancerProtectionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeLoadBalancerProtectionRequest" /> class.
         /// </summary>
         /// <param name="delete">If true, prevents the Load Balancer from being deleted</param>
         [JsonConstructor]
-        internal ChangeLoadBalancerProtectionRequest(Option<bool?> delete = default)
+        public ChangeLoadBalancerProtectionRequest(Option<bool?> delete = default)
         {
             DeleteOption = delete;
             OnCreated();
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeLoadBalancerProtectionRequest" />
     /// </summary>
-    internal class ChangeLoadBalancerProtectionRequestJsonConverter : JsonConverter<ChangeLoadBalancerProtectionRequest>
+    public class ChangeLoadBalancerProtectionRequestJsonConverter : JsonConverter<ChangeLoadBalancerProtectionRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeLoadBalancerProtectionRequest" />
@@ -171,5 +171,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeLoadBalancerProtectionRequest))]
-    internal partial class ChangeLoadBalancerProtectionRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeLoadBalancerProtectionRequestSerializationContext : JsonSerializerContext { }
 }

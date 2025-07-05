@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Configuration option for protocols http and https
     /// </summary>
-    internal partial class Http : IValidatableObject
+    public partial class Http : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Http" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="redirectHttp">Redirect HTTP requests to HTTPS. Only available if &#x60;protocol&#x60; is &#x60;https&#x60;. (default to false)</param>
         /// <param name="stickySessions">Use sticky sessions. Only available if &#x60;protocol&#x60; is &#x60;http&#x60; or &#x60;https&#x60;. (default to false)</param>
         [JsonConstructor]
-        internal Http(Option<List<long>?> certificates = default, Option<int?> cookieLifetime = default, Option<string?> cookieName = default, Option<bool?> redirectHttp = default, Option<bool?> stickySessions = default)
+        public Http(Option<List<long>?> certificates = default, Option<int?> cookieLifetime = default, Option<string?> cookieName = default, Option<bool?> redirectHttp = default, Option<bool?> stickySessions = default)
         {
             CertificatesOption = certificates;
             CookieLifetimeOption = cookieLifetime;
@@ -158,7 +158,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Http" />
     /// </summary>
-    internal class HttpJsonConverter : JsonConverter<Http>
+    public class HttpJsonConverter : JsonConverter<Http>
     {
         /// <summary>
         /// Deserializes json to <see cref="Http" />
@@ -291,5 +291,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Http))]
-    internal partial class HttpSerializationContext : JsonSerializerContext { }
+    public partial class HttpSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Configuration for type LabelSelector, required if type is &#x60;label_selector&#x60;
     /// </summary>
-    internal partial class LabelSelector : IValidatableObject
+    public partial class LabelSelector : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LabelSelector" /> class.
         /// </summary>
         /// <param name="selector">Label selector | The selector.</param>
         [JsonConstructor]
-        internal LabelSelector(string selector)
+        public LabelSelector(string selector)
         {
             Selector = selector;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LabelSelector" />
     /// </summary>
-    internal class LabelSelectorJsonConverter : JsonConverter<LabelSelector>
+    public class LabelSelectorJsonConverter : JsonConverter<LabelSelector>
     {
         /// <summary>
         /// Deserializes json to <see cref="LabelSelector" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LabelSelector))]
-    internal partial class LabelSelectorSerializationContext : JsonSerializerContext { }
+    public partial class LabelSelectorSerializationContext : JsonSerializerContext { }
 }

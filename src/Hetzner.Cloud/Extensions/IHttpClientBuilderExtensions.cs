@@ -12,18 +12,16 @@
 using System;
 using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Polly;
-using Polly.CircuitBreaker;
-using Polly.Extensions.Http;
-using Polly.Retry;
 using Polly.Timeout;
+using Polly.Extensions.Http;
+using Polly;
 
 namespace Hetzner.Cloud.Extensions
 {
     /// <summary>
     /// Extension methods for IHttpClientBuilder
     /// </summary>
-    internal static class IHttpClientBuilderExtensions
+    public static class IHttpClientBuilderExtensions
     {
         /// <summary>
         /// Adds a Polly retry policy to your clients.
@@ -65,7 +63,7 @@ namespace Hetzner.Cloud.Extensions
             return client;
         }
 
-        private static AsyncRetryPolicy<HttpResponseMessage> RetryPolicy(int retries)
+        private static Polly.Retry.AsyncRetryPolicy<HttpResponseMessage> RetryPolicy(int retries)
             => HttpPolicyExtensions
                 .HandleTransientHttpError()
                 .Or<TimeoutRejectedException>()
@@ -74,7 +72,7 @@ namespace Hetzner.Cloud.Extensions
         private static AsyncTimeoutPolicy<HttpResponseMessage> TimeoutPolicy(TimeSpan timeout)
             => Policy.TimeoutAsync<HttpResponseMessage>(timeout);
 
-        private static AsyncCircuitBreakerPolicy<HttpResponseMessage> CircuitBreakerPolicy(
+        private static Polly.CircuitBreaker.AsyncCircuitBreakerPolicy<HttpResponseMessage> CircuitBreakerPolicy(
             PolicyBuilder<HttpResponseMessage> builder, int handledEventsAllowedBeforeBreaking, TimeSpan durationOfBreak)
                 => builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking, durationOfBreak);
     }

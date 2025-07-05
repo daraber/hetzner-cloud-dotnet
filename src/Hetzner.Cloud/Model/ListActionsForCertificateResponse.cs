@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/certificates/{id}/actions
     /// </summary>
-    internal partial class ListActionsForCertificateResponse : IValidatableObject
+    public partial class ListActionsForCertificateResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListActionsForCertificateResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="actions">actions</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListActionsForCertificateResponse(List<Action> actions, Meta meta)
+        public ListActionsForCertificateResponse(List<Action> actions, Meta meta)
         {
             Actions = actions;
             Meta = meta;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListActionsForCertificateResponse" />
     /// </summary>
-    internal class ListActionsForCertificateResponseJsonConverter : JsonConverter<ListActionsForCertificateResponse>
+    public class ListActionsForCertificateResponseJsonConverter : JsonConverter<ListActionsForCertificateResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListActionsForCertificateResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListActionsForCertificateResponse))]
-    internal partial class ListActionsForCertificateResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListActionsForCertificateResponseSerializationContext : JsonSerializerContext { }
 }

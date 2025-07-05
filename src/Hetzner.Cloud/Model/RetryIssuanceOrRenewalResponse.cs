@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/certificates/{id}/actions/retry
     /// </summary>
-    internal partial class RetryIssuanceOrRenewalResponse : IValidatableObject
+    public partial class RetryIssuanceOrRenewalResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RetryIssuanceOrRenewalResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal RetryIssuanceOrRenewalResponse(Action action)
+        public RetryIssuanceOrRenewalResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RetryIssuanceOrRenewalResponse" />
     /// </summary>
-    internal class RetryIssuanceOrRenewalResponseJsonConverter : JsonConverter<RetryIssuanceOrRenewalResponse>
+    public class RetryIssuanceOrRenewalResponseJsonConverter : JsonConverter<RetryIssuanceOrRenewalResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RetryIssuanceOrRenewalResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RetryIssuanceOrRenewalResponse))]
-    internal partial class RetryIssuanceOrRenewalResponseSerializationContext : JsonSerializerContext { }
+    public partial class RetryIssuanceOrRenewalResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/primary_ips/{id}/actions/assign
     /// </summary>
-    internal partial class AssignPrimaryIpToResourceResponse : IValidatableObject
+    public partial class AssignPrimaryIpToResourceResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignPrimaryIpToResourceResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AssignPrimaryIpToResourceResponse(Action action)
+        public AssignPrimaryIpToResourceResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AssignPrimaryIpToResourceResponse" />
     /// </summary>
-    internal class AssignPrimaryIpToResourceResponseJsonConverter : JsonConverter<AssignPrimaryIpToResourceResponse>
+    public class AssignPrimaryIpToResourceResponseJsonConverter : JsonConverter<AssignPrimaryIpToResourceResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AssignPrimaryIpToResourceResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AssignPrimaryIpToResourceResponse))]
-    internal partial class AssignPrimaryIpToResourceResponseSerializationContext : JsonSerializerContext { }
+    public partial class AssignPrimaryIpToResourceResponseSerializationContext : JsonSerializerContext { }
 }

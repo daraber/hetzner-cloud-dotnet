@@ -20,7 +20,7 @@ namespace Hetzner.Cloud.Client
     /// Provides a token to the api clients. Tokens will be rate limited based on the provided TimeSpan.
     /// </summary>
     /// <typeparam name="TTokenBase"></typeparam>
-    internal class RateLimitProvider<TTokenBase> : TokenProvider<TTokenBase> where TTokenBase : TokenBase
+    public class RateLimitProvider<TTokenBase> : TokenProvider<TTokenBase> where TTokenBase : TokenBase
     {
         internal Dictionary<string, global::System.Threading.Channels.Channel<TTokenBase>> AvailableTokens { get; } = new();
 

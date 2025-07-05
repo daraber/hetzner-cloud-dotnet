@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeLoadBalancerProtectionResponse : IValidatableObject
+    public partial class ChangeLoadBalancerProtectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeLoadBalancerProtectionResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeLoadBalancerProtectionResponse(Action action)
+        public ChangeLoadBalancerProtectionResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeLoadBalancerProtectionResponse" />
     /// </summary>
-    internal class ChangeLoadBalancerProtectionResponseJsonConverter : JsonConverter<ChangeLoadBalancerProtectionResponse>
+    public class ChangeLoadBalancerProtectionResponseJsonConverter : JsonConverter<ChangeLoadBalancerProtectionResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeLoadBalancerProtectionResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeLoadBalancerProtectionResponse))]
-    internal partial class ChangeLoadBalancerProtectionResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeLoadBalancerProtectionResponseSerializationContext : JsonSerializerContext { }
 }

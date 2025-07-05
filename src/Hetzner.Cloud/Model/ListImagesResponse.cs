@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/images
     /// </summary>
-    internal partial class ListImagesResponse : IValidatableObject
+    public partial class ListImagesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListImagesResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="images">images</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListImagesResponse(List<Image> images, Meta meta)
+        public ListImagesResponse(List<Image> images, Meta meta)
         {
             Images = images;
             Meta = meta;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListImagesResponse" />
     /// </summary>
-    internal class ListImagesResponseJsonConverter : JsonConverter<ListImagesResponse>
+    public class ListImagesResponseJsonConverter : JsonConverter<ListImagesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListImagesResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListImagesResponse))]
-    internal partial class ListImagesResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListImagesResponseSerializationContext : JsonSerializerContext { }
 }

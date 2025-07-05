@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers
     /// </summary>
-    internal partial class CreateServerResponse : IValidatableObject
+    public partial class CreateServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateServerResponse" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="server">server</param>
         /// <param name="rootPassword">Root password when no SSH keys have been specified</param>
         [JsonConstructor]
-        internal CreateServerResponse(Action action, List<Action> nextActions, Server server, string? rootPassword = default)
+        public CreateServerResponse(Action action, List<Action> nextActions, Server server, string? rootPassword = default)
         {
             Action = action;
             NextActions = nextActions;
@@ -106,7 +106,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateServerResponse" />
     /// </summary>
-    internal class CreateServerResponseJsonConverter : JsonConverter<CreateServerResponse>
+    public class CreateServerResponseJsonConverter : JsonConverter<CreateServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateServerResponse" />
@@ -238,5 +238,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateServerResponse))]
-    internal partial class CreateServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class CreateServerResponseSerializationContext : JsonSerializerContext { }
 }

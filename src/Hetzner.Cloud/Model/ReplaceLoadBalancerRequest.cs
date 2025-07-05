@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/load_balancers/{id}
     /// </summary>
-    internal partial class ReplaceLoadBalancerRequest : IValidatableObject
+    public partial class ReplaceLoadBalancerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceLoadBalancerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New Load Balancer name</param>
         [JsonConstructor]
-        internal ReplaceLoadBalancerRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceLoadBalancerRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceLoadBalancerRequest" />
     /// </summary>
-    internal class ReplaceLoadBalancerRequestJsonConverter : JsonConverter<ReplaceLoadBalancerRequest>
+    public class ReplaceLoadBalancerRequestJsonConverter : JsonConverter<ReplaceLoadBalancerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceLoadBalancerRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceLoadBalancerRequest))]
-    internal partial class ReplaceLoadBalancerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceLoadBalancerRequestSerializationContext : JsonSerializerContext { }
 }

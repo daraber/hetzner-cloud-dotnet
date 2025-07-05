@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers
     /// </summary>
-    internal partial class CreateLoadBalancerRequest : IValidatableObject
+    public partial class CreateLoadBalancerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLoadBalancerRequest" /> class.
@@ -45,7 +45,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="services">Array of services</param>
         /// <param name="targets">Array of targets</param>
         [JsonConstructor]
-        internal CreateLoadBalancerRequest(string loadBalancerType, string name, Option<LoadBalancerAlgorithm?> algorithm = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<long?> network = default, Option<string?> networkZone = default, Option<bool?> publicInterface = default, Option<List<LoadBalancerService>?> services = default, Option<List<LoadBalancerAddTarget>?> targets = default)
+        public CreateLoadBalancerRequest(string loadBalancerType, string name, Option<LoadBalancerAlgorithm?> algorithm = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<long?> network = default, Option<string?> networkZone = default, Option<bool?> publicInterface = default, Option<List<LoadBalancerService>?> services = default, Option<List<LoadBalancerAddTarget>?> targets = default)
         {
             LoadBalancerType = loadBalancerType;
             Name = name;
@@ -230,7 +230,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateLoadBalancerRequest" />
     /// </summary>
-    internal class CreateLoadBalancerRequestJsonConverter : JsonConverter<CreateLoadBalancerRequest>
+    public class CreateLoadBalancerRequestJsonConverter : JsonConverter<CreateLoadBalancerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateLoadBalancerRequest" />
@@ -442,5 +442,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateLoadBalancerRequest))]
-    internal partial class CreateLoadBalancerRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateLoadBalancerRequestSerializationContext : JsonSerializerContext { }
 }

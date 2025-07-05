@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/volumes/{id}/actions/resize
     /// </summary>
-    internal partial class ResizeVolumeResponse : IValidatableObject
+    public partial class ResizeVolumeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResizeVolumeResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ResizeVolumeResponse(Action action)
+        public ResizeVolumeResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ResizeVolumeResponse" />
     /// </summary>
-    internal class ResizeVolumeResponseJsonConverter : JsonConverter<ResizeVolumeResponse>
+    public class ResizeVolumeResponseJsonConverter : JsonConverter<ResizeVolumeResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ResizeVolumeResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ResizeVolumeResponse))]
-    internal partial class ResizeVolumeResponseSerializationContext : JsonSerializerContext { }
+    public partial class ResizeVolumeResponseSerializationContext : JsonSerializerContext { }
 }

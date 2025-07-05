@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/placement_groups
     /// </summary>
-    internal partial class ListPlacementgroupsResponse : IValidatableObject
+    public partial class ListPlacementgroupsResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPlacementgroupsResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="placementGroups">placementGroups</param>
         [JsonConstructor]
-        internal ListPlacementgroupsResponse(Meta meta, List<PlacementGroup> placementGroups)
+        public ListPlacementgroupsResponse(Meta meta, List<PlacementGroup> placementGroups)
         {
             Meta = meta;
             PlacementGroups = placementGroups;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPlacementgroupsResponse" />
     /// </summary>
-    internal class ListPlacementgroupsResponseJsonConverter : JsonConverter<ListPlacementgroupsResponse>
+    public class ListPlacementgroupsResponseJsonConverter : JsonConverter<ListPlacementgroupsResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPlacementgroupsResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPlacementgroupsResponse))]
-    internal partial class ListPlacementgroupsResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListPlacementgroupsResponseSerializationContext : JsonSerializerContext { }
 }

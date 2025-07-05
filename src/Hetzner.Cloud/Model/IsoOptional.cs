@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ISO Image that is attached to this Server. Null if no ISO is attached.
     /// </summary>
-    internal partial class IsoOptional : IValidatableObject
+    public partial class IsoOptional : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IsoOptional" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Unique identifier of the ISO. Only set for public ISOs</param>
         /// <param name="type">Type of the ISO</param>
         [JsonConstructor]
-        internal IsoOptional(string description, long id, ArchitectureOptional? architecture = default, DeprecationInfo? deprecation = default, string? name = default, TypeEnum? type = default)
+        public IsoOptional(string description, long id, ArchitectureOptional? architecture = default, DeprecationInfo? deprecation = default, string? name = default, TypeEnum? type = default)
         {
             Description = description;
             Id = id;
@@ -64,7 +64,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the ISO
         /// </summary>
         /// <value>Type of the ISO</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Private for value: private
@@ -205,7 +205,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="IsoOptional" />
     /// </summary>
-    internal class IsoOptionalJsonConverter : JsonConverter<IsoOptional>
+    public class IsoOptionalJsonConverter : JsonConverter<IsoOptional>
     {
         /// <summary>
         /// Deserializes json to <see cref="IsoOptional" />
@@ -368,5 +368,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(IsoOptional))]
-    internal partial class IsoOptionalSerializationContext : JsonSerializerContext { }
+    public partial class IsoOptionalSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Actions show the results and progress of asynchronous requests to the API.
     /// </summary>
-    internal partial class Action : IValidatableObject
+    public partial class Action : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
@@ -43,7 +43,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="error">error</param>
         /// <param name="finished">Point in time when the Action was finished (in ISO-8601 format). Only set if the Action is finished otherwise null.</param>
         [JsonConstructor]
-        internal Action(string command, long id, int progress, List<Resource> resources, string started, StatusEnum status, Error? error = default, string? finished = default)
+        public Action(string command, long id, int progress, List<Resource> resources, string started, StatusEnum status, Error? error = default, string? finished = default)
         {
             Command = command;
             Id = id;
@@ -62,7 +62,7 @@ namespace Hetzner.Cloud.Model
         /// Status of the Action.
         /// </summary>
         /// <value>Status of the Action.</value>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Error for value: error
@@ -239,7 +239,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Action" />
     /// </summary>
-    internal class ActionJsonConverter : JsonConverter<Action>
+    public class ActionJsonConverter : JsonConverter<Action>
     {
         /// <summary>
         /// Deserializes json to <see cref="Action" />
@@ -423,5 +423,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Action))]
-    internal partial class ActionSerializationContext : JsonSerializerContext { }
+    public partial class ActionSerializationContext : JsonSerializerContext { }
 }

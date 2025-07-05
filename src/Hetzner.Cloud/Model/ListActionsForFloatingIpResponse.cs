@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/floating_ips/{id}/actions
     /// </summary>
-    internal partial class ListActionsForFloatingIpResponse : IValidatableObject
+    public partial class ListActionsForFloatingIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListActionsForFloatingIpResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="actions">actions</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListActionsForFloatingIpResponse(List<Action> actions, Meta meta)
+        public ListActionsForFloatingIpResponse(List<Action> actions, Meta meta)
         {
             Actions = actions;
             Meta = meta;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListActionsForFloatingIpResponse" />
     /// </summary>
-    internal class ListActionsForFloatingIpResponseJsonConverter : JsonConverter<ListActionsForFloatingIpResponse>
+    public class ListActionsForFloatingIpResponseJsonConverter : JsonConverter<ListActionsForFloatingIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListActionsForFloatingIpResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListActionsForFloatingIpResponse))]
-    internal partial class ListActionsForFloatingIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListActionsForFloatingIpResponseSerializationContext : JsonSerializerContext { }
 }

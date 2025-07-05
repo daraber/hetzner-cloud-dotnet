@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/attach_to_network
     /// </summary>
-    internal partial class AttachServerToNetworkRequest : IValidatableObject
+    public partial class AttachServerToNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachServerToNetworkRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="aliasIps">Additional IPs to be assigned to this Server</param>
         /// <param name="ip">IP to request to be assigned to this Server; if you do not provide this then you will be auto assigned an IP address</param>
         [JsonConstructor]
-        internal AttachServerToNetworkRequest(long network, Option<List<string>?> aliasIps = default, Option<string?> ip = default)
+        public AttachServerToNetworkRequest(long network, Option<List<string>?> aliasIps = default, Option<string?> ip = default)
         {
             Network = network;
             AliasIpsOption = aliasIps;
@@ -115,7 +115,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachServerToNetworkRequest" />
     /// </summary>
-    internal class AttachServerToNetworkRequestJsonConverter : JsonConverter<AttachServerToNetworkRequest>
+    public class AttachServerToNetworkRequestJsonConverter : JsonConverter<AttachServerToNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachServerToNetworkRequest" />
@@ -230,5 +230,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachServerToNetworkRequest))]
-    internal partial class AttachServerToNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class AttachServerToNetworkRequestSerializationContext : JsonSerializerContext { }
 }

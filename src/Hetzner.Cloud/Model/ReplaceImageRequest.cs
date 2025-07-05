@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/images/{id}
     /// </summary>
-    internal partial class ReplaceImageRequest : IValidatableObject
+    public partial class ReplaceImageRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceImageRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="type">Destination Image type to convert to</param>
         [JsonConstructor]
-        internal ReplaceImageRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<TypeEnum?> type = default)
+        public ReplaceImageRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<TypeEnum?> type = default)
         {
             DescriptionOption = description;
             LabelsOption = labels;
@@ -52,7 +52,7 @@ namespace Hetzner.Cloud.Model
         /// Destination Image type to convert to
         /// </summary>
         /// <value>Destination Image type to convert to</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Snapshot for value: snapshot
@@ -174,7 +174,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceImageRequest" />
     /// </summary>
-    internal class ReplaceImageRequestJsonConverter : JsonConverter<ReplaceImageRequest>
+    public class ReplaceImageRequestJsonConverter : JsonConverter<ReplaceImageRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceImageRequest" />
@@ -289,5 +289,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceImageRequest))]
-    internal partial class ReplaceImageRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceImageRequestSerializationContext : JsonSerializerContext { }
 }

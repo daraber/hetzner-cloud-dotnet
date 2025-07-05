@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/enable_public_interface
     /// </summary>
-    internal partial class EnablePublicInterfaceOfLoadBalancerResponse : IValidatableObject
+    public partial class EnablePublicInterfaceOfLoadBalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnablePublicInterfaceOfLoadBalancerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal EnablePublicInterfaceOfLoadBalancerResponse(Action action)
+        public EnablePublicInterfaceOfLoadBalancerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="EnablePublicInterfaceOfLoadBalancerResponse" />
     /// </summary>
-    internal class EnablePublicInterfaceOfLoadBalancerResponseJsonConverter : JsonConverter<EnablePublicInterfaceOfLoadBalancerResponse>
+    public class EnablePublicInterfaceOfLoadBalancerResponseJsonConverter : JsonConverter<EnablePublicInterfaceOfLoadBalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="EnablePublicInterfaceOfLoadBalancerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(EnablePublicInterfaceOfLoadBalancerResponse))]
-    internal partial class EnablePublicInterfaceOfLoadBalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class EnablePublicInterfaceOfLoadBalancerResponseSerializationContext : JsonSerializerContext { }
 }

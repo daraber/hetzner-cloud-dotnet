@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/images/{id}
     /// </summary>
-    internal partial class ReplaceImageResponse : IValidatableObject
+    public partial class ReplaceImageResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceImageResponse" /> class.
         /// </summary>
         /// <param name="image">image</param>
         [JsonConstructor]
-        internal ReplaceImageResponse(Option<Image?> image = default)
+        public ReplaceImageResponse(Option<Image?> image = default)
         {
             ImageOption = image;
             OnCreated();
@@ -84,7 +84,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceImageResponse" />
     /// </summary>
-    internal class ReplaceImageResponseJsonConverter : JsonConverter<ReplaceImageResponse>
+    public class ReplaceImageResponseJsonConverter : JsonConverter<ReplaceImageResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceImageResponse" />
@@ -175,5 +175,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceImageResponse))]
-    internal partial class ReplaceImageResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceImageResponseSerializationContext : JsonSerializerContext { }
 }

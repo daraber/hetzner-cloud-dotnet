@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/shutdown
     /// </summary>
-    internal partial class ShutdownServerResponse : IValidatableObject
+    public partial class ShutdownServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ShutdownServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ShutdownServerResponse(Action action)
+        public ShutdownServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ShutdownServerResponse" />
     /// </summary>
-    internal class ShutdownServerResponseJsonConverter : JsonConverter<ShutdownServerResponse>
+    public class ShutdownServerResponseJsonConverter : JsonConverter<ShutdownServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ShutdownServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ShutdownServerResponse))]
-    internal partial class ShutdownServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ShutdownServerResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Protection configuration for the Server
     /// </summary>
-    internal partial class ServerProtection : IValidatableObject
+    public partial class ServerProtection : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerProtection" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="delete">If true, prevents the Server from being deleted</param>
         /// <param name="rebuild">If true, prevents the Server from being rebuilt</param>
         [JsonConstructor]
-        internal ServerProtection(bool delete, bool rebuild)
+        public ServerProtection(bool delete, bool rebuild)
         {
             Delete = delete;
             Rebuild = rebuild;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ServerProtection" />
     /// </summary>
-    internal class ServerProtectionJsonConverter : JsonConverter<ServerProtection>
+    public class ServerProtectionJsonConverter : JsonConverter<ServerProtection>
     {
         /// <summary>
         /// Deserializes json to <see cref="ServerProtection" />
@@ -189,5 +189,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ServerProtection))]
-    internal partial class ServerProtectionSerializationContext : JsonSerializerContext { }
+    public partial class ServerProtectionSerializationContext : JsonSerializerContext { }
 }

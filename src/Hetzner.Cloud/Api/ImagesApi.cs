@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IImagesApi : IApi
+    public interface IImagesApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -286,7 +286,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeImageProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeImageProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeImageProtectionResponse?>
+    public interface IChangeImageProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeImageProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -298,7 +298,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteImageApiResponse"/>
     /// </summary>
-    internal interface IDeleteImageApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteImageApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -310,7 +310,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForImageApiResponse"/>
     /// </summary>
-    internal interface IGetActionForImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForImageResponse?>
+    public interface IGetActionForImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForImageResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -322,7 +322,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetImageApiResponse"/>
     /// </summary>
-    internal interface IGetImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetImageResponse?>
+    public interface IGetImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetImageResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -334,7 +334,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetImageActionApiResponse"/>
     /// </summary>
-    internal interface IGetImageActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetImageActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -346,7 +346,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForImageApiResponse"/>
     /// </summary>
-    internal interface IListActionsForImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForImageResponse?>
+    public interface IListActionsForImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForImageResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -358,7 +358,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListImageActionsApiResponse"/>
     /// </summary>
-    internal interface IListImageActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListImageActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -370,7 +370,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListImagesApiResponse"/>
     /// </summary>
-    internal interface IListImagesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListImagesResponse?>
+    public interface IListImagesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListImagesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -382,7 +382,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceImageApiResponse"/>
     /// </summary>
-    internal interface IReplaceImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceImageResponse?>
+    public interface IReplaceImageApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceImageResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -394,7 +394,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class ImagesApiEvents
+    public class ImagesApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -580,7 +580,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class ImagesApi : IImagesApi
+    public sealed partial class ImagesApi : IImagesApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -801,7 +801,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeImageProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeImageProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeImageProtectionApiResponse
+        public partial class ChangeImageProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeImageProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1010,7 +1010,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteImageApiResponse"/>
         /// </summary>
-        internal partial class DeleteImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteImageApiResponse
+        public partial class DeleteImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteImageApiResponse
         {
             /// <summary>
             /// The logger
@@ -1203,7 +1203,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForImageApiResponse"/>
         /// </summary>
-        internal partial class GetActionForImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForImageApiResponse
+        public partial class GetActionForImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForImageApiResponse
         {
             /// <summary>
             /// The logger
@@ -1421,7 +1421,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetImageApiResponse"/>
         /// </summary>
-        internal partial class GetImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetImageApiResponse
+        public partial class GetImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetImageApiResponse
         {
             /// <summary>
             /// The logger
@@ -1639,7 +1639,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetImageActionApiResponse"/>
         /// </summary>
-        internal partial class GetImageActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetImageActionApiResponse
+        public partial class GetImageActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetImageActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1914,7 +1914,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForImageApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForImageApiResponse
+        public partial class ListActionsForImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForImageApiResponse
         {
             /// <summary>
             /// The logger
@@ -2191,7 +2191,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListImageActionsApiResponse"/>
         /// </summary>
-        internal partial class ListImageActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListImageActionsApiResponse
+        public partial class ListImageActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListImageActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2533,7 +2533,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListImagesApiResponse"/>
         /// </summary>
-        internal partial class ListImagesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListImagesApiResponse
+        public partial class ListImagesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListImagesApiResponse
         {
             /// <summary>
             /// The logger
@@ -2784,7 +2784,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceImageApiResponse"/>
         /// </summary>
-        internal partial class ReplaceImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceImageApiResponse
+        public partial class ReplaceImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceImageApiResponse
         {
             /// <summary>
             /// The logger

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/volumes/{id}/actions/detach
     /// </summary>
-    internal partial class DetachVolumeResponse : IValidatableObject
+    public partial class DetachVolumeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DetachVolumeResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DetachVolumeResponse(Action action)
+        public DetachVolumeResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DetachVolumeResponse" />
     /// </summary>
-    internal class DetachVolumeResponseJsonConverter : JsonConverter<DetachVolumeResponse>
+    public class DetachVolumeResponseJsonConverter : JsonConverter<DetachVolumeResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DetachVolumeResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DetachVolumeResponse))]
-    internal partial class DetachVolumeResponseSerializationContext : JsonSerializerContext { }
+    public partial class DetachVolumeResponseSerializationContext : JsonSerializerContext { }
 }

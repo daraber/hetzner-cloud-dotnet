@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/volumes
     /// </summary>
-    internal partial class CreateVolumeRequest : IValidatableObject
+    public partial class CreateVolumeRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateVolumeRequest" /> class.
@@ -42,7 +42,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="location">Location to create the Volume in (can be omitted if Server is specified)</param>
         /// <param name="server">Server to which to attach the Volume once it&#39;s created (Volume will be created in the same Location as the server)</param>
         [JsonConstructor]
-        internal CreateVolumeRequest(string name, int size, Option<bool?> automount = default, Option<string?> format = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<long?> server = default)
+        public CreateVolumeRequest(string name, int size, Option<bool?> automount = default, Option<string?> format = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<long?> server = default)
         {
             Name = name;
             Size = size;
@@ -179,7 +179,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateVolumeRequest" />
     /// </summary>
-    internal class CreateVolumeRequestJsonConverter : JsonConverter<CreateVolumeRequest>
+    public class CreateVolumeRequestJsonConverter : JsonConverter<CreateVolumeRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateVolumeRequest" />
@@ -342,5 +342,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateVolumeRequest))]
-    internal partial class CreateVolumeRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateVolumeRequestSerializationContext : JsonSerializerContext { }
 }

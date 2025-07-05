@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// [Location](#locations) the [Datacenter](#datacenters) is located at.  | [Location](#locations) the for the [Floating IP](#floating-ips) is located at.  Routing is optimized for this [Location](#locations).  | Location of the Volume. Volume can only be attached to Servers in the same Location.
     /// </summary>
-    internal partial class Location : IValidatableObject
+    public partial class Location : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
@@ -43,7 +43,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Unique identifier of the [Location](#locations).</param>
         /// <param name="networkZone">Name of the Network Zone this [Location](#locations) resides in.</param>
         [JsonConstructor]
-        internal Location(string city, string country, string description, long id, double latitude, double longitude, string name, string networkZone)
+        public Location(string city, string country, string description, long id, double latitude, double longitude, string name, string networkZone)
         {
             City = city;
             Country = country;
@@ -182,7 +182,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Location" />
     /// </summary>
-    internal class LocationJsonConverter : JsonConverter<Location>
+    public class LocationJsonConverter : JsonConverter<Location>
     {
         /// <summary>
         /// Deserializes json to <see cref="Location" />
@@ -368,5 +368,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Location))]
-    internal partial class LocationSerializationContext : JsonSerializerContext { }
+    public partial class LocationSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// You must specify the type of metric to get: open_connections, requests_per_second or bandwidth. You can also specify more than one type by comma separation, e.g. requests_per_second,bandwidth. Depending on the type you will get different time series data.
     /// </summary>
-    internal partial class Metrics : IValidatableObject
+    public partial class Metrics : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Metrics" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="step">Resolution of results in seconds.</param>
         /// <param name="timeSeries">Hash with timeseries information, containing the name of timeseries as key</param>
         [JsonConstructor]
-        internal Metrics(string end, string start, int step, Dictionary<string, MetricsTimeSeriesValue> timeSeries)
+        public Metrics(string end, string start, int step, Dictionary<string, MetricsTimeSeriesValue> timeSeries)
         {
             End = end;
             Start = start;
@@ -112,7 +112,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Metrics" />
     /// </summary>
-    internal class MetricsJsonConverter : JsonConverter<Metrics>
+    public class MetricsJsonConverter : JsonConverter<Metrics>
     {
         /// <summary>
         /// Deserializes json to <see cref="Metrics" />
@@ -245,5 +245,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Metrics))]
-    internal partial class MetricsSerializationContext : JsonSerializerContext { }
+    public partial class MetricsSerializationContext : JsonSerializerContext { }
 }

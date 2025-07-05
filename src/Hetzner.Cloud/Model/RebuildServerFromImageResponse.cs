@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/rebuild
     /// </summary>
-    internal partial class RebuildServerFromImageResponse : IValidatableObject
+    public partial class RebuildServerFromImageResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RebuildServerFromImageResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="action">action</param>
         /// <param name="rootPassword">New root password when not using SSH keys</param>
         [JsonConstructor]
-        internal RebuildServerFromImageResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
+        public RebuildServerFromImageResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
         {
             ActionOption = action;
             RootPasswordOption = rootPassword;
@@ -101,7 +101,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RebuildServerFromImageResponse" />
     /// </summary>
-    internal class RebuildServerFromImageResponseJsonConverter : JsonConverter<RebuildServerFromImageResponse>
+    public class RebuildServerFromImageResponseJsonConverter : JsonConverter<RebuildServerFromImageResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RebuildServerFromImageResponse" />
@@ -201,5 +201,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RebuildServerFromImageResponse))]
-    internal partial class RebuildServerFromImageResponseSerializationContext : JsonSerializerContext { }
+    public partial class RebuildServerFromImageResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/networks/{id}/actions/change_ip_range
     /// </summary>
-    internal partial class ChangeIpRangeOfNetworkResponse : IValidatableObject
+    public partial class ChangeIpRangeOfNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeIpRangeOfNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeIpRangeOfNetworkResponse(Action action)
+        public ChangeIpRangeOfNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeIpRangeOfNetworkResponse" />
     /// </summary>
-    internal class ChangeIpRangeOfNetworkResponseJsonConverter : JsonConverter<ChangeIpRangeOfNetworkResponse>
+    public class ChangeIpRangeOfNetworkResponseJsonConverter : JsonConverter<ChangeIpRangeOfNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeIpRangeOfNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeIpRangeOfNetworkResponse))]
-    internal partial class ChangeIpRangeOfNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeIpRangeOfNetworkResponseSerializationContext : JsonSerializerContext { }
 }

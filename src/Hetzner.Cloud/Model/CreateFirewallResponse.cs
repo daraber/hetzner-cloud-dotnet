@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/firewalls
     /// </summary>
-    internal partial class CreateFirewallResponse : IValidatableObject
+    public partial class CreateFirewallResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFirewallResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="actions">actions</param>
         /// <param name="firewall">firewall</param>
         [JsonConstructor]
-        internal CreateFirewallResponse(Option<List<Action>?> actions = default, Option<Firewall?> firewall = default)
+        public CreateFirewallResponse(Option<List<Action>?> actions = default, Option<Firewall?> firewall = default)
         {
             ActionsOption = actions;
             FirewallOption = firewall;
@@ -101,7 +101,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateFirewallResponse" />
     /// </summary>
-    internal class CreateFirewallResponseJsonConverter : JsonConverter<CreateFirewallResponse>
+    public class CreateFirewallResponseJsonConverter : JsonConverter<CreateFirewallResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateFirewallResponse" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateFirewallResponse))]
-    internal partial class CreateFirewallResponseSerializationContext : JsonSerializerContext { }
+    public partial class CreateFirewallResponseSerializationContext : JsonSerializerContext { }
 }

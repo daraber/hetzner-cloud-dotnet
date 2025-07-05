@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Price of [Floating IPs](#floating-ips).  **Deprecated**: This field is deprecated, please refer to the &#x60;floating_ips&#x60; field instead.  See the [Changelog](https://docs.hetzner.cloud/changelog#2024-08-29-field-floating_ip-in-pricing-response-is-now-deprecated) for more details. 
     /// </summary>
-    internal partial class ListPricesResponsePricingFloatingIp : IValidatableObject
+    public partial class ListPricesResponsePricingFloatingIp : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingFloatingIp" /> class.
         /// </summary>
         /// <param name="priceMonthly">priceMonthly</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingFloatingIp(Price priceMonthly)
+        public ListPricesResponsePricingFloatingIp(Price priceMonthly)
         {
             PriceMonthly = priceMonthly;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingFloatingIp" />
     /// </summary>
-    internal class ListPricesResponsePricingFloatingIpJsonConverter : JsonConverter<ListPricesResponsePricingFloatingIp>
+    public class ListPricesResponsePricingFloatingIpJsonConverter : JsonConverter<ListPricesResponsePricingFloatingIp>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingFloatingIp" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingFloatingIp))]
-    internal partial class ListPricesResponsePricingFloatingIpSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingFloatingIpSerializationContext : JsonSerializerContext { }
 }

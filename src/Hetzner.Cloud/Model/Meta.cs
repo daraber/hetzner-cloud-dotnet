@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Meta
     /// </summary>
-    internal partial class Meta : IValidatableObject
+    public partial class Meta : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Meta" /> class.
         /// </summary>
         /// <param name="pagination">pagination</param>
         [JsonConstructor]
-        internal Meta(Pagination pagination)
+        public Meta(Pagination pagination)
         {
             Pagination = pagination;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Meta" />
     /// </summary>
-    internal class MetaJsonConverter : JsonConverter<Meta>
+    public class MetaJsonConverter : JsonConverter<Meta>
     {
         /// <summary>
         /// Deserializes json to <see cref="Meta" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Meta))]
-    internal partial class MetaSerializationContext : JsonSerializerContext { }
+    public partial class MetaSerializationContext : JsonSerializerContext { }
 }

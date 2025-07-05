@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/locations
     /// </summary>
-    internal partial class ListLocationsResponse : IValidatableObject
+    public partial class ListLocationsResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListLocationsResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="locations">List of [Locations](#locations).</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListLocationsResponse(List<Location> locations, Meta meta)
+        public ListLocationsResponse(List<Location> locations, Meta meta)
         {
             Locations = locations;
             Meta = meta;
@@ -87,7 +87,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListLocationsResponse" />
     /// </summary>
-    internal class ListLocationsResponseJsonConverter : JsonConverter<ListLocationsResponse>
+    public class ListLocationsResponseJsonConverter : JsonConverter<ListLocationsResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListLocationsResponse" />
@@ -193,5 +193,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListLocationsResponse))]
-    internal partial class ListLocationsResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListLocationsResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Service health check
     /// </summary>
-    internal partial class LoadBalancerServiceHealthCheck : IValidatableObject
+    public partial class LoadBalancerServiceHealthCheck : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerServiceHealthCheck" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="timeout">Time in seconds after an attempt is considered a timeout</param>
         /// <param name="http">http</param>
         [JsonConstructor]
-        internal LoadBalancerServiceHealthCheck(int interval, int port, ProtocolEnum protocol, int retries, int timeout, Option<LoadBalancerServiceHealthCheckHttp?> http = default)
+        public LoadBalancerServiceHealthCheck(int interval, int port, ProtocolEnum protocol, int retries, int timeout, Option<LoadBalancerServiceHealthCheckHttp?> http = default)
         {
             Interval = interval;
             Port = port;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the health check
         /// </summary>
         /// <value>Type of the health check</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Http for value: http
@@ -206,7 +206,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerServiceHealthCheck" />
     /// </summary>
-    internal class LoadBalancerServiceHealthCheckJsonConverter : JsonConverter<LoadBalancerServiceHealthCheck>
+    public class LoadBalancerServiceHealthCheckJsonConverter : JsonConverter<LoadBalancerServiceHealthCheck>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerServiceHealthCheck" />
@@ -359,5 +359,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerServiceHealthCheck))]
-    internal partial class LoadBalancerServiceHealthCheckSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerServiceHealthCheckSerializationContext : JsonSerializerContext { }
 }

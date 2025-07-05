@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// IP address (v4)
     /// </summary>
-    internal partial class LoadBalancerPublicNetIpv4 : IValidatableObject
+    public partial class LoadBalancerPublicNetIpv4 : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerPublicNetIpv4" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="dnsPtr">Reverse DNS PTR entry for the IPv4 address of this Load Balancer</param>
         /// <param name="ip">IP address (v4) of this Load Balancer</param>
         [JsonConstructor]
-        internal LoadBalancerPublicNetIpv4(Option<string?> dnsPtr = default, Option<string?> ip = default)
+        public LoadBalancerPublicNetIpv4(Option<string?> dnsPtr = default, Option<string?> ip = default)
         {
             DnsPtrOption = dnsPtr;
             IpOption = ip;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerPublicNetIpv4" />
     /// </summary>
-    internal class LoadBalancerPublicNetIpv4JsonConverter : JsonConverter<LoadBalancerPublicNetIpv4>
+    public class LoadBalancerPublicNetIpv4JsonConverter : JsonConverter<LoadBalancerPublicNetIpv4>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerPublicNetIpv4" />
@@ -199,5 +199,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerPublicNetIpv4))]
-    internal partial class LoadBalancerPublicNetIpv4SerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerPublicNetIpv4SerializationContext : JsonSerializerContext { }
 }

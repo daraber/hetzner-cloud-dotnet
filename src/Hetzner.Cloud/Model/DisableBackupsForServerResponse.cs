@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/disable_backup
     /// </summary>
-    internal partial class DisableBackupsForServerResponse : IValidatableObject
+    public partial class DisableBackupsForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DisableBackupsForServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DisableBackupsForServerResponse(Action action)
+        public DisableBackupsForServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DisableBackupsForServerResponse" />
     /// </summary>
-    internal class DisableBackupsForServerResponseJsonConverter : JsonConverter<DisableBackupsForServerResponse>
+    public class DisableBackupsForServerResponseJsonConverter : JsonConverter<DisableBackupsForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DisableBackupsForServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DisableBackupsForServerResponse))]
-    internal partial class DisableBackupsForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class DisableBackupsForServerResponseSerializationContext : JsonSerializerContext { }
 }

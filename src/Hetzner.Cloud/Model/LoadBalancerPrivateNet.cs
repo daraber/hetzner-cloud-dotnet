@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// LoadBalancerPrivateNet
     /// </summary>
-    internal partial class LoadBalancerPrivateNet : IValidatableObject
+    public partial class LoadBalancerPrivateNet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerPrivateNet" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ip">IP address (v4) of this Load Balancer in this Network</param>
         /// <param name="network">ID of the Network</param>
         [JsonConstructor]
-        internal LoadBalancerPrivateNet(Option<string?> ip = default, Option<long?> network = default)
+        public LoadBalancerPrivateNet(Option<string?> ip = default, Option<long?> network = default)
         {
             IpOption = ip;
             NetworkOption = network;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerPrivateNet" />
     /// </summary>
-    internal class LoadBalancerPrivateNetJsonConverter : JsonConverter<LoadBalancerPrivateNet>
+    public class LoadBalancerPrivateNetJsonConverter : JsonConverter<LoadBalancerPrivateNet>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerPrivateNet" />
@@ -202,5 +202,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerPrivateNet))]
-    internal partial class LoadBalancerPrivateNetSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerPrivateNetSerializationContext : JsonSerializerContext { }
 }

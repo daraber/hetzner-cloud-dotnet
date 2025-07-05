@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// SSH keys are public keys you provide to the cloud system. They can be injected into Servers at creation time. We highly recommend that you use keys instead of passwords to manage your Servers.
     /// </summary>
-    internal partial class SshKey : IValidatableObject
+    public partial class SshKey : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SshKey" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Name of the Resource. Must be unique per Project.</param>
         /// <param name="publicKey">Public key</param>
         [JsonConstructor]
-        internal SshKey(string created, string fingerprint, long id, Dictionary<string, string> labels, string name, string publicKey)
+        public SshKey(string created, string fingerprint, long id, Dictionary<string, string> labels, string name, string publicKey)
         {
             Created = created;
             Fingerprint = fingerprint;
@@ -140,7 +140,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="SshKey" />
     /// </summary>
-    internal class SshKeyJsonConverter : JsonConverter<SshKey>
+    public class SshKeyJsonConverter : JsonConverter<SshKey>
     {
         /// <summary>
         /// Deserializes json to <see cref="SshKey" />
@@ -302,5 +302,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(SshKey))]
-    internal partial class SshKeySerializationContext : JsonSerializerContext { }
+    public partial class SshKeySerializationContext : JsonSerializerContext { }
 }

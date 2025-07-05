@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/firewalls/{id}/actions/set_rules
     /// </summary>
-    internal partial class SetRulesRequest : IValidatableObject
+    public partial class SetRulesRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SetRulesRequest" /> class.
         /// </summary>
         /// <param name="rules">Array of rules.  Rules are limited to 50 entries per [Firewall](#firewalls) and [500 effective rules](https://docs.hetzner.com/cloud/firewalls/overview#limits).  Existing rules will be replaced. </param>
         [JsonConstructor]
-        internal SetRulesRequest(List<Rule> rules)
+        public SetRulesRequest(List<Rule> rules)
         {
             Rules = rules;
             OnCreated();
@@ -78,7 +78,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="SetRulesRequest" />
     /// </summary>
-    internal class SetRulesRequestJsonConverter : JsonConverter<SetRulesRequest>
+    public class SetRulesRequestJsonConverter : JsonConverter<SetRulesRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="SetRulesRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(SetRulesRequest))]
-    internal partial class SetRulesRequestSerializationContext : JsonSerializerContext { }
+    public partial class SetRulesRequestSerializationContext : JsonSerializerContext { }
 }

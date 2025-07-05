@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// PricePerTime
     /// </summary>
-    internal partial class PricePerTime : IValidatableObject
+    public partial class PricePerTime : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PricePerTime" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="priceMonthly">priceMonthly</param>
         /// <param name="pricePerTbTraffic">pricePerTbTraffic</param>
         [JsonConstructor]
-        internal PricePerTime(long includedTraffic, string location, Price priceHourly, Price priceMonthly, Price pricePerTbTraffic)
+        public PricePerTime(long includedTraffic, string location, Price priceHourly, Price priceMonthly, Price pricePerTbTraffic)
         {
             IncludedTraffic = includedTraffic;
             Location = location;
@@ -117,7 +117,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="PricePerTime" />
     /// </summary>
-    internal class PricePerTimeJsonConverter : JsonConverter<PricePerTime>
+    public class PricePerTimeJsonConverter : JsonConverter<PricePerTime>
     {
         /// <summary>
         /// Deserializes json to <see cref="PricePerTime" />
@@ -265,5 +265,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(PricePerTime))]
-    internal partial class PricePerTimeSerializationContext : JsonSerializerContext { }
+    public partial class PricePerTimeSerializationContext : JsonSerializerContext { }
 }

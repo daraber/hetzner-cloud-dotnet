@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// The placement group the server is assigned to.
     /// </summary>
-    internal partial class PlacementGroupNullable : IValidatableObject
+    public partial class PlacementGroupNullable : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PlacementGroupNullable" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="servers">Array of IDs of Servers that are part of this Placement Group</param>
         /// <param name="type">Type of the Placement Group</param>
         [JsonConstructor]
-        internal PlacementGroupNullable(string created, long id, Dictionary<string, string> labels, string name, List<long> servers, TypeEnum type)
+        public PlacementGroupNullable(string created, long id, Dictionary<string, string> labels, string name, List<long> servers, TypeEnum type)
         {
             Created = created;
             Id = id;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the Placement Group
         /// </summary>
         /// <value>Type of the Placement Group</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Spread for value: spread
@@ -193,7 +193,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="PlacementGroupNullable" />
     /// </summary>
-    internal class PlacementGroupNullableJsonConverter : JsonConverter<PlacementGroupNullable>
+    public class PlacementGroupNullableJsonConverter : JsonConverter<PlacementGroupNullable>
     {
         /// <summary>
         /// Deserializes json to <see cref="PlacementGroupNullable" />
@@ -355,5 +355,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(PlacementGroupNullable))]
-    internal partial class PlacementGroupNullableSerializationContext : JsonSerializerContext { }
+    public partial class PlacementGroupNullableSerializationContext : JsonSerializerContext { }
 }

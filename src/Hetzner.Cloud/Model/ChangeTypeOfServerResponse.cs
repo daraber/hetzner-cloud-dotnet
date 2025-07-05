@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/change_type
     /// </summary>
-    internal partial class ChangeTypeOfServerResponse : IValidatableObject
+    public partial class ChangeTypeOfServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeTypeOfServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeTypeOfServerResponse(Action action)
+        public ChangeTypeOfServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeTypeOfServerResponse" />
     /// </summary>
-    internal class ChangeTypeOfServerResponseJsonConverter : JsonConverter<ChangeTypeOfServerResponse>
+    public class ChangeTypeOfServerResponseJsonConverter : JsonConverter<ChangeTypeOfServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeTypeOfServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeTypeOfServerResponse))]
-    internal partial class ChangeTypeOfServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeTypeOfServerResponseSerializationContext : JsonSerializerContext { }
 }

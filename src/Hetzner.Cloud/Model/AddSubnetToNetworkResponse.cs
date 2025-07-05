@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/networks/{id}/actions/add_subnet
     /// </summary>
-    internal partial class AddSubnetToNetworkResponse : IValidatableObject
+    public partial class AddSubnetToNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddSubnetToNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AddSubnetToNetworkResponse(Action action)
+        public AddSubnetToNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AddSubnetToNetworkResponse" />
     /// </summary>
-    internal class AddSubnetToNetworkResponseJsonConverter : JsonConverter<AddSubnetToNetworkResponse>
+    public class AddSubnetToNetworkResponseJsonConverter : JsonConverter<AddSubnetToNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AddSubnetToNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AddSubnetToNetworkResponse))]
-    internal partial class AddSubnetToNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class AddSubnetToNetworkResponseSerializationContext : JsonSerializerContext { }
 }

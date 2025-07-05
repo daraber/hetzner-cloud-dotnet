@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/primary_ips
     /// </summary>
-    internal partial class CreatePrimaryIpRequest : IValidatableObject
+    public partial class CreatePrimaryIpRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePrimaryIpRequest" /> class.
@@ -42,7 +42,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="datacenter">[Datacenter](#datacenters) ID or name.  The  [Primary IP](#primary-ips) will be bound to this [Datacenter](#datacenters). Omit if &#x60;assignee_id&#x60;/&#x60;assignee_type&#x60; is provided. </param>
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         [JsonConstructor]
-        internal CreatePrimaryIpRequest(AssigneeTypeEnum assigneeType, string name, IpType type, Option<long?> assigneeId = default, Option<bool?> autoDelete = default, Option<string?> datacenter = default, Option<Dictionary<string, string>?> labels = default)
+        public CreatePrimaryIpRequest(AssigneeTypeEnum assigneeType, string name, IpType type, Option<long?> assigneeId = default, Option<bool?> autoDelete = default, Option<string?> datacenter = default, Option<Dictionary<string, string>?> labels = default)
         {
             AssigneeType = assigneeType;
             Name = name;
@@ -60,7 +60,7 @@ namespace Hetzner.Cloud.Model
         /// Type of resource the [Primary IP](#primary-ips) can get assigned to.  Currently [Primary IPs](#primary-ips) can only be assigned to [Servers](#servers), therefore this field must be set to &#x60;server&#x60;. 
         /// </summary>
         /// <value>Type of resource the [Primary IP](#primary-ips) can get assigned to.  Currently [Primary IPs](#primary-ips) can only be assigned to [Servers](#servers), therefore this field must be set to &#x60;server&#x60;. </value>
-        internal enum AssigneeTypeEnum
+        public enum AssigneeTypeEnum
         {
             /// <summary>
             /// Enum Server for value: server
@@ -224,7 +224,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreatePrimaryIpRequest" />
     /// </summary>
-    internal class CreatePrimaryIpRequestJsonConverter : JsonConverter<CreatePrimaryIpRequest>
+    public class CreatePrimaryIpRequestJsonConverter : JsonConverter<CreatePrimaryIpRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreatePrimaryIpRequest" />
@@ -392,5 +392,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreatePrimaryIpRequest))]
-    internal partial class CreatePrimaryIpRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreatePrimaryIpRequestSerializationContext : JsonSerializerContext { }
 }

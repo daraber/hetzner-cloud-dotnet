@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Price of [Server](#servers) backups.
     /// </summary>
-    internal partial class ListPricesResponsePricingServerBackup : IValidatableObject
+    public partial class ListPricesResponsePricingServerBackup : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingServerBackup" /> class.
         /// </summary>
         /// <param name="percentage">Price increase of the [Server](#servers) base price in percentage.</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingServerBackup(decimal percentage)
+        public ListPricesResponsePricingServerBackup(decimal percentage)
         {
             Percentage = percentage;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingServerBackup" />
     /// </summary>
-    internal class ListPricesResponsePricingServerBackupJsonConverter : JsonConverter<ListPricesResponsePricingServerBackup>
+    public class ListPricesResponsePricingServerBackupJsonConverter : JsonConverter<ListPricesResponsePricingServerBackup>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingServerBackup" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingServerBackup))]
-    internal partial class ListPricesResponsePricingServerBackupSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingServerBackupSerializationContext : JsonSerializerContext { }
 }

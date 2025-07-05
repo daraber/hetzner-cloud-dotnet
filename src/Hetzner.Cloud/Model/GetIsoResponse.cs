@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/isos/{id}
     /// </summary>
-    internal partial class GetIsoResponse : IValidatableObject
+    public partial class GetIsoResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetIsoResponse" /> class.
         /// </summary>
         /// <param name="iso">iso</param>
         [JsonConstructor]
-        internal GetIsoResponse(Iso iso)
+        public GetIsoResponse(Iso iso)
         {
             Iso = iso;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetIsoResponse" />
     /// </summary>
-    internal class GetIsoResponseJsonConverter : JsonConverter<GetIsoResponse>
+    public class GetIsoResponseJsonConverter : JsonConverter<GetIsoResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetIsoResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetIsoResponse))]
-    internal partial class GetIsoResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetIsoResponseSerializationContext : JsonSerializerContext { }
 }

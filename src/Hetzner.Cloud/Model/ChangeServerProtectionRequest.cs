@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeServerProtectionRequest : IValidatableObject
+    public partial class ChangeServerProtectionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeServerProtectionRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="delete">If true, prevents the Server from being deleted (currently delete and rebuild attribute needs to have the same value)</param>
         /// <param name="rebuild">If true, prevents the Server from being rebuilt (currently delete and rebuild attribute needs to have the same value)</param>
         [JsonConstructor]
-        internal ChangeServerProtectionRequest(Option<bool?> delete = default, Option<bool?> rebuild = default)
+        public ChangeServerProtectionRequest(Option<bool?> delete = default, Option<bool?> rebuild = default)
         {
             DeleteOption = delete;
             RebuildOption = rebuild;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeServerProtectionRequest" />
     /// </summary>
-    internal class ChangeServerProtectionRequestJsonConverter : JsonConverter<ChangeServerProtectionRequest>
+    public class ChangeServerProtectionRequestJsonConverter : JsonConverter<ChangeServerProtectionRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeServerProtectionRequest" />
@@ -199,5 +199,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeServerProtectionRequest))]
-    internal partial class ChangeServerProtectionRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeServerProtectionRequestSerializationContext : JsonSerializerContext { }
 }

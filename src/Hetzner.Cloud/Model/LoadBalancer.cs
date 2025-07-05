@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// LoadBalancer
     /// </summary>
-    internal partial class LoadBalancer : IValidatableObject
+    public partial class LoadBalancer : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancer" /> class.
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ingoingTraffic">Inbound Traffic for the current billing period in bytes</param>
         /// <param name="outgoingTraffic">Outbound Traffic for the current billing period in bytes</param>
         [JsonConstructor]
-        internal LoadBalancer(LoadBalancerAlgorithm algorithm, string created, long id, long includedTraffic, Dictionary<string, string> labels, LoadBalancerType loadBalancerType, Location location, string name, List<LoadBalancerPrivateNet> privateNet, Protection protection, LoadBalancerPublicNet publicNet, List<LoadBalancerService> services, List<LoadBalancerTarget> targets, long? ingoingTraffic = default, long? outgoingTraffic = default)
+        public LoadBalancer(LoadBalancerAlgorithm algorithm, string created, long id, long includedTraffic, Dictionary<string, string> labels, LoadBalancerType loadBalancerType, Location location, string name, List<LoadBalancerPrivateNet> privateNet, Protection protection, LoadBalancerPublicNet publicNet, List<LoadBalancerService> services, List<LoadBalancerTarget> targets, long? ingoingTraffic = default, long? outgoingTraffic = default)
         {
             Algorithm = algorithm;
             Created = created;
@@ -224,7 +224,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancer" />
     /// </summary>
-    internal class LoadBalancerJsonConverter : JsonConverter<LoadBalancer>
+    public class LoadBalancerJsonConverter : JsonConverter<LoadBalancer>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancer" />
@@ -512,5 +512,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancer))]
-    internal partial class LoadBalancerSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerSerializationContext : JsonSerializerContext { }
 }

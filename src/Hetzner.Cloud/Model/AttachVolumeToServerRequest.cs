@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/volumes/{id}/actions/attach
     /// </summary>
-    internal partial class AttachVolumeToServerRequest : IValidatableObject
+    public partial class AttachVolumeToServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachVolumeToServerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="server">ID of the Server the Volume will be attached to</param>
         /// <param name="automount">Auto-mount the Volume after attaching it</param>
         [JsonConstructor]
-        internal AttachVolumeToServerRequest(long server, Option<bool?> automount = default)
+        public AttachVolumeToServerRequest(long server, Option<bool?> automount = default)
         {
             Server = server;
             AutomountOption = automount;
@@ -97,7 +97,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachVolumeToServerRequest" />
     /// </summary>
-    internal class AttachVolumeToServerRequestJsonConverter : JsonConverter<AttachVolumeToServerRequest>
+    public class AttachVolumeToServerRequestJsonConverter : JsonConverter<AttachVolumeToServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachVolumeToServerRequest" />
@@ -194,5 +194,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachVolumeToServerRequest))]
-    internal partial class AttachVolumeToServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class AttachVolumeToServerRequestSerializationContext : JsonSerializerContext { }
 }

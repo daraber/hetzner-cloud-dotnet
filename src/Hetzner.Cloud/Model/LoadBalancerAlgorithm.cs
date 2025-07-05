@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Algorithm of the Load Balancer
     /// </summary>
-    internal partial class LoadBalancerAlgorithm : IValidatableObject
+    public partial class LoadBalancerAlgorithm : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerAlgorithm" /> class.
         /// </summary>
         /// <param name="type">Type of the algorithm. (default to TypeEnum.RoundRobin)</param>
         [JsonConstructor]
-        internal LoadBalancerAlgorithm(TypeEnum type = TypeEnum.RoundRobin)
+        public LoadBalancerAlgorithm(TypeEnum type = TypeEnum.RoundRobin)
         {
             Type = type;
             OnCreated();
@@ -48,7 +48,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the algorithm.
         /// </summary>
         /// <value>Type of the algorithm.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum LeastConnections for value: least_connections
@@ -145,7 +145,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerAlgorithm" />
     /// </summary>
-    internal class LoadBalancerAlgorithmJsonConverter : JsonConverter<LoadBalancerAlgorithm>
+    public class LoadBalancerAlgorithmJsonConverter : JsonConverter<LoadBalancerAlgorithm>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerAlgorithm" />
@@ -235,5 +235,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerAlgorithm))]
-    internal partial class LoadBalancerAlgorithmSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerAlgorithmSerializationContext : JsonSerializerContext { }
 }

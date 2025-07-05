@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// SubnetWithGateway
     /// </summary>
-    internal partial class SubnetWithGateway : IValidatableObject
+    public partial class SubnetWithGateway : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetWithGateway" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ipRange">IP range of the subnet.  Uses CIDR notation. </param>
         /// <param name="vswitchId">ID of the robot vSwitch if the subnet is of type &#x60;vswitch&#x60;.</param>
         [JsonConstructor]
-        internal SubnetWithGateway(string gateway, string networkZone, TypeEnum type, Option<string?> ipRange = default, Option<long?> vswitchId = default)
+        public SubnetWithGateway(string gateway, string networkZone, TypeEnum type, Option<string?> ipRange = default, Option<long?> vswitchId = default)
         {
             Gateway = gateway;
             NetworkZone = networkZone;
@@ -56,7 +56,7 @@ namespace Hetzner.Cloud.Model
         /// Type of subnet.  - &#x60;cloud&#x60; - Used to connect cloud [Servers](#servers) and [Load Balancers](#load-balancers). - &#x60;server&#x60; - Same as the &#x60;cloud&#x60; type. **Deprecated**, use the &#x60;cloud&#x60; type instead. - &#x60;vswitch&#x60; - Used to [connect cloud Servers and Load Balancers with dedicated Servers](https://docs.hetzner.com/cloud/networks/connect-dedi-vswitch). 
         /// </summary>
         /// <value>Type of subnet.  - &#x60;cloud&#x60; - Used to connect cloud [Servers](#servers) and [Load Balancers](#load-balancers). - &#x60;server&#x60; - Same as the &#x60;cloud&#x60; type. **Deprecated**, use the &#x60;cloud&#x60; type instead. - &#x60;vswitch&#x60; - Used to [connect cloud Servers and Load Balancers with dedicated Servers](https://docs.hetzner.com/cloud/networks/connect-dedi-vswitch). </value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Cloud for value: cloud
@@ -217,7 +217,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="SubnetWithGateway" />
     /// </summary>
-    internal class SubnetWithGatewayJsonConverter : JsonConverter<SubnetWithGateway>
+    public class SubnetWithGatewayJsonConverter : JsonConverter<SubnetWithGateway>
     {
         /// <summary>
         /// Deserializes json to <see cref="SubnetWithGateway" />
@@ -359,5 +359,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(SubnetWithGateway))]
-    internal partial class SubnetWithGatewaySerializationContext : JsonSerializerContext { }
+    public partial class SubnetWithGatewaySerializationContext : JsonSerializerContext { }
 }

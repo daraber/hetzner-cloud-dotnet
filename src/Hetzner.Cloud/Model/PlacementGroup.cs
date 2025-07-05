@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// PlacementGroup
     /// </summary>
-    internal partial class PlacementGroup : IValidatableObject
+    public partial class PlacementGroup : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PlacementGroup" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="servers">Array of IDs of Servers that are part of this Placement Group</param>
         /// <param name="type">Type of the Placement Group</param>
         [JsonConstructor]
-        internal PlacementGroup(string created, long id, Dictionary<string, string> labels, string name, List<long> servers, TypeEnum type)
+        public PlacementGroup(string created, long id, Dictionary<string, string> labels, string name, List<long> servers, TypeEnum type)
         {
             Created = created;
             Id = id;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the Placement Group
         /// </summary>
         /// <value>Type of the Placement Group</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Spread for value: spread
@@ -193,7 +193,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="PlacementGroup" />
     /// </summary>
-    internal class PlacementGroupJsonConverter : JsonConverter<PlacementGroup>
+    public class PlacementGroupJsonConverter : JsonConverter<PlacementGroup>
     {
         /// <summary>
         /// Deserializes json to <see cref="PlacementGroup" />
@@ -355,5 +355,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(PlacementGroup))]
-    internal partial class PlacementGroupSerializationContext : JsonSerializerContext { }
+    public partial class PlacementGroupSerializationContext : JsonSerializerContext { }
 }

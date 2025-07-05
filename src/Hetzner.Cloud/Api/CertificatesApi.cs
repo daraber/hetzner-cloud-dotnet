@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface ICertificatesApi : IApi
+    public interface ICertificatesApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -299,7 +299,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateCertificateApiResponse"/>
     /// </summary>
-    internal interface ICreateCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateCertificateResponse?>
+    public interface ICreateCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateCertificateResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -311,7 +311,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteCertificateApiResponse"/>
     /// </summary>
-    internal interface IDeleteCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -323,7 +323,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForCertificateApiResponse"/>
     /// </summary>
-    internal interface IGetActionForCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForCertificateResponse?>
+    public interface IGetActionForCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForCertificateResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -335,7 +335,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetCertificateApiResponse"/>
     /// </summary>
-    internal interface IGetCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetCertificateResponse?>
+    public interface IGetCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetCertificateResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -347,7 +347,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetCertificateActionApiResponse"/>
     /// </summary>
-    internal interface IGetCertificateActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetCertificateActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -359,7 +359,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForCertificateApiResponse"/>
     /// </summary>
-    internal interface IListActionsForCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForCertificateResponse?>
+    public interface IListActionsForCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForCertificateResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -371,7 +371,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListCertificateActionsApiResponse"/>
     /// </summary>
-    internal interface IListCertificateActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListCertificateActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -383,7 +383,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListCertificatesApiResponse"/>
     /// </summary>
-    internal interface IListCertificatesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListCertificatesResponse?>
+    public interface IListCertificatesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListCertificatesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -395,7 +395,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceCertificateApiResponse"/>
     /// </summary>
-    internal interface IReplaceCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceCertificateResponse?>
+    public interface IReplaceCertificateApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceCertificateResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -407,7 +407,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRetryIssuanceOrRenewalApiResponse"/>
     /// </summary>
-    internal interface IRetryIssuanceOrRenewalApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RetryIssuanceOrRenewalResponse?>
+    public interface IRetryIssuanceOrRenewalApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RetryIssuanceOrRenewalResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -419,7 +419,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class CertificatesApiEvents
+    public class CertificatesApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -625,7 +625,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class CertificatesApi : ICertificatesApi
+    public sealed partial class CertificatesApi : ICertificatesApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -839,7 +839,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateCertificateApiResponse"/>
         /// </summary>
-        internal partial class CreateCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateCertificateApiResponse
+        public partial class CreateCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -1048,7 +1048,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteCertificateApiResponse"/>
         /// </summary>
-        internal partial class DeleteCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteCertificateApiResponse
+        public partial class DeleteCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -1241,7 +1241,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForCertificateApiResponse"/>
         /// </summary>
-        internal partial class GetActionForCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForCertificateApiResponse
+        public partial class GetActionForCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -1459,7 +1459,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetCertificateApiResponse"/>
         /// </summary>
-        internal partial class GetCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetCertificateApiResponse
+        public partial class GetCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -1677,7 +1677,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetCertificateActionApiResponse"/>
         /// </summary>
-        internal partial class GetCertificateActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetCertificateActionApiResponse
+        public partial class GetCertificateActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetCertificateActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1952,7 +1952,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForCertificateApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForCertificateApiResponse
+        public partial class ListActionsForCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -2229,7 +2229,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListCertificateActionsApiResponse"/>
         /// </summary>
-        internal partial class ListCertificateActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListCertificateActionsApiResponse
+        public partial class ListCertificateActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListCertificateActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2523,7 +2523,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListCertificatesApiResponse"/>
         /// </summary>
-        internal partial class ListCertificatesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListCertificatesApiResponse
+        public partial class ListCertificatesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListCertificatesApiResponse
         {
             /// <summary>
             /// The logger
@@ -2774,7 +2774,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceCertificateApiResponse"/>
         /// </summary>
-        internal partial class ReplaceCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceCertificateApiResponse
+        public partial class ReplaceCertificateApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceCertificateApiResponse
         {
             /// <summary>
             /// The logger
@@ -2992,7 +2992,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RetryIssuanceOrRenewalApiResponse"/>
         /// </summary>
-        internal partial class RetryIssuanceOrRenewalApiResponse : Hetzner.Cloud.Client.ApiResponse, IRetryIssuanceOrRenewalApiResponse
+        public partial class RetryIssuanceOrRenewalApiResponse : Hetzner.Cloud.Client.ApiResponse, IRetryIssuanceOrRenewalApiResponse
         {
             /// <summary>
             /// The logger

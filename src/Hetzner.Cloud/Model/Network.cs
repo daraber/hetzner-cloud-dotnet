@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Network
     /// </summary>
-    internal partial class Network : IValidatableObject
+    public partial class Network : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Network" /> class.
@@ -46,7 +46,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="subnets">List of subnets allocated in this [Network](#networks).</param>
         /// <param name="loadBalancers">Array of IDs of [Load Balancers](#load-balancers) attached to this [Network](#networks).</param>
         [JsonConstructor]
-        internal Network(string created, bool exposeRoutesToVswitch, long id, string ipRange, Dictionary<string, string> labels, string name, Protection protection, List<Route> routes, List<long> servers, List<SubnetWithGateway> subnets, Option<List<long>?> loadBalancers = default)
+        public Network(string created, bool exposeRoutesToVswitch, long id, string ipRange, Dictionary<string, string> labels, string name, Protection protection, List<Route> routes, List<long> servers, List<SubnetWithGateway> subnets, Option<List<long>?> loadBalancers = default)
         {
             Created = created;
             ExposeRoutesToVswitch = exposeRoutesToVswitch;
@@ -198,7 +198,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Network" />
     /// </summary>
-    internal class NetworkJsonConverter : JsonConverter<Network>
+    public class NetworkJsonConverter : JsonConverter<Network>
     {
         /// <summary>
         /// Deserializes json to <see cref="Network" />
@@ -433,5 +433,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Network))]
-    internal partial class NetworkSerializationContext : JsonSerializerContext { }
+    public partial class NetworkSerializationContext : JsonSerializerContext { }
 }

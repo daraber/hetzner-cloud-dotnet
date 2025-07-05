@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/firewalls/{id}/actions/{action_id}
     /// </summary>
-    internal partial class GetActionForFirewallResponse : IValidatableObject
+    public partial class GetActionForFirewallResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetActionForFirewallResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal GetActionForFirewallResponse(Action action)
+        public GetActionForFirewallResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetActionForFirewallResponse" />
     /// </summary>
-    internal class GetActionForFirewallResponseJsonConverter : JsonConverter<GetActionForFirewallResponse>
+    public class GetActionForFirewallResponseJsonConverter : JsonConverter<GetActionForFirewallResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetActionForFirewallResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetActionForFirewallResponse))]
-    internal partial class GetActionForFirewallResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetActionForFirewallResponseSerializationContext : JsonSerializerContext { }
 }

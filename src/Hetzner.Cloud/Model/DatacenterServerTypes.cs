@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// [Server Types](#server-types) supported and available in this [Datacenter](#datacenters). 
     /// </summary>
-    internal partial class DatacenterServerTypes : IValidatableObject
+    public partial class DatacenterServerTypes : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DatacenterServerTypes" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="availableForMigration">[Server Types](#server-types) available to migrate to in this [Datacenter](#datacenters).  Existing [Servers](#servers) can be migrated to these [Server Types](#server-types). </param>
         /// <param name="supported">List of [Server Types](#server-types) supported in this [Datacenter](#datacenters).  These [Server Types](#server-types) are generally available in this Datacenter, but might be temporarily out of stock. </param>
         [JsonConstructor]
-        internal DatacenterServerTypes(List<long> available, List<long> availableForMigration, List<long> supported)
+        public DatacenterServerTypes(List<long> available, List<long> availableForMigration, List<long> supported)
         {
             Available = available;
             AvailableForMigration = availableForMigration;
@@ -101,7 +101,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DatacenterServerTypes" />
     /// </summary>
-    internal class DatacenterServerTypesJsonConverter : JsonConverter<DatacenterServerTypes>
+    public class DatacenterServerTypesJsonConverter : JsonConverter<DatacenterServerTypes>
     {
         /// <summary>
         /// Deserializes json to <see cref="DatacenterServerTypes" />
@@ -222,5 +222,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DatacenterServerTypes))]
-    internal partial class DatacenterServerTypesSerializationContext : JsonSerializerContext { }
+    public partial class DatacenterServerTypesSerializationContext : JsonSerializerContext { }
 }

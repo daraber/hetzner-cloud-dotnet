@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_type
     /// </summary>
-    internal partial class ChangeTypeOfLoadBalancerResponse : IValidatableObject
+    public partial class ChangeTypeOfLoadBalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeTypeOfLoadBalancerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeTypeOfLoadBalancerResponse(Action action)
+        public ChangeTypeOfLoadBalancerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeTypeOfLoadBalancerResponse" />
     /// </summary>
-    internal class ChangeTypeOfLoadBalancerResponseJsonConverter : JsonConverter<ChangeTypeOfLoadBalancerResponse>
+    public class ChangeTypeOfLoadBalancerResponseJsonConverter : JsonConverter<ChangeTypeOfLoadBalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeTypeOfLoadBalancerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeTypeOfLoadBalancerResponse))]
-    internal partial class ChangeTypeOfLoadBalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeTypeOfLoadBalancerResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Rule of a firewall.
     /// </summary>
-    internal partial class Rule : IValidatableObject
+    public partial class Rule : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Rule" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="port">Port or port range to apply the rule for.  Only applicable for protocols &#x60;tcp&#x60; and &#x60;udp&#x60;.  A port range can be specified by separating lower and upper bounds with a dash. &#x60;1024-5000&#x60; will include all ports starting from 1024 up to port 5000. </param>
         /// <param name="sourceIps">List of permitted IPv4/IPv6 addresses for incoming traffic.  The &#x60;direction&#x60; must be set to &#x60;in&#x60;.  IPs must be provided in [CIDR block notation](https://wikipedia.org/wiki/CIDR). You can specify 100 CIDR blocks at most.  The CIDR blocks may refer to networks (with empty host bits) or single hosts. For example, a network could be defined with &#x60;10.0.1.0/24&#x60; or &#x60;2001:db8:ff00:42::/64&#x60;, and a single host with &#x60;10.0.1.1/32&#x60; or &#x60;2001:db8:ff00:42::8329/128&#x60;.  Use &#x60;0.0.0.0/0&#x60; to allow any IPv4 addresses and &#x60;::/0&#x60; to allow any IPv6 addresses. </param>
         [JsonConstructor]
-        internal Rule(DirectionEnum direction, ProtocolEnum protocol, Option<string?> description = default, Option<List<string>?> destinationIps = default, Option<string?> port = default, Option<List<string>?> sourceIps = default)
+        public Rule(DirectionEnum direction, ProtocolEnum protocol, Option<string?> description = default, Option<List<string>?> destinationIps = default, Option<string?> port = default, Option<List<string>?> sourceIps = default)
         {
             Direction = direction;
             Protocol = protocol;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Traffic direction in which the rule should be applied to.  Use &#x60;source_ips&#x60; for direction &#x60;in&#x60; and &#x60;destination_ips&#x60; for direction &#x60;out&#x60; to specify IPs. 
         /// </summary>
         /// <value>Traffic direction in which the rule should be applied to.  Use &#x60;source_ips&#x60; for direction &#x60;in&#x60; and &#x60;destination_ips&#x60; for direction &#x60;out&#x60; to specify IPs. </value>
-        internal enum DirectionEnum
+        public enum DirectionEnum
         {
             /// <summary>
             /// Enum In for value: in
@@ -133,7 +133,7 @@ namespace Hetzner.Cloud.Model
         /// Network protocol to apply the rule for.
         /// </summary>
         /// <value>Network protocol to apply the rule for.</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Esp for value: esp
@@ -342,7 +342,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Rule" />
     /// </summary>
-    internal class RuleJsonConverter : JsonConverter<Rule>
+    public class RuleJsonConverter : JsonConverter<Rule>
     {
         /// <summary>
         /// Deserializes json to <see cref="Rule" />
@@ -496,5 +496,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Rule))]
-    internal partial class RuleSerializationContext : JsonSerializerContext { }
+    public partial class RuleSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Subnets divide the ip_range from the parent Network object into multiple Subnetworks that you can use for different specific purposes.
     /// </summary>
-    internal partial class Subnet : IValidatableObject
+    public partial class Subnet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Subnet" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ipRange">IP range of the subnet.  Uses CIDR notation.  Must be a subnet of the parent [Networks](#networks) &#x60;ip_range&#x60;.  Must not overlap with any other subnets or with any destinations in routes.  Minimum network size is /30. We highly recommend that you pick a larger subnet with a /24 netmask. </param>
         /// <param name="vswitchId">ID of the robot vSwitch.  Must only be supplied for subnets of type &#x60;vswitch&#x60;.  | ID of the robot vSwitch.  Must be supplied if the subnet is of type &#x60;vswitch&#x60;. </param>
         [JsonConstructor]
-        internal Subnet(string networkZone, TypeEnum type, Option<string?> ipRange = default, Option<long?> vswitchId = default)
+        public Subnet(string networkZone, TypeEnum type, Option<string?> ipRange = default, Option<long?> vswitchId = default)
         {
             NetworkZone = networkZone;
             Type = type;
@@ -54,7 +54,7 @@ namespace Hetzner.Cloud.Model
         /// Type of subnet.  - &#x60;cloud&#x60; - Used to connect cloud [Servers](#servers) and [Load Balancers](#load-balancers). - &#x60;server&#x60; - Same as the &#x60;cloud&#x60; type. **Deprecated**, use the &#x60;cloud&#x60; type instead. - &#x60;vswitch&#x60; - Used to [connect cloud Servers and Load Balancers with dedicated Servers](https://docs.hetzner.com/cloud/networks/connect-dedi-vswitch). 
         /// </summary>
         /// <value>Type of subnet.  - &#x60;cloud&#x60; - Used to connect cloud [Servers](#servers) and [Load Balancers](#load-balancers). - &#x60;server&#x60; - Same as the &#x60;cloud&#x60; type. **Deprecated**, use the &#x60;cloud&#x60; type instead. - &#x60;vswitch&#x60; - Used to [connect cloud Servers and Load Balancers with dedicated Servers](https://docs.hetzner.com/cloud/networks/connect-dedi-vswitch). </value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Cloud for value: cloud
@@ -206,7 +206,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Subnet" />
     /// </summary>
-    internal class SubnetJsonConverter : JsonConverter<Subnet>
+    public class SubnetJsonConverter : JsonConverter<Subnet>
     {
         /// <summary>
         /// Deserializes json to <see cref="Subnet" />
@@ -333,5 +333,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Subnet))]
-    internal partial class SubnetSerializationContext : JsonSerializerContext { }
+    public partial class SubnetSerializationContext : JsonSerializerContext { }
 }

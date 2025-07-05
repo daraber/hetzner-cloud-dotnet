@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IFloatingIpsApi : IApi
+    public interface IFloatingIpsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -372,7 +372,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAssignFloatingIpToServerApiResponse"/>
     /// </summary>
-    internal interface IAssignFloatingIpToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AssignFloatingIpToServerResponse?>
+    public interface IAssignFloatingIpToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AssignFloatingIpToServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -384,7 +384,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeFloatingIpProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeFloatingIpProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeFloatingIpProtectionResponse?>
+    public interface IChangeFloatingIpProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeFloatingIpProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -396,7 +396,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeReverseDnsRecordsForFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IChangeReverseDnsRecordsForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsRecordsForFloatingIpResponse?>
+    public interface IChangeReverseDnsRecordsForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsRecordsForFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -408,7 +408,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateFloatingIpApiResponse"/>
     /// </summary>
-    internal interface ICreateFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateFloatingIpResponse?>
+    public interface ICreateFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -420,7 +420,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IDeleteFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -432,7 +432,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IGetActionForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForFloatingIpResponse?>
+    public interface IGetActionForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -444,7 +444,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IGetFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetFloatingIpResponse?>
+    public interface IGetFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -456,7 +456,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetFloatingIpActionApiResponse"/>
     /// </summary>
-    internal interface IGetFloatingIpActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetFloatingIpActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -468,7 +468,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IListActionsForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForFloatingIpResponse?>
+    public interface IListActionsForFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -480,7 +480,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListFloatingIpActionsApiResponse"/>
     /// </summary>
-    internal interface IListFloatingIpActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListFloatingIpActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -492,7 +492,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListFloatingIpsApiResponse"/>
     /// </summary>
-    internal interface IListFloatingIpsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListFloatingIpsResponse?>
+    public interface IListFloatingIpsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListFloatingIpsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -504,7 +504,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IReplaceFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceFloatingIpResponse?>
+    public interface IReplaceFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -516,7 +516,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IUnassignFloatingIpApiResponse"/>
     /// </summary>
-    internal interface IUnassignFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UnassignFloatingIpResponse?>
+    public interface IUnassignFloatingIpApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UnassignFloatingIpResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -528,7 +528,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class FloatingIpsApiEvents
+    public class FloatingIpsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -794,7 +794,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class FloatingIpsApi : IFloatingIpsApi
+    public sealed partial class FloatingIpsApi : IFloatingIpsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -1015,7 +1015,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AssignFloatingIpToServerApiResponse"/>
         /// </summary>
-        internal partial class AssignFloatingIpToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAssignFloatingIpToServerApiResponse
+        public partial class AssignFloatingIpToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAssignFloatingIpToServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -1266,7 +1266,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeFloatingIpProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeFloatingIpProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeFloatingIpProtectionApiResponse
+        public partial class ChangeFloatingIpProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeFloatingIpProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1517,7 +1517,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeReverseDnsRecordsForFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class ChangeReverseDnsRecordsForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsRecordsForFloatingIpApiResponse
+        public partial class ChangeReverseDnsRecordsForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsRecordsForFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -1761,7 +1761,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class CreateFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateFloatingIpApiResponse
+        public partial class CreateFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -1970,7 +1970,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class DeleteFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteFloatingIpApiResponse
+        public partial class DeleteFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -2163,7 +2163,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class GetActionForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForFloatingIpApiResponse
+        public partial class GetActionForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -2381,7 +2381,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class GetFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFloatingIpApiResponse
+        public partial class GetFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -2599,7 +2599,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetFloatingIpActionApiResponse"/>
         /// </summary>
-        internal partial class GetFloatingIpActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFloatingIpActionApiResponse
+        public partial class GetFloatingIpActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFloatingIpActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2874,7 +2874,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForFloatingIpApiResponse
+        public partial class ListActionsForFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -3151,7 +3151,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListFloatingIpActionsApiResponse"/>
         /// </summary>
-        internal partial class ListFloatingIpActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFloatingIpActionsApiResponse
+        public partial class ListFloatingIpActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFloatingIpActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3432,7 +3432,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListFloatingIpsApiResponse"/>
         /// </summary>
-        internal partial class ListFloatingIpsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFloatingIpsApiResponse
+        public partial class ListFloatingIpsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFloatingIpsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3683,7 +3683,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class ReplaceFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceFloatingIpApiResponse
+        public partial class ReplaceFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceFloatingIpApiResponse
         {
             /// <summary>
             /// The logger
@@ -3901,7 +3901,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="UnassignFloatingIpApiResponse"/>
         /// </summary>
-        internal partial class UnassignFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IUnassignFloatingIpApiResponse
+        public partial class UnassignFloatingIpApiResponse : Hetzner.Cloud.Client.ApiResponse, IUnassignFloatingIpApiResponse
         {
             /// <summary>
             /// The logger

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/remove_from_placement_group
     /// </summary>
-    internal partial class RemoveFromPlacementGroupResponse : IValidatableObject
+    public partial class RemoveFromPlacementGroupResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoveFromPlacementGroupResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal RemoveFromPlacementGroupResponse(Action action)
+        public RemoveFromPlacementGroupResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RemoveFromPlacementGroupResponse" />
     /// </summary>
-    internal class RemoveFromPlacementGroupResponseJsonConverter : JsonConverter<RemoveFromPlacementGroupResponse>
+    public class RemoveFromPlacementGroupResponseJsonConverter : JsonConverter<RemoveFromPlacementGroupResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RemoveFromPlacementGroupResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RemoveFromPlacementGroupResponse))]
-    internal partial class RemoveFromPlacementGroupResponseSerializationContext : JsonSerializerContext { }
+    public partial class RemoveFromPlacementGroupResponseSerializationContext : JsonSerializerContext { }
 }

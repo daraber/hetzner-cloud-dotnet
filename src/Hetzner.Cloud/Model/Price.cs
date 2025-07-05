@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Hourly price in this [Location](#locations). | Monthly price in this [Location](#locations). | Additional traffic price per TB in this [Location](#locations). | Price of one [Floating IP](#floating-ips) per month. | Price of [Images](#images) per GB/month. | Price of [Volumes](#volumes) per GB/month.
     /// </summary>
-    internal partial class Price : IValidatableObject
+    public partial class Price : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Price" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="gross">Price with VAT added.</param>
         /// <param name="net">Price without VAT.</param>
         [JsonConstructor]
-        internal Price(decimal gross, decimal net)
+        public Price(decimal gross, decimal net)
         {
             Gross = gross;
             Net = net;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Price" />
     /// </summary>
-    internal class PriceJsonConverter : JsonConverter<Price>
+    public class PriceJsonConverter : JsonConverter<Price>
     {
         /// <summary>
         /// Deserializes json to <see cref="Price" />
@@ -189,5 +189,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Price))]
-    internal partial class PriceSerializationContext : JsonSerializerContext { }
+    public partial class PriceSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ListPricesResponsePricingServerTypes
     /// </summary>
-    internal partial class ListPricesResponsePricingServerTypes : IValidatableObject
+    public partial class ListPricesResponsePricingServerTypes : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingServerTypes" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Name of the [Server Types](#server-types) the price is for.</param>
         /// <param name="prices">Price of the [Server Types](#server-types) per [Location](#locations).</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingServerTypes(long id, string name, List<PricePerTime> prices)
+        public ListPricesResponsePricingServerTypes(long id, string name, List<PricePerTime> prices)
         {
             Id = id;
             Name = name;
@@ -106,7 +106,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingServerTypes" />
     /// </summary>
-    internal class ListPricesResponsePricingServerTypesJsonConverter : JsonConverter<ListPricesResponsePricingServerTypes>
+    public class ListPricesResponsePricingServerTypesJsonConverter : JsonConverter<ListPricesResponsePricingServerTypes>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingServerTypes" />
@@ -224,5 +224,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingServerTypes))]
-    internal partial class ListPricesResponsePricingServerTypesSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingServerTypesSerializationContext : JsonSerializerContext { }
 }

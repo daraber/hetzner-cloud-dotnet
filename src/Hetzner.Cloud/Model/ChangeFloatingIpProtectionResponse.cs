@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/floating_ips/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeFloatingIpProtectionResponse : IValidatableObject
+    public partial class ChangeFloatingIpProtectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeFloatingIpProtectionResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeFloatingIpProtectionResponse(Action action)
+        public ChangeFloatingIpProtectionResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeFloatingIpProtectionResponse" />
     /// </summary>
-    internal class ChangeFloatingIpProtectionResponseJsonConverter : JsonConverter<ChangeFloatingIpProtectionResponse>
+    public class ChangeFloatingIpProtectionResponseJsonConverter : JsonConverter<ChangeFloatingIpProtectionResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeFloatingIpProtectionResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeFloatingIpProtectionResponse))]
-    internal partial class ChangeFloatingIpProtectionResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeFloatingIpProtectionResponseSerializationContext : JsonSerializerContext { }
 }

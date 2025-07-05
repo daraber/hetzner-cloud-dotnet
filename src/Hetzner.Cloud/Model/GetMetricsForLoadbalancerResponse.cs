@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/load_balancers/{id}/metrics
     /// </summary>
-    internal partial class GetMetricsForLoadbalancerResponse : IValidatableObject
+    public partial class GetMetricsForLoadbalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMetricsForLoadbalancerResponse" /> class.
         /// </summary>
         /// <param name="metrics">metrics</param>
         [JsonConstructor]
-        internal GetMetricsForLoadbalancerResponse(Metrics metrics)
+        public GetMetricsForLoadbalancerResponse(Metrics metrics)
         {
             Metrics = metrics;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetMetricsForLoadbalancerResponse" />
     /// </summary>
-    internal class GetMetricsForLoadbalancerResponseJsonConverter : JsonConverter<GetMetricsForLoadbalancerResponse>
+    public class GetMetricsForLoadbalancerResponseJsonConverter : JsonConverter<GetMetricsForLoadbalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetMetricsForLoadbalancerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetMetricsForLoadbalancerResponse))]
-    internal partial class GetMetricsForLoadbalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetMetricsForLoadbalancerResponseSerializationContext : JsonSerializerContext { }
 }

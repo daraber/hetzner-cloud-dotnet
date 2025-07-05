@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// See \&quot;[Pagination](#pagination)\&quot; for more information.
     /// </summary>
-    internal partial class Pagination : IValidatableObject
+    public partial class Pagination : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Pagination" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="previousPage">Page number of the previous page. Can be null if the current page is the first one.</param>
         /// <param name="totalEntries">Total number of entries that exist for this query. Can be null if unknown.</param>
         [JsonConstructor]
-        internal Pagination(long page, long perPage, long? lastPage = default, long? nextPage = default, long? previousPage = default, long? totalEntries = default)
+        public Pagination(long page, long perPage, long? lastPage = default, long? nextPage = default, long? previousPage = default, long? totalEntries = default)
         {
             Page = page;
             PerPage = perPage;
@@ -134,7 +134,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Pagination" />
     /// </summary>
-    internal class PaginationJsonConverter : JsonConverter<Pagination>
+    public class PaginationJsonConverter : JsonConverter<Pagination>
     {
         /// <summary>
         /// Deserializes json to <see cref="Pagination" />
@@ -281,5 +281,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Pagination))]
-    internal partial class PaginationSerializationContext : JsonSerializerContext { }
+    public partial class PaginationSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ServerType
     /// </summary>
-    internal partial class ServerType : IValidatableObject
+    public partial class ServerType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerType" /> class.
@@ -47,7 +47,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="deprecated">This field is deprecated. Use the deprecation object instead</param>
         /// <param name="deprecation">deprecation</param>
         [JsonConstructor]
-        internal ServerType(Architecture architecture, int cores, CpuTypeEnum cpuType, string description, decimal disk, long id, decimal memory, string name, List<PricePerTime> prices, StorageTypeEnum storageType, bool? deprecated = default, Option<DeprecationInfo?> deprecation = default)
+        public ServerType(Architecture architecture, int cores, CpuTypeEnum cpuType, string description, decimal disk, long id, decimal memory, string name, List<PricePerTime> prices, StorageTypeEnum storageType, bool? deprecated = default, Option<DeprecationInfo?> deprecation = default)
         {
             Architecture = architecture;
             Cores = cores;
@@ -76,7 +76,7 @@ namespace Hetzner.Cloud.Model
         /// Type of cpu
         /// </summary>
         /// <value>Type of cpu</value>
-        internal enum CpuTypeEnum
+        public enum CpuTypeEnum
         {
             /// <summary>
             /// Enum Dedicated for value: dedicated
@@ -151,7 +151,7 @@ namespace Hetzner.Cloud.Model
         /// Type of Server boot drive. Local has higher speed. Network has better availability.
         /// </summary>
         /// <value>Type of Server boot drive. Local has higher speed. Network has better availability.</value>
-        internal enum StorageTypeEnum
+        public enum StorageTypeEnum
         {
             /// <summary>
             /// Enum Local for value: local
@@ -341,7 +341,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ServerType" />
     /// </summary>
-    internal class ServerTypeJsonConverter : JsonConverter<ServerType>
+    public class ServerTypeJsonConverter : JsonConverter<ServerType>
     {
         /// <summary>
         /// Deserializes json to <see cref="ServerType" />
@@ -577,5 +577,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ServerType))]
-    internal partial class ServerTypeSerializationContext : JsonSerializerContext { }
+    public partial class ServerTypeSerializationContext : JsonSerializerContext { }
 }

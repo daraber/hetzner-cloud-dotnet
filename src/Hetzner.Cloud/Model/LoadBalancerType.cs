@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// LoadBalancerType
     /// </summary>
-    internal partial class LoadBalancerType : IValidatableObject
+    public partial class LoadBalancerType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerType" /> class.
@@ -44,7 +44,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="prices">Price per [Location](#locations).</param>
         /// <param name="deprecated">Point in time when the Load Balancer type is deprecated (in ISO-8601 format)</param>
         [JsonConstructor]
-        internal LoadBalancerType(string description, long id, long maxAssignedCertificates, long maxConnections, long maxServices, long maxTargets, string name, List<PricePerTime> prices, string? deprecated = default)
+        public LoadBalancerType(string description, long id, long maxAssignedCertificates, long maxConnections, long maxServices, long maxTargets, string name, List<PricePerTime> prices, string? deprecated = default)
         {
             Description = description;
             Id = id;
@@ -172,7 +172,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerType" />
     /// </summary>
-    internal class LoadBalancerTypeJsonConverter : JsonConverter<LoadBalancerType>
+    public class LoadBalancerTypeJsonConverter : JsonConverter<LoadBalancerType>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerType" />
@@ -364,5 +364,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerType))]
-    internal partial class LoadBalancerTypeSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerTypeSerializationContext : JsonSerializerContext { }
 }

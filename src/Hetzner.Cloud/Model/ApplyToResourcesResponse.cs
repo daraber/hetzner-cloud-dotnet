@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/firewalls/{id}/actions/apply_to_resources
     /// </summary>
-    internal partial class ApplyToResourcesResponse : IValidatableObject
+    public partial class ApplyToResourcesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplyToResourcesResponse" /> class.
         /// </summary>
         /// <param name="actions">actions</param>
         [JsonConstructor]
-        internal ApplyToResourcesResponse(List<Action> actions)
+        public ApplyToResourcesResponse(List<Action> actions)
         {
             Actions = actions;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ApplyToResourcesResponse" />
     /// </summary>
-    internal class ApplyToResourcesResponseJsonConverter : JsonConverter<ApplyToResourcesResponse>
+    public class ApplyToResourcesResponseJsonConverter : JsonConverter<ApplyToResourcesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ApplyToResourcesResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ApplyToResourcesResponse))]
-    internal partial class ApplyToResourcesResponseSerializationContext : JsonSerializerContext { }
+    public partial class ApplyToResourcesResponseSerializationContext : JsonSerializerContext { }
 }

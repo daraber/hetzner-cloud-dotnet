@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/ssh_keys
     /// </summary>
-    internal partial class CreateSshKeyRequest : IValidatableObject
+    public partial class CreateSshKeyRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSshKeyRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="publicKey">Public key</param>
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         [JsonConstructor]
-        internal CreateSshKeyRequest(string name, string publicKey, Option<Dictionary<string, string>?> labels = default)
+        public CreateSshKeyRequest(string name, string publicKey, Option<Dictionary<string, string>?> labels = default)
         {
             Name = name;
             PublicKey = publicKey;
@@ -108,7 +108,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateSshKeyRequest" />
     /// </summary>
-    internal class CreateSshKeyRequestJsonConverter : JsonConverter<CreateSshKeyRequest>
+    public class CreateSshKeyRequestJsonConverter : JsonConverter<CreateSshKeyRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateSshKeyRequest" />
@@ -229,5 +229,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateSshKeyRequest))]
-    internal partial class CreateSshKeyRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateSshKeyRequestSerializationContext : JsonSerializerContext { }
 }

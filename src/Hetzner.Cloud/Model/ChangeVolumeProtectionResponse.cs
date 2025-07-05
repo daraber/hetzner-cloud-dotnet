@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/volumes/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeVolumeProtectionResponse : IValidatableObject
+    public partial class ChangeVolumeProtectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeVolumeProtectionResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeVolumeProtectionResponse(Action action)
+        public ChangeVolumeProtectionResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeVolumeProtectionResponse" />
     /// </summary>
-    internal class ChangeVolumeProtectionResponseJsonConverter : JsonConverter<ChangeVolumeProtectionResponse>
+    public class ChangeVolumeProtectionResponseJsonConverter : JsonConverter<ChangeVolumeProtectionResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeVolumeProtectionResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeVolumeProtectionResponse))]
-    internal partial class ChangeVolumeProtectionResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeVolumeProtectionResponseSerializationContext : JsonSerializerContext { }
 }

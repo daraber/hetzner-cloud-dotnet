@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/rebuild
     /// </summary>
-    internal partial class RebuildServerFromImageRequest : IValidatableObject
+    public partial class RebuildServerFromImageRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RebuildServerFromImageRequest" /> class.
         /// </summary>
         /// <param name="image">ID or name of Image to rebuilt from.</param>
         [JsonConstructor]
-        internal RebuildServerFromImageRequest(string image)
+        public RebuildServerFromImageRequest(string image)
         {
             Image = image;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RebuildServerFromImageRequest" />
     /// </summary>
-    internal class RebuildServerFromImageRequestJsonConverter : JsonConverter<RebuildServerFromImageRequest>
+    public class RebuildServerFromImageRequestJsonConverter : JsonConverter<RebuildServerFromImageRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="RebuildServerFromImageRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RebuildServerFromImageRequest))]
-    internal partial class RebuildServerFromImageRequestSerializationContext : JsonSerializerContext { }
+    public partial class RebuildServerFromImageRequestSerializationContext : JsonSerializerContext { }
 }

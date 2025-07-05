@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_algorithm
     /// </summary>
-    internal partial class ChangeAlgorithmResponse : IValidatableObject
+    public partial class ChangeAlgorithmResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeAlgorithmResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeAlgorithmResponse(Action action)
+        public ChangeAlgorithmResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeAlgorithmResponse" />
     /// </summary>
-    internal class ChangeAlgorithmResponseJsonConverter : JsonConverter<ChangeAlgorithmResponse>
+    public class ChangeAlgorithmResponseJsonConverter : JsonConverter<ChangeAlgorithmResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeAlgorithmResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeAlgorithmResponse))]
-    internal partial class ChangeAlgorithmResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeAlgorithmResponseSerializationContext : JsonSerializerContext { }
 }

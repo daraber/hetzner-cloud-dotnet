@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Information about the Server the Image was created from
     /// </summary>
-    internal partial class CreatedFrom : IValidatableObject
+    public partial class CreatedFrom : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatedFrom" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="id">ID of the Server the Image was created from</param>
         /// <param name="name">Server name at the time the Image was created</param>
         [JsonConstructor]
-        internal CreatedFrom(long id, string name)
+        public CreatedFrom(long id, string name)
         {
             Id = id;
             Name = name;
@@ -96,7 +96,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreatedFrom" />
     /// </summary>
-    internal class CreatedFromJsonConverter : JsonConverter<CreatedFrom>
+    public class CreatedFromJsonConverter : JsonConverter<CreatedFrom>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreatedFrom" />
@@ -198,5 +198,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreatedFrom))]
-    internal partial class CreatedFromSerializationContext : JsonSerializerContext { }
+    public partial class CreatedFromSerializationContext : JsonSerializerContext { }
 }

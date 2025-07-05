@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/volumes/{id}/actions/attach
     /// </summary>
-    internal partial class AttachVolumeToServerResponse : IValidatableObject
+    public partial class AttachVolumeToServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachVolumeToServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AttachVolumeToServerResponse(Action action)
+        public AttachVolumeToServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachVolumeToServerResponse" />
     /// </summary>
-    internal class AttachVolumeToServerResponseJsonConverter : JsonConverter<AttachVolumeToServerResponse>
+    public class AttachVolumeToServerResponseJsonConverter : JsonConverter<AttachVolumeToServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachVolumeToServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachVolumeToServerResponse))]
-    internal partial class AttachVolumeToServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class AttachVolumeToServerResponseSerializationContext : JsonSerializerContext { }
 }

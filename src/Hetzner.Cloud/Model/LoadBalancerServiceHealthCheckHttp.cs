@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Additional configuration for protocol http
     /// </summary>
-    internal partial class LoadBalancerServiceHealthCheckHttp : IValidatableObject
+    public partial class LoadBalancerServiceHealthCheckHttp : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerServiceHealthCheckHttp" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="statusCodes">List of returned HTTP status codes in order to pass the health check. Supports the wildcards &#x60;?&#x60; for exactly one character and &#x60;*&#x60; for multiple ones.</param>
         /// <param name="tls">Use HTTPS for health check</param>
         [JsonConstructor]
-        internal LoadBalancerServiceHealthCheckHttp(string path, string? domain = default, Option<string?> response = default, Option<List<string>?> statusCodes = default, Option<bool?> tls = default)
+        public LoadBalancerServiceHealthCheckHttp(string path, string? domain = default, Option<string?> response = default, Option<List<string>?> statusCodes = default, Option<bool?> tls = default)
         {
             Path = path;
             Domain = domain;
@@ -144,7 +144,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerServiceHealthCheckHttp" />
     /// </summary>
-    internal class LoadBalancerServiceHealthCheckHttpJsonConverter : JsonConverter<LoadBalancerServiceHealthCheckHttp>
+    public class LoadBalancerServiceHealthCheckHttpJsonConverter : JsonConverter<LoadBalancerServiceHealthCheckHttp>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerServiceHealthCheckHttp" />
@@ -284,5 +284,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerServiceHealthCheckHttp))]
-    internal partial class LoadBalancerServiceHealthCheckHttpSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerServiceHealthCheckHttpSerializationContext : JsonSerializerContext { }
 }

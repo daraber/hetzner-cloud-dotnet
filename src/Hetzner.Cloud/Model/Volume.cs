@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Volume is a highly-available, scalable, and SSD-based block storage for Servers. Pricing for Volumes depends on the Volume size and Location, not the actual used storage. Please see [Hetzner Wiki](https://wiki.hetzner.de/index.php/CloudServer/en#Volumes) for more details about Volumes.
     /// </summary>
-    internal partial class Volume : IValidatableObject
+    public partial class Volume : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Volume" /> class.
@@ -46,7 +46,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="format">Filesystem of the Volume if formatted on creation, null if not formatted on creation</param>
         /// <param name="server">ID of the Server the Volume is attached to, null if it is not attached at all</param>
         [JsonConstructor]
-        internal Volume(string created, long id, Dictionary<string, string> labels, string linuxDevice, Location location, string name, Protection protection, decimal size, StatusEnum status, string? format = default, long? server = default)
+        public Volume(string created, long id, Dictionary<string, string> labels, string linuxDevice, Location location, string name, Protection protection, decimal size, StatusEnum status, string? format = default, long? server = default)
         {
             Created = created;
             Id = id;
@@ -68,7 +68,7 @@ namespace Hetzner.Cloud.Model
         /// Current status of the Volume
         /// </summary>
         /// <value>Current status of the Volume</value>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Available for value: available
@@ -258,7 +258,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Volume" />
     /// </summary>
-    internal class VolumeJsonConverter : JsonConverter<Volume>
+    public class VolumeJsonConverter : JsonConverter<Volume>
     {
         /// <summary>
         /// Deserializes json to <see cref="Volume" />
@@ -485,5 +485,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Volume))]
-    internal partial class VolumeSerializationContext : JsonSerializerContext { }
+    public partial class VolumeSerializationContext : JsonSerializerContext { }
 }

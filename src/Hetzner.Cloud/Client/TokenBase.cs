@@ -9,7 +9,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// The base for all tokens.
     /// </summary>
-    internal abstract class TokenBase
+    public abstract class TokenBase
     {
         private DateTime _nextAvailable = DateTime.UtcNow;
         private object _nextAvailableLock = new object();

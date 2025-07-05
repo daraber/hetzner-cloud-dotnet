@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IIsosApi : IApi
+    public interface IIsosApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -93,7 +93,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetIsoApiResponse"/>
     /// </summary>
-    internal interface IGetIsoApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetIsoResponse?>
+    public interface IGetIsoApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetIsoResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -105,7 +105,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListIsosApiResponse"/>
     /// </summary>
-    internal interface IListIsosApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListIsosResponse?>
+    public interface IListIsosApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListIsosResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -117,7 +117,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class IsosApiEvents
+    public class IsosApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -163,7 +163,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class IsosApi : IIsosApi
+    public sealed partial class IsosApi : IIsosApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -351,7 +351,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetIsoApiResponse"/>
         /// </summary>
-        internal partial class GetIsoApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetIsoApiResponse
+        public partial class GetIsoApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetIsoApiResponse
         {
             /// <summary>
             /// The logger
@@ -628,7 +628,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListIsosApiResponse"/>
         /// </summary>
-        internal partial class ListIsosApiResponse : Hetzner.Cloud.Client.ApiResponse, IListIsosApiResponse
+        public partial class ListIsosApiResponse : Hetzner.Cloud.Client.ApiResponse, IListIsosApiResponse
         {
             /// <summary>
             /// The logger

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/servers/{id}
     /// </summary>
-    internal partial class ReplaceServerResponse : IValidatableObject
+    public partial class ReplaceServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceServerResponse" /> class.
         /// </summary>
         /// <param name="server">server</param>
         [JsonConstructor]
-        internal ReplaceServerResponse(Option<Server?> server = default)
+        public ReplaceServerResponse(Option<Server?> server = default)
         {
             ServerOption = server;
             OnCreated();
@@ -84,7 +84,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceServerResponse" />
     /// </summary>
-    internal class ReplaceServerResponseJsonConverter : JsonConverter<ReplaceServerResponse>
+    public class ReplaceServerResponseJsonConverter : JsonConverter<ReplaceServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceServerResponse" />
@@ -175,5 +175,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceServerResponse))]
-    internal partial class ReplaceServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceServerResponseSerializationContext : JsonSerializerContext { }
 }

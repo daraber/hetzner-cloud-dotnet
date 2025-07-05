@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/enable_rescue
     /// </summary>
-    internal partial class EnableRescueModeForServerRequest : IValidatableObject
+    public partial class EnableRescueModeForServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnableRescueModeForServerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="sshKeys">Array of SSH key IDs which should be injected into the rescue system.</param>
         /// <param name="type">Type of rescue system to boot. (default to TypeEnum.Linux64)</param>
         [JsonConstructor]
-        internal EnableRescueModeForServerRequest(Option<List<long>?> sshKeys = default, Option<TypeEnum?> type = default)
+        public EnableRescueModeForServerRequest(Option<List<long>?> sshKeys = default, Option<TypeEnum?> type = default)
         {
             SshKeysOption = sshKeys;
             TypeOption = type;
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// Type of rescue system to boot.
         /// </summary>
         /// <value>Type of rescue system to boot.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Linux64 for value: linux64
@@ -156,7 +156,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="EnableRescueModeForServerRequest" />
     /// </summary>
-    internal class EnableRescueModeForServerRequestJsonConverter : JsonConverter<EnableRescueModeForServerRequest>
+    public class EnableRescueModeForServerRequestJsonConverter : JsonConverter<EnableRescueModeForServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="EnableRescueModeForServerRequest" />
@@ -258,5 +258,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(EnableRescueModeForServerRequest))]
-    internal partial class EnableRescueModeForServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class EnableRescueModeForServerRequestSerializationContext : JsonSerializerContext { }
 }

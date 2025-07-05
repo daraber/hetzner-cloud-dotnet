@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Firewalls can limit the network access to or from your resources.
     /// </summary>
-    internal partial class Firewall : IValidatableObject
+    public partial class Firewall : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Firewall" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="rules">rules</param>
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         [JsonConstructor]
-        internal Firewall(List<FirewallResourceId> appliedTo, string created, long id, string name, List<RuleResponse> rules, Option<Dictionary<string, string>?> labels = default)
+        public Firewall(List<FirewallResourceId> appliedTo, string created, long id, string name, List<RuleResponse> rules, Option<Dictionary<string, string>?> labels = default)
         {
             AppliedTo = appliedTo;
             Created = created;
@@ -143,7 +143,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Firewall" />
     /// </summary>
-    internal class FirewallJsonConverter : JsonConverter<Firewall>
+    public class FirewallJsonConverter : JsonConverter<Firewall>
     {
         /// <summary>
         /// Deserializes json to <see cref="Firewall" />
@@ -306,5 +306,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Firewall))]
-    internal partial class FirewallSerializationContext : JsonSerializerContext { }
+    public partial class FirewallSerializationContext : JsonSerializerContext { }
 }

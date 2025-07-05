@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IVolumesApi : IApi
+    public interface IVolumesApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -374,7 +374,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAttachVolumeToServerApiResponse"/>
     /// </summary>
-    internal interface IAttachVolumeToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachVolumeToServerResponse?>
+    public interface IAttachVolumeToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachVolumeToServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -386,7 +386,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeVolumeProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeVolumeProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeVolumeProtectionResponse?>
+    public interface IChangeVolumeProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeVolumeProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -398,7 +398,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateVolumeApiResponse"/>
     /// </summary>
-    internal interface ICreateVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateVolumeResponse?>
+    public interface ICreateVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -410,7 +410,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteVolumeApiResponse"/>
     /// </summary>
-    internal interface IDeleteVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -422,7 +422,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDetachVolumeApiResponse"/>
     /// </summary>
-    internal interface IDetachVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachVolumeResponse?>
+    public interface IDetachVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -434,7 +434,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForVolumeApiResponse"/>
     /// </summary>
-    internal interface IGetActionForVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForVolumeResponse?>
+    public interface IGetActionForVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -446,7 +446,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetVolumeApiResponse"/>
     /// </summary>
-    internal interface IGetVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetVolumeResponse?>
+    public interface IGetVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -458,7 +458,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetVolumeActionApiResponse"/>
     /// </summary>
-    internal interface IGetVolumeActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetVolumeActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -470,7 +470,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForVolumeApiResponse"/>
     /// </summary>
-    internal interface IListActionsForVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForVolumeResponse?>
+    public interface IListActionsForVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -482,7 +482,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListVolumeActionsApiResponse"/>
     /// </summary>
-    internal interface IListVolumeActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListVolumeActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -494,7 +494,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListVolumesApiResponse"/>
     /// </summary>
-    internal interface IListVolumesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListVolumesResponse?>
+    public interface IListVolumesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListVolumesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -506,7 +506,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceVolumeApiResponse"/>
     /// </summary>
-    internal interface IReplaceVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceVolumeResponse?>
+    public interface IReplaceVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -518,7 +518,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IResizeVolumeApiResponse"/>
     /// </summary>
-    internal interface IResizeVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResizeVolumeResponse?>
+    public interface IResizeVolumeApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResizeVolumeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -530,7 +530,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class VolumesApiEvents
+    public class VolumesApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -796,7 +796,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class VolumesApi : IVolumesApi
+    public sealed partial class VolumesApi : IVolumesApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -1017,7 +1017,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AttachVolumeToServerApiResponse"/>
         /// </summary>
-        internal partial class AttachVolumeToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachVolumeToServerApiResponse
+        public partial class AttachVolumeToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachVolumeToServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -1268,7 +1268,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeVolumeProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeVolumeProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeVolumeProtectionApiResponse
+        public partial class ChangeVolumeProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeVolumeProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1512,7 +1512,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateVolumeApiResponse"/>
         /// </summary>
-        internal partial class CreateVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateVolumeApiResponse
+        public partial class CreateVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -1721,7 +1721,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteVolumeApiResponse"/>
         /// </summary>
-        internal partial class DeleteVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteVolumeApiResponse
+        public partial class DeleteVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -1907,7 +1907,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DetachVolumeApiResponse"/>
         /// </summary>
-        internal partial class DetachVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachVolumeApiResponse
+        public partial class DetachVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -2132,7 +2132,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForVolumeApiResponse"/>
         /// </summary>
-        internal partial class GetActionForVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForVolumeApiResponse
+        public partial class GetActionForVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -2350,7 +2350,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetVolumeApiResponse"/>
         /// </summary>
-        internal partial class GetVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetVolumeApiResponse
+        public partial class GetVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -2568,7 +2568,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetVolumeActionApiResponse"/>
         /// </summary>
-        internal partial class GetVolumeActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetVolumeActionApiResponse
+        public partial class GetVolumeActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetVolumeActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2843,7 +2843,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForVolumeApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForVolumeApiResponse
+        public partial class ListActionsForVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -3120,7 +3120,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListVolumeActionsApiResponse"/>
         /// </summary>
-        internal partial class ListVolumeActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListVolumeActionsApiResponse
+        public partial class ListVolumeActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListVolumeActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3414,7 +3414,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListVolumesApiResponse"/>
         /// </summary>
-        internal partial class ListVolumesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListVolumesApiResponse
+        public partial class ListVolumesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListVolumesApiResponse
         {
             /// <summary>
             /// The logger
@@ -3665,7 +3665,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceVolumeApiResponse"/>
         /// </summary>
-        internal partial class ReplaceVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceVolumeApiResponse
+        public partial class ReplaceVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceVolumeApiResponse
         {
             /// <summary>
             /// The logger
@@ -3916,7 +3916,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ResizeVolumeApiResponse"/>
         /// </summary>
-        internal partial class ResizeVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IResizeVolumeApiResponse
+        public partial class ResizeVolumeApiResponse : Hetzner.Cloud.Client.ApiResponse, IResizeVolumeApiResponse
         {
             /// <summary>
             /// The logger

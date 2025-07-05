@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/datacenters/{id}
     /// </summary>
-    internal partial class GetDatacenterResponse : IValidatableObject
+    public partial class GetDatacenterResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDatacenterResponse" /> class.
         /// </summary>
         /// <param name="datacenter">datacenter</param>
         [JsonConstructor]
-        internal GetDatacenterResponse(Datacenter datacenter)
+        public GetDatacenterResponse(Datacenter datacenter)
         {
             Datacenter = datacenter;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetDatacenterResponse" />
     /// </summary>
-    internal class GetDatacenterResponseJsonConverter : JsonConverter<GetDatacenterResponse>
+    public class GetDatacenterResponseJsonConverter : JsonConverter<GetDatacenterResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetDatacenterResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetDatacenterResponse))]
-    internal partial class GetDatacenterResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetDatacenterResponseSerializationContext : JsonSerializerContext { }
 }

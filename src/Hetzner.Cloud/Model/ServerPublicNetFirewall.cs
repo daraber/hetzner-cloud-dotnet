@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ServerPublicNetFirewall
     /// </summary>
-    internal partial class ServerPublicNetFirewall : IValidatableObject
+    public partial class ServerPublicNetFirewall : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerPublicNetFirewall" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="id">ID of the Firewall.</param>
         /// <param name="status">Status of the Firewall on the Server</param>
         [JsonConstructor]
-        internal ServerPublicNetFirewall(Option<long?> id = default, Option<StatusEnum?> status = default)
+        public ServerPublicNetFirewall(Option<long?> id = default, Option<StatusEnum?> status = default)
         {
             IdOption = id;
             StatusOption = status;
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// Status of the Firewall on the Server
         /// </summary>
         /// <value>Status of the Firewall on the Server</value>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Applied for value: applied
@@ -177,7 +177,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ServerPublicNetFirewall" />
     /// </summary>
-    internal class ServerPublicNetFirewallJsonConverter : JsonConverter<ServerPublicNetFirewall>
+    public class ServerPublicNetFirewallJsonConverter : JsonConverter<ServerPublicNetFirewall>
     {
         /// <summary>
         /// Deserializes json to <see cref="ServerPublicNetFirewall" />
@@ -274,5 +274,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ServerPublicNetFirewall))]
-    internal partial class ServerPublicNetFirewallSerializationContext : JsonSerializerContext { }
+    public partial class ServerPublicNetFirewallSerializationContext : JsonSerializerContext { }
 }

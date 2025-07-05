@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/request_console
     /// </summary>
-    internal partial class RequestConsoleForServerResponse : IValidatableObject
+    public partial class RequestConsoleForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestConsoleForServerResponse" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="password">VNC password to use for this connection (this password only works in combination with a wss_url with valid token)</param>
         /// <param name="wssUrl">URL of websocket proxy to use; this includes a token which is valid for a limited time only</param>
         [JsonConstructor]
-        internal RequestConsoleForServerResponse(Action action, string password, string wssUrl)
+        public RequestConsoleForServerResponse(Action action, string password, string wssUrl)
         {
             Action = action;
             Password = password;
@@ -99,7 +99,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RequestConsoleForServerResponse" />
     /// </summary>
-    internal class RequestConsoleForServerResponseJsonConverter : JsonConverter<RequestConsoleForServerResponse>
+    public class RequestConsoleForServerResponseJsonConverter : JsonConverter<RequestConsoleForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RequestConsoleForServerResponse" />
@@ -219,5 +219,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RequestConsoleForServerResponse))]
-    internal partial class RequestConsoleForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class RequestConsoleForServerResponseSerializationContext : JsonSerializerContext { }
 }

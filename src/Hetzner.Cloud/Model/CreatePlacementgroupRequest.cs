@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/placement_groups
     /// </summary>
-    internal partial class CreatePlacementgroupRequest : IValidatableObject
+    public partial class CreatePlacementgroupRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePlacementgroupRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="type">Define the Placement Group Type.</param>
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         [JsonConstructor]
-        internal CreatePlacementgroupRequest(string name, TypeEnum type, Option<Dictionary<string, string>?> labels = default)
+        public CreatePlacementgroupRequest(string name, TypeEnum type, Option<Dictionary<string, string>?> labels = default)
         {
             Name = name;
             Type = type;
@@ -52,7 +52,7 @@ namespace Hetzner.Cloud.Model
         /// Define the Placement Group Type.
         /// </summary>
         /// <value>Define the Placement Group Type.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Spread for value: spread
@@ -161,7 +161,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreatePlacementgroupRequest" />
     /// </summary>
-    internal class CreatePlacementgroupRequestJsonConverter : JsonConverter<CreatePlacementgroupRequest>
+    public class CreatePlacementgroupRequestJsonConverter : JsonConverter<CreatePlacementgroupRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreatePlacementgroupRequest" />
@@ -281,5 +281,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreatePlacementgroupRequest))]
-    internal partial class CreatePlacementgroupRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreatePlacementgroupRequestSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/firewalls
     /// </summary>
-    internal partial class CreateFirewallRequest : IValidatableObject
+    public partial class CreateFirewallRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFirewallRequest" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="rules">Array of rules.  Rules are limited to 50 entries per [Firewall](#firewalls) and [500 effective rules](https://docs.hetzner.com/cloud/firewalls/overview#limits). </param>
         [JsonConstructor]
-        internal CreateFirewallRequest(string name, Option<List<FirewallResource>?> applyTo = default, Option<Dictionary<string, string>?> labels = default, Option<List<Rule>?> rules = default)
+        public CreateFirewallRequest(string name, Option<List<FirewallResource>?> applyTo = default, Option<Dictionary<string, string>?> labels = default, Option<List<Rule>?> rules = default)
         {
             Name = name;
             ApplyToOption = applyTo;
@@ -132,7 +132,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateFirewallRequest" />
     /// </summary>
-    internal class CreateFirewallRequestJsonConverter : JsonConverter<CreateFirewallRequest>
+    public class CreateFirewallRequestJsonConverter : JsonConverter<CreateFirewallRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateFirewallRequest" />
@@ -268,5 +268,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateFirewallRequest))]
-    internal partial class CreateFirewallRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateFirewallRequestSerializationContext : JsonSerializerContext { }
 }

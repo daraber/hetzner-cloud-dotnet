@@ -10,7 +10,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// A class containing a CookieContainer
     /// </summary>
-    internal sealed class CookieContainer
+    public sealed class CookieContainer
     {
         /// <summary>
         /// The collection of tokens

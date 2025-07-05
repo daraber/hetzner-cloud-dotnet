@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Price of [Images](#images).
     /// </summary>
-    internal partial class ListPricesResponsePricingImage : IValidatableObject
+    public partial class ListPricesResponsePricingImage : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingImage" /> class.
         /// </summary>
         /// <param name="pricePerGbMonth">pricePerGbMonth</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingImage(Price pricePerGbMonth)
+        public ListPricesResponsePricingImage(Price pricePerGbMonth)
         {
             PricePerGbMonth = pricePerGbMonth;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingImage" />
     /// </summary>
-    internal class ListPricesResponsePricingImageJsonConverter : JsonConverter<ListPricesResponsePricingImage>
+    public class ListPricesResponsePricingImageJsonConverter : JsonConverter<ListPricesResponsePricingImage>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingImage" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingImage))]
-    internal partial class ListPricesResponsePricingImageSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingImageSerializationContext : JsonSerializerContext { }
 }

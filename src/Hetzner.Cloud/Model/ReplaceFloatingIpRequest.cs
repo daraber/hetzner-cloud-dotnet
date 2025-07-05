@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/floating_ips/{id}
     /// </summary>
-    internal partial class ReplaceFloatingIpRequest : IValidatableObject
+    public partial class ReplaceFloatingIpRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceFloatingIpRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">Name of the Resource. Must be unique per Project.</param>
         [JsonConstructor]
-        internal ReplaceFloatingIpRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceFloatingIpRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             DescriptionOption = description;
             LabelsOption = labels;
@@ -122,7 +122,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceFloatingIpRequest" />
     /// </summary>
-    internal class ReplaceFloatingIpRequestJsonConverter : JsonConverter<ReplaceFloatingIpRequest>
+    public class ReplaceFloatingIpRequestJsonConverter : JsonConverter<ReplaceFloatingIpRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceFloatingIpRequest" />
@@ -235,5 +235,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceFloatingIpRequest))]
-    internal partial class ReplaceFloatingIpRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceFloatingIpRequestSerializationContext : JsonSerializerContext { }
 }

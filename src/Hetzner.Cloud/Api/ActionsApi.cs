@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IActionsApi : IApi
+    public interface IActionsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -93,7 +93,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionApiResponse"/>
     /// </summary>
-    internal interface IGetActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -105,7 +105,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsApiResponse"/>
     /// </summary>
-    internal interface IListActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -117,7 +117,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class ActionsApiEvents
+    public class ActionsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -163,7 +163,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class ActionsApi : IActionsApi
+    public sealed partial class ActionsApi : IActionsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -351,7 +351,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionApiResponse"/>
         /// </summary>
-        internal partial class GetActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionApiResponse
+        public partial class GetActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -628,7 +628,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsApiResponse"/>
         /// </summary>
-        internal partial class ListActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsApiResponse
+        public partial class ListActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsApiResponse
         {
             /// <summary>
             /// The logger

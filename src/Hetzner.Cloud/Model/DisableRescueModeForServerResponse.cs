@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/disable_rescue
     /// </summary>
-    internal partial class DisableRescueModeForServerResponse : IValidatableObject
+    public partial class DisableRescueModeForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DisableRescueModeForServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DisableRescueModeForServerResponse(Action action)
+        public DisableRescueModeForServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DisableRescueModeForServerResponse" />
     /// </summary>
-    internal class DisableRescueModeForServerResponseJsonConverter : JsonConverter<DisableRescueModeForServerResponse>
+    public class DisableRescueModeForServerResponseJsonConverter : JsonConverter<DisableRescueModeForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DisableRescueModeForServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DisableRescueModeForServerResponse))]
-    internal partial class DisableRescueModeForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class DisableRescueModeForServerResponseSerializationContext : JsonSerializerContext { }
 }

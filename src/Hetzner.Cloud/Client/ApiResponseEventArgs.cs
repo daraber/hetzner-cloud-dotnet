@@ -5,7 +5,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// Useful for tracking server health
     /// </summary>
-    internal class ApiResponseEventArgs : EventArgs
+    public class ApiResponseEventArgs : EventArgs
     {
         /// <summary>
         /// The ApiResponse

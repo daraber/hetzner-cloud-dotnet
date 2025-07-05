@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface ILoadBalancerTypesApi : IApi
+    public interface ILoadBalancerTypesApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -89,7 +89,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetLoadBalancerTypeApiResponse"/>
     /// </summary>
-    internal interface IGetLoadBalancerTypeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLoadBalancerTypeResponse?>
+    public interface IGetLoadBalancerTypeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLoadBalancerTypeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -101,7 +101,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListLoadBalancerTypesApiResponse"/>
     /// </summary>
-    internal interface IListLoadBalancerTypesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLoadBalancerTypesResponse?>
+    public interface IListLoadBalancerTypesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLoadBalancerTypesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -113,7 +113,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class LoadBalancerTypesApiEvents
+    public class LoadBalancerTypesApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -159,7 +159,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class LoadBalancerTypesApi : ILoadBalancerTypesApi
+    public sealed partial class LoadBalancerTypesApi : ILoadBalancerTypesApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -347,7 +347,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetLoadBalancerTypeApiResponse"/>
         /// </summary>
-        internal partial class GetLoadBalancerTypeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerTypeApiResponse
+        public partial class GetLoadBalancerTypeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerTypeApiResponse
         {
             /// <summary>
             /// The logger
@@ -602,7 +602,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListLoadBalancerTypesApiResponse"/>
         /// </summary>
-        internal partial class ListLoadBalancerTypesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancerTypesApiResponse
+        public partial class ListLoadBalancerTypesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancerTypesApiResponse
         {
             /// <summary>
             /// The logger

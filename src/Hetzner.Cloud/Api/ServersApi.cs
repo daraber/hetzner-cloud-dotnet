@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IServersApi : IApi
+    public interface IServersApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -858,7 +858,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAddServerToPlacementGroupApiResponse"/>
     /// </summary>
-    internal interface IAddServerToPlacementGroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddServerToPlacementGroupResponse?>
+    public interface IAddServerToPlacementGroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddServerToPlacementGroupResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -870,7 +870,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAttachIsoToServerApiResponse"/>
     /// </summary>
-    internal interface IAttachIsoToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachIsoToServerResponse?>
+    public interface IAttachIsoToServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachIsoToServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -882,7 +882,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAttachServerToNetworkApiResponse"/>
     /// </summary>
-    internal interface IAttachServerToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachServerToNetworkResponse?>
+    public interface IAttachServerToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachServerToNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -894,7 +894,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeAliasIpsOfNetworkApiResponse"/>
     /// </summary>
-    internal interface IChangeAliasIpsOfNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeAliasIpsOfNetworkResponse?>
+    public interface IChangeAliasIpsOfNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeAliasIpsOfNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -906,7 +906,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeReverseDnsEntryForThisServerApiResponse"/>
     /// </summary>
-    internal interface IChangeReverseDnsEntryForThisServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsEntryForThisServerResponse?>
+    public interface IChangeReverseDnsEntryForThisServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsEntryForThisServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -918,7 +918,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeServerProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeServerProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeServerProtectionResponse?>
+    public interface IChangeServerProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeServerProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -930,7 +930,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeTypeOfServerApiResponse"/>
     /// </summary>
-    internal interface IChangeTypeOfServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeTypeOfServerResponse?>
+    public interface IChangeTypeOfServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeTypeOfServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -942,7 +942,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateImageFromServerApiResponse"/>
     /// </summary>
-    internal interface ICreateImageFromServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateImageFromServerResponse?>
+    public interface ICreateImageFromServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateImageFromServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -954,7 +954,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateServerApiResponse"/>
     /// </summary>
-    internal interface ICreateServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateServerResponse?>
+    public interface ICreateServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -966,7 +966,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteServerApiResponse"/>
     /// </summary>
-    internal interface IDeleteServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.DeleteServerResponse?>
+    public interface IDeleteServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.DeleteServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -978,7 +978,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDetachIsoFromServerApiResponse"/>
     /// </summary>
-    internal interface IDetachIsoFromServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachIsoFromServerResponse?>
+    public interface IDetachIsoFromServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachIsoFromServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -990,7 +990,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDetachServerFromNetworkApiResponse"/>
     /// </summary>
-    internal interface IDetachServerFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachServerFromNetworkResponse?>
+    public interface IDetachServerFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachServerFromNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1002,7 +1002,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDisableBackupsForServerApiResponse"/>
     /// </summary>
-    internal interface IDisableBackupsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisableBackupsForServerResponse?>
+    public interface IDisableBackupsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisableBackupsForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1014,7 +1014,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDisableRescueModeForServerApiResponse"/>
     /// </summary>
-    internal interface IDisableRescueModeForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisableRescueModeForServerResponse?>
+    public interface IDisableRescueModeForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisableRescueModeForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1026,7 +1026,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IEnableAndConfigureBackupsForServerApiResponse"/>
     /// </summary>
-    internal interface IEnableAndConfigureBackupsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnableAndConfigureBackupsForServerResponse?>
+    public interface IEnableAndConfigureBackupsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnableAndConfigureBackupsForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1038,7 +1038,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IEnableRescueModeForServerApiResponse"/>
     /// </summary>
-    internal interface IEnableRescueModeForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnableRescueModeForServerResponse?>
+    public interface IEnableRescueModeForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnableRescueModeForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1050,7 +1050,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForServerApiResponse"/>
     /// </summary>
-    internal interface IGetActionForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForServerResponse?>
+    public interface IGetActionForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1062,7 +1062,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetMetricsForServerApiResponse"/>
     /// </summary>
-    internal interface IGetMetricsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetMetricsForServerResponse?>
+    public interface IGetMetricsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetMetricsForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1074,7 +1074,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetServerApiResponse"/>
     /// </summary>
-    internal interface IGetServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetServerResponse?>
+    public interface IGetServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1086,7 +1086,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetServerActionApiResponse"/>
     /// </summary>
-    internal interface IGetServerActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetServerActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1098,7 +1098,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForServerApiResponse"/>
     /// </summary>
-    internal interface IListActionsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForServerResponse?>
+    public interface IListActionsForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1110,7 +1110,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListServerActionsApiResponse"/>
     /// </summary>
-    internal interface IListServerActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListServerActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1122,7 +1122,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListServersApiResponse"/>
     /// </summary>
-    internal interface IListServersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListServersResponse?>
+    public interface IListServersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListServersResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1134,7 +1134,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IPowerOffServerApiResponse"/>
     /// </summary>
-    internal interface IPowerOffServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.PowerOffServerResponse?>
+    public interface IPowerOffServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.PowerOffServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1146,7 +1146,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IPowerOnServerApiResponse"/>
     /// </summary>
-    internal interface IPowerOnServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.PowerOnServerResponse?>
+    public interface IPowerOnServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.PowerOnServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1158,7 +1158,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRebuildServerFromImageApiResponse"/>
     /// </summary>
-    internal interface IRebuildServerFromImageApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RebuildServerFromImageResponse?>
+    public interface IRebuildServerFromImageApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RebuildServerFromImageResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1170,7 +1170,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRemoveFromPlacementGroupApiResponse"/>
     /// </summary>
-    internal interface IRemoveFromPlacementGroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveFromPlacementGroupResponse?>
+    public interface IRemoveFromPlacementGroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveFromPlacementGroupResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1182,7 +1182,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceServerApiResponse"/>
     /// </summary>
-    internal interface IReplaceServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceServerResponse?>
+    public interface IReplaceServerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -1194,7 +1194,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRequestConsoleForServerApiResponse"/>
     /// </summary>
-    internal interface IRequestConsoleForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RequestConsoleForServerResponse?>
+    public interface IRequestConsoleForServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RequestConsoleForServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1206,7 +1206,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IResetRootPasswordOfServerApiResponse"/>
     /// </summary>
-    internal interface IResetRootPasswordOfServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResetRootPasswordOfServerResponse?>
+    public interface IResetRootPasswordOfServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResetRootPasswordOfServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1218,7 +1218,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IResetServerApiResponse"/>
     /// </summary>
-    internal interface IResetServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResetServerResponse?>
+    public interface IResetServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ResetServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1230,7 +1230,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IShutdownServerApiResponse"/>
     /// </summary>
-    internal interface IShutdownServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ShutdownServerResponse?>
+    public interface IShutdownServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ShutdownServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1242,7 +1242,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ISoftRebootServerApiResponse"/>
     /// </summary>
-    internal interface ISoftRebootServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.SoftRebootServerResponse?>
+    public interface ISoftRebootServerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.SoftRebootServerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -1254,7 +1254,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class ServersApiEvents
+    public class ServersApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -1920,7 +1920,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class ServersApi : IServersApi
+    public sealed partial class ServersApi : IServersApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -2141,7 +2141,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AddServerToPlacementGroupApiResponse"/>
         /// </summary>
-        internal partial class AddServerToPlacementGroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddServerToPlacementGroupApiResponse
+        public partial class AddServerToPlacementGroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddServerToPlacementGroupApiResponse
         {
             /// <summary>
             /// The logger
@@ -2392,7 +2392,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AttachIsoToServerApiResponse"/>
         /// </summary>
-        internal partial class AttachIsoToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachIsoToServerApiResponse
+        public partial class AttachIsoToServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachIsoToServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -2643,7 +2643,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AttachServerToNetworkApiResponse"/>
         /// </summary>
-        internal partial class AttachServerToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachServerToNetworkApiResponse
+        public partial class AttachServerToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachServerToNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2894,7 +2894,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeAliasIpsOfNetworkApiResponse"/>
         /// </summary>
-        internal partial class ChangeAliasIpsOfNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeAliasIpsOfNetworkApiResponse
+        public partial class ChangeAliasIpsOfNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeAliasIpsOfNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -3145,7 +3145,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeReverseDnsEntryForThisServerApiResponse"/>
         /// </summary>
-        internal partial class ChangeReverseDnsEntryForThisServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsEntryForThisServerApiResponse
+        public partial class ChangeReverseDnsEntryForThisServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsEntryForThisServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3396,7 +3396,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeServerProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeServerProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeServerProtectionApiResponse
+        public partial class ChangeServerProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeServerProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -3647,7 +3647,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeTypeOfServerApiResponse"/>
         /// </summary>
-        internal partial class ChangeTypeOfServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeTypeOfServerApiResponse
+        public partial class ChangeTypeOfServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeTypeOfServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3898,7 +3898,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateImageFromServerApiResponse"/>
         /// </summary>
-        internal partial class CreateImageFromServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateImageFromServerApiResponse
+        public partial class CreateImageFromServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateImageFromServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4142,7 +4142,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateServerApiResponse"/>
         /// </summary>
-        internal partial class CreateServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateServerApiResponse
+        public partial class CreateServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4360,7 +4360,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteServerApiResponse"/>
         /// </summary>
-        internal partial class DeleteServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteServerApiResponse
+        public partial class DeleteServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4578,7 +4578,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DetachIsoFromServerApiResponse"/>
         /// </summary>
-        internal partial class DetachIsoFromServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachIsoFromServerApiResponse
+        public partial class DetachIsoFromServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachIsoFromServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4829,7 +4829,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DetachServerFromNetworkApiResponse"/>
         /// </summary>
-        internal partial class DetachServerFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachServerFromNetworkApiResponse
+        public partial class DetachServerFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachServerFromNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -5047,7 +5047,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DisableBackupsForServerApiResponse"/>
         /// </summary>
-        internal partial class DisableBackupsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisableBackupsForServerApiResponse
+        public partial class DisableBackupsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisableBackupsForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5265,7 +5265,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DisableRescueModeForServerApiResponse"/>
         /// </summary>
-        internal partial class DisableRescueModeForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisableRescueModeForServerApiResponse
+        public partial class DisableRescueModeForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisableRescueModeForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5483,7 +5483,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="EnableAndConfigureBackupsForServerApiResponse"/>
         /// </summary>
-        internal partial class EnableAndConfigureBackupsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnableAndConfigureBackupsForServerApiResponse
+        public partial class EnableAndConfigureBackupsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnableAndConfigureBackupsForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5734,7 +5734,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="EnableRescueModeForServerApiResponse"/>
         /// </summary>
-        internal partial class EnableRescueModeForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnableRescueModeForServerApiResponse
+        public partial class EnableRescueModeForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnableRescueModeForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5959,7 +5959,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForServerApiResponse"/>
         /// </summary>
-        internal partial class GetActionForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForServerApiResponse
+        public partial class GetActionForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -6237,7 +6237,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetMetricsForServerApiResponse"/>
         /// </summary>
-        internal partial class GetMetricsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetMetricsForServerApiResponse
+        public partial class GetMetricsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetMetricsForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -6455,7 +6455,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetServerApiResponse"/>
         /// </summary>
-        internal partial class GetServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerApiResponse
+        public partial class GetServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -6673,7 +6673,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetServerActionApiResponse"/>
         /// </summary>
-        internal partial class GetServerActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerActionApiResponse
+        public partial class GetServerActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -6948,7 +6948,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForServerApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForServerApiResponse
+        public partial class ListActionsForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -7225,7 +7225,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListServerActionsApiResponse"/>
         /// </summary>
-        internal partial class ListServerActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServerActionsApiResponse
+        public partial class ListServerActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServerActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -7519,7 +7519,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListServersApiResponse"/>
         /// </summary>
-        internal partial class ListServersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServersApiResponse
+        public partial class ListServersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServersApiResponse
         {
             /// <summary>
             /// The logger
@@ -7737,7 +7737,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="PowerOffServerApiResponse"/>
         /// </summary>
-        internal partial class PowerOffServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IPowerOffServerApiResponse
+        public partial class PowerOffServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IPowerOffServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -7955,7 +7955,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="PowerOnServerApiResponse"/>
         /// </summary>
-        internal partial class PowerOnServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IPowerOnServerApiResponse
+        public partial class PowerOnServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IPowerOnServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -8206,7 +8206,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RebuildServerFromImageApiResponse"/>
         /// </summary>
-        internal partial class RebuildServerFromImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IRebuildServerFromImageApiResponse
+        public partial class RebuildServerFromImageApiResponse : Hetzner.Cloud.Client.ApiResponse, IRebuildServerFromImageApiResponse
         {
             /// <summary>
             /// The logger
@@ -8424,7 +8424,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RemoveFromPlacementGroupApiResponse"/>
         /// </summary>
-        internal partial class RemoveFromPlacementGroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveFromPlacementGroupApiResponse
+        public partial class RemoveFromPlacementGroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveFromPlacementGroupApiResponse
         {
             /// <summary>
             /// The logger
@@ -8675,7 +8675,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceServerApiResponse"/>
         /// </summary>
-        internal partial class ReplaceServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceServerApiResponse
+        public partial class ReplaceServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -8893,7 +8893,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RequestConsoleForServerApiResponse"/>
         /// </summary>
-        internal partial class RequestConsoleForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IRequestConsoleForServerApiResponse
+        public partial class RequestConsoleForServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IRequestConsoleForServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -9111,7 +9111,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ResetRootPasswordOfServerApiResponse"/>
         /// </summary>
-        internal partial class ResetRootPasswordOfServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IResetRootPasswordOfServerApiResponse
+        public partial class ResetRootPasswordOfServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IResetRootPasswordOfServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -9329,7 +9329,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ResetServerApiResponse"/>
         /// </summary>
-        internal partial class ResetServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IResetServerApiResponse
+        public partial class ResetServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IResetServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -9547,7 +9547,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ShutdownServerApiResponse"/>
         /// </summary>
-        internal partial class ShutdownServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IShutdownServerApiResponse
+        public partial class ShutdownServerApiResponse : Hetzner.Cloud.Client.ApiResponse, IShutdownServerApiResponse
         {
             /// <summary>
             /// The logger
@@ -9765,7 +9765,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="SoftRebootServerApiResponse"/>
         /// </summary>
-        internal partial class SoftRebootServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ISoftRebootServerApiResponse
+        public partial class SoftRebootServerApiResponse : Hetzner.Cloud.Client.ApiResponse, ISoftRebootServerApiResponse
         {
             /// <summary>
             /// The logger

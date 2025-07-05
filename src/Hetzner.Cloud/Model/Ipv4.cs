@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// IP address (v4) and its reverse DNS entry of this Server
     /// </summary>
-    internal partial class Ipv4 : IValidatableObject
+    public partial class Ipv4 : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Ipv4" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ip">IP address (v4) of this Server</param>
         /// <param name="id">ID of the Primary IP.</param>
         [JsonConstructor]
-        internal Ipv4(bool blocked, string dnsPtr, string ip, Option<long?> id = default)
+        public Ipv4(bool blocked, string dnsPtr, string ip, Option<long?> id = default)
         {
             Blocked = blocked;
             DnsPtr = dnsPtr;
@@ -125,7 +125,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Ipv4" />
     /// </summary>
-    internal class Ipv4JsonConverter : JsonConverter<Ipv4>
+    public class Ipv4JsonConverter : JsonConverter<Ipv4>
     {
         /// <summary>
         /// Deserializes json to <see cref="Ipv4" />
@@ -252,5 +252,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Ipv4))]
-    internal partial class Ipv4SerializationContext : JsonSerializerContext { }
+    public partial class Ipv4SerializationContext : JsonSerializerContext { }
 }

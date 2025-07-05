@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/load_balancers/{id}/actions
     /// </summary>
-    internal partial class ListActionsForLoadBalancerResponse : IValidatableObject
+    public partial class ListActionsForLoadBalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListActionsForLoadBalancerResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="actions">actions</param>
         /// <param name="meta">meta</param>
         [JsonConstructor]
-        internal ListActionsForLoadBalancerResponse(List<Action> actions, Meta meta)
+        public ListActionsForLoadBalancerResponse(List<Action> actions, Meta meta)
         {
             Actions = actions;
             Meta = meta;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListActionsForLoadBalancerResponse" />
     /// </summary>
-    internal class ListActionsForLoadBalancerResponseJsonConverter : JsonConverter<ListActionsForLoadBalancerResponse>
+    public class ListActionsForLoadBalancerResponseJsonConverter : JsonConverter<ListActionsForLoadBalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListActionsForLoadBalancerResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListActionsForLoadBalancerResponse))]
-    internal partial class ListActionsForLoadBalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListActionsForLoadBalancerResponseSerializationContext : JsonSerializerContext { }
 }

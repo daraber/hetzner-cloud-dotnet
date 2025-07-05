@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// IPv6 network assigned to this Server and its reverse DNS entry
     /// </summary>
-    internal partial class Ipv6 : IValidatableObject
+    public partial class Ipv6 : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Ipv6" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="dnsPtr">Reverse DNS PTR entries for the IPv6 addresses of this Server</param>
         /// <param name="id">ID of the Primary IP.</param>
         [JsonConstructor]
-        internal Ipv6(bool blocked, string ip, List<DnsPtr>? dnsPtr = default, Option<long?> id = default)
+        public Ipv6(bool blocked, string ip, List<DnsPtr>? dnsPtr = default, Option<long?> id = default)
         {
             Blocked = blocked;
             Ip = ip;
@@ -124,7 +124,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Ipv6" />
     /// </summary>
-    internal class Ipv6JsonConverter : JsonConverter<Ipv6>
+    public class Ipv6JsonConverter : JsonConverter<Ipv6>
     {
         /// <summary>
         /// Deserializes json to <see cref="Ipv6" />
@@ -250,5 +250,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Ipv6))]
-    internal partial class Ipv6SerializationContext : JsonSerializerContext { }
+    public partial class Ipv6SerializationContext : JsonSerializerContext { }
 }

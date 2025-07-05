@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/server_types/{id}
     /// </summary>
-    internal partial class GetServerTypeResponse : IValidatableObject
+    public partial class GetServerTypeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetServerTypeResponse" /> class.
         /// </summary>
         /// <param name="serverType">serverType</param>
         [JsonConstructor]
-        internal GetServerTypeResponse(ServerType serverType)
+        public GetServerTypeResponse(ServerType serverType)
         {
             ServerType = serverType;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetServerTypeResponse" />
     /// </summary>
-    internal class GetServerTypeResponseJsonConverter : JsonConverter<GetServerTypeResponse>
+    public class GetServerTypeResponseJsonConverter : JsonConverter<GetServerTypeResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetServerTypeResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetServerTypeResponse))]
-    internal partial class GetServerTypeResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetServerTypeResponseSerializationContext : JsonSerializerContext { }
 }

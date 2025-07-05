@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/pricing
     /// </summary>
-    internal partial class ListPricesResponse : IValidatableObject
+    public partial class ListPricesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponse" /> class.
         /// </summary>
         /// <param name="pricing">pricing</param>
         [JsonConstructor]
-        internal ListPricesResponse(ListPricesResponsePricing pricing)
+        public ListPricesResponse(ListPricesResponsePricing pricing)
         {
             Pricing = pricing;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponse" />
     /// </summary>
-    internal class ListPricesResponseJsonConverter : JsonConverter<ListPricesResponse>
+    public class ListPricesResponseJsonConverter : JsonConverter<ListPricesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponse))]
-    internal partial class ListPricesResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/networks/{id}/actions/change_ip_range
     /// </summary>
-    internal partial class ChangeIpRangeOfNetworkRequest : IValidatableObject
+    public partial class ChangeIpRangeOfNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeIpRangeOfNetworkRequest" /> class.
         /// </summary>
         /// <param name="ipRange">IP range of the [Network](#networks).  Uses CIDR notation.  Must span all included subnets. Must be one of the private IPv4 ranges of RFC1918.  Minimum network size is /24. We highly recommend that you pick a larger [Network](#networks) with a /16 netmask. </param>
         [JsonConstructor]
-        internal ChangeIpRangeOfNetworkRequest(string ipRange)
+        public ChangeIpRangeOfNetworkRequest(string ipRange)
         {
             IpRange = ipRange;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeIpRangeOfNetworkRequest" />
     /// </summary>
-    internal class ChangeIpRangeOfNetworkRequestJsonConverter : JsonConverter<ChangeIpRangeOfNetworkRequest>
+    public class ChangeIpRangeOfNetworkRequestJsonConverter : JsonConverter<ChangeIpRangeOfNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeIpRangeOfNetworkRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeIpRangeOfNetworkRequest))]
-    internal partial class ChangeIpRangeOfNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeIpRangeOfNetworkRequestSerializationContext : JsonSerializerContext { }
 }

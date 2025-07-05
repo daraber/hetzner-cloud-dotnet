@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface ISshKeysApi : IApi
+    public interface ISshKeysApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -166,7 +166,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateSshKeyApiResponse"/>
     /// </summary>
-    internal interface ICreateSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateSshKeyResponse?>
+    public interface ICreateSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateSshKeyResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -178,7 +178,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteSshKeyApiResponse"/>
     /// </summary>
-    internal interface IDeleteSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -190,7 +190,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetSshKeyApiResponse"/>
     /// </summary>
-    internal interface IGetSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetSshKeyResponse?>
+    public interface IGetSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetSshKeyResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -202,7 +202,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListSshKeysApiResponse"/>
     /// </summary>
-    internal interface IListSshKeysApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListSshKeysResponse?>
+    public interface IListSshKeysApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListSshKeysResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -214,7 +214,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceSshKeyApiResponse"/>
     /// </summary>
-    internal interface IReplaceSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceSshKeyResponse?>
+    public interface IReplaceSshKeyApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceSshKeyResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -226,7 +226,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class SshKeysApiEvents
+    public class SshKeysApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -332,7 +332,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class SshKeysApi : ISshKeysApi
+    public sealed partial class SshKeysApi : ISshKeysApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -546,7 +546,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateSshKeyApiResponse"/>
         /// </summary>
-        internal partial class CreateSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateSshKeyApiResponse
+        public partial class CreateSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateSshKeyApiResponse
         {
             /// <summary>
             /// The logger
@@ -755,7 +755,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteSshKeyApiResponse"/>
         /// </summary>
-        internal partial class DeleteSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteSshKeyApiResponse
+        public partial class DeleteSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteSshKeyApiResponse
         {
             /// <summary>
             /// The logger
@@ -941,7 +941,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetSshKeyApiResponse"/>
         /// </summary>
-        internal partial class GetSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetSshKeyApiResponse
+        public partial class GetSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetSshKeyApiResponse
         {
             /// <summary>
             /// The logger
@@ -1235,7 +1235,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListSshKeysApiResponse"/>
         /// </summary>
-        internal partial class ListSshKeysApiResponse : Hetzner.Cloud.Client.ApiResponse, IListSshKeysApiResponse
+        public partial class ListSshKeysApiResponse : Hetzner.Cloud.Client.ApiResponse, IListSshKeysApiResponse
         {
             /// <summary>
             /// The logger
@@ -1486,7 +1486,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceSshKeyApiResponse"/>
         /// </summary>
-        internal partial class ReplaceSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceSshKeyApiResponse
+        public partial class ReplaceSshKeyApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceSshKeyApiResponse
         {
             /// <summary>
             /// The logger

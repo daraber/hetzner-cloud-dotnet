@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A target to be added to a load balancer.
     /// </summary>
-    internal partial class LoadBalancerAddTarget : IValidatableObject
+    public partial class LoadBalancerAddTarget : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerAddTarget" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="server">server</param>
         /// <param name="usePrivateIp">Use the private network IP instead of the public IP of the Server, requires the Server and Load Balancer to be in the same network. (default to false)</param>
         [JsonConstructor]
-        internal LoadBalancerAddTarget(TypeEnum type, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default, Option<bool?> usePrivateIp = default)
+        public LoadBalancerAddTarget(TypeEnum type, Option<LoadBalancerTargetIp?> ip = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default, Option<bool?> usePrivateIp = default)
         {
             Type = type;
             IpOption = ip;
@@ -56,7 +56,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the resource
         /// </summary>
         /// <value>Type of the resource</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Ip for value: ip
@@ -225,7 +225,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerAddTarget" />
     /// </summary>
-    internal class LoadBalancerAddTargetJsonConverter : JsonConverter<LoadBalancerAddTarget>
+    public class LoadBalancerAddTargetJsonConverter : JsonConverter<LoadBalancerAddTarget>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerAddTarget" />
@@ -369,5 +369,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerAddTarget))]
-    internal partial class LoadBalancerAddTargetSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerAddTargetSerializationContext : JsonSerializerContext { }
 }

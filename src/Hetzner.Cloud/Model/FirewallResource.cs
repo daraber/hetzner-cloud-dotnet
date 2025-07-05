@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Resource a Firewall should be applied to.
     /// </summary>
-    internal partial class FirewallResource : IValidatableObject
+    public partial class FirewallResource : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallResource" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labelSelector">labelSelector</param>
         /// <param name="server">server</param>
         [JsonConstructor]
-        internal FirewallResource(TypeEnum type, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
+        public FirewallResource(TypeEnum type, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
         {
             Type = type;
             LabelSelectorOption = labelSelector;
@@ -52,7 +52,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the resource.
         /// </summary>
         /// <value>Type of the resource.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum LabelSelector for value: label_selector
@@ -177,7 +177,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="FirewallResource" />
     /// </summary>
-    internal class FirewallResourceJsonConverter : JsonConverter<FirewallResource>
+    public class FirewallResourceJsonConverter : JsonConverter<FirewallResource>
     {
         /// <summary>
         /// Deserializes json to <see cref="FirewallResource" />
@@ -297,5 +297,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(FirewallResource))]
-    internal partial class FirewallResourceSerializationContext : JsonSerializerContext { }
+    public partial class FirewallResourceSerializationContext : JsonSerializerContext { }
 }

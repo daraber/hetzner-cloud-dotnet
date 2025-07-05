@@ -20,7 +20,7 @@ namespace Hetzner.Cloud
     /// <summary>
     /// A class which will provide tokens.
     /// </summary>
-    internal abstract class TokenProvider<TTokenBase> where TTokenBase : TokenBase
+    public abstract class TokenProvider<TTokenBase> where TTokenBase : TokenBase
     {
         /// <summary>
         /// The array of tokens.

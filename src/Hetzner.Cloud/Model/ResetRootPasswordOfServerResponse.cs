@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/reset_password
     /// </summary>
-    internal partial class ResetRootPasswordOfServerResponse : IValidatableObject
+    public partial class ResetRootPasswordOfServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResetRootPasswordOfServerResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="action">action</param>
         /// <param name="rootPassword">Password that will be set for this Server once the Action succeeds</param>
         [JsonConstructor]
-        internal ResetRootPasswordOfServerResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
+        public ResetRootPasswordOfServerResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
         {
             ActionOption = action;
             RootPasswordOption = rootPassword;
@@ -102,7 +102,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ResetRootPasswordOfServerResponse" />
     /// </summary>
-    internal class ResetRootPasswordOfServerResponseJsonConverter : JsonConverter<ResetRootPasswordOfServerResponse>
+    public class ResetRootPasswordOfServerResponseJsonConverter : JsonConverter<ResetRootPasswordOfServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ResetRootPasswordOfServerResponse" />
@@ -205,5 +205,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ResetRootPasswordOfServerResponse))]
-    internal partial class ResetRootPasswordOfServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ResetRootPasswordOfServerResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/detach_from_network
     /// </summary>
-    internal partial class DetachLoadBalancerFromNetworkResponse : IValidatableObject
+    public partial class DetachLoadBalancerFromNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DetachLoadBalancerFromNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DetachLoadBalancerFromNetworkResponse(Action action)
+        public DetachLoadBalancerFromNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DetachLoadBalancerFromNetworkResponse" />
     /// </summary>
-    internal class DetachLoadBalancerFromNetworkResponseJsonConverter : JsonConverter<DetachLoadBalancerFromNetworkResponse>
+    public class DetachLoadBalancerFromNetworkResponseJsonConverter : JsonConverter<DetachLoadBalancerFromNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DetachLoadBalancerFromNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DetachLoadBalancerFromNetworkResponse))]
-    internal partial class DetachLoadBalancerFromNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class DetachLoadBalancerFromNetworkResponseSerializationContext : JsonSerializerContext { }
 }

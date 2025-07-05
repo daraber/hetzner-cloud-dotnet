@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Error message for the Action if an error occurred, otherwise null.
     /// </summary>
-    internal partial class Error : IValidatableObject
+    public partial class Error : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Error" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="code">Fixed error code for machines.</param>
         /// <param name="message">Error message for humans.</param>
         [JsonConstructor]
-        internal Error(string code, string message)
+        public Error(string code, string message)
         {
             Code = code;
             Message = message;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Error" />
     /// </summary>
-    internal class ErrorJsonConverter : JsonConverter<Error>
+    public class ErrorJsonConverter : JsonConverter<Error>
     {
         /// <summary>
         /// Deserializes json to <see cref="Error" />
@@ -195,5 +195,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Error))]
-    internal partial class ErrorSerializationContext : JsonSerializerContext { }
+    public partial class ErrorSerializationContext : JsonSerializerContext { }
 }

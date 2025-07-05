@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/delete_service
     /// </summary>
-    internal partial class DeleteServiceResponse : IValidatableObject
+    public partial class DeleteServiceResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteServiceResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DeleteServiceResponse(Action action)
+        public DeleteServiceResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeleteServiceResponse" />
     /// </summary>
-    internal class DeleteServiceResponseJsonConverter : JsonConverter<DeleteServiceResponse>
+    public class DeleteServiceResponseJsonConverter : JsonConverter<DeleteServiceResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeleteServiceResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeleteServiceResponse))]
-    internal partial class DeleteServiceResponseSerializationContext : JsonSerializerContext { }
+    public partial class DeleteServiceResponseSerializationContext : JsonSerializerContext { }
 }

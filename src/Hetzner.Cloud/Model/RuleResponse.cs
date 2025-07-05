@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// RuleResponse
     /// </summary>
-    internal partial class RuleResponse : IValidatableObject
+    public partial class RuleResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleResponse" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="description">Description of the rule.</param>
         /// <param name="port">Port or port range to apply the rule for.  Only applicable for protocols &#x60;tcp&#x60; and &#x60;udp&#x60;.  A port range can be specified by separating lower and upper bounds with a dash. &#x60;1024-5000&#x60; will include all ports starting from 1024 up to port 5000. </param>
         [JsonConstructor]
-        internal RuleResponse(List<string> destinationIps, DirectionEnum direction, ProtocolEnum protocol, List<string> sourceIps, Option<string?> description = default, string? port = default)
+        public RuleResponse(List<string> destinationIps, DirectionEnum direction, ProtocolEnum protocol, List<string> sourceIps, Option<string?> description = default, string? port = default)
         {
             DestinationIps = destinationIps;
             Direction = direction;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Traffic direction in which the rule should be applied to.  Use &#x60;source_ips&#x60; for direction &#x60;in&#x60; and &#x60;destination_ips&#x60; for direction &#x60;out&#x60; to specify IPs. 
         /// </summary>
         /// <value>Traffic direction in which the rule should be applied to.  Use &#x60;source_ips&#x60; for direction &#x60;in&#x60; and &#x60;destination_ips&#x60; for direction &#x60;out&#x60; to specify IPs. </value>
-        internal enum DirectionEnum
+        public enum DirectionEnum
         {
             /// <summary>
             /// Enum In for value: in
@@ -133,7 +133,7 @@ namespace Hetzner.Cloud.Model
         /// Network protocol to apply the rule for.
         /// </summary>
         /// <value>Network protocol to apply the rule for.</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Esp for value: esp
@@ -321,7 +321,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RuleResponse" />
     /// </summary>
-    internal class RuleResponseJsonConverter : JsonConverter<RuleResponse>
+    public class RuleResponseJsonConverter : JsonConverter<RuleResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="RuleResponse" />
@@ -476,5 +476,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RuleResponse))]
-    internal partial class RuleResponseSerializationContext : JsonSerializerContext { }
+    public partial class RuleResponseSerializationContext : JsonSerializerContext { }
 }

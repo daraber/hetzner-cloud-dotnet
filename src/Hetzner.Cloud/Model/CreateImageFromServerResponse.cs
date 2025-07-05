@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/create_image
     /// </summary>
-    internal partial class CreateImageFromServerResponse : IValidatableObject
+    public partial class CreateImageFromServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateImageFromServerResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="action">action</param>
         /// <param name="image">image</param>
         [JsonConstructor]
-        internal CreateImageFromServerResponse(Option<Action?> action = default, Option<Image?> image = default)
+        public CreateImageFromServerResponse(Option<Action?> action = default, Option<Image?> image = default)
         {
             ActionOption = action;
             ImageOption = image;
@@ -100,7 +100,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateImageFromServerResponse" />
     /// </summary>
-    internal class CreateImageFromServerResponseJsonConverter : JsonConverter<CreateImageFromServerResponse>
+    public class CreateImageFromServerResponseJsonConverter : JsonConverter<CreateImageFromServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateImageFromServerResponse" />
@@ -206,5 +206,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateImageFromServerResponse))]
-    internal partial class CreateImageFromServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class CreateImageFromServerResponseSerializationContext : JsonSerializerContext { }
 }

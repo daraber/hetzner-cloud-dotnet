@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/reset
     /// </summary>
-    internal partial class ResetServerResponse : IValidatableObject
+    public partial class ResetServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResetServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ResetServerResponse(Action action)
+        public ResetServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ResetServerResponse" />
     /// </summary>
-    internal class ResetServerResponseJsonConverter : JsonConverter<ResetServerResponse>
+    public class ResetServerResponseJsonConverter : JsonConverter<ResetServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ResetServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ResetServerResponse))]
-    internal partial class ResetServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ResetServerResponseSerializationContext : JsonSerializerContext { }
 }

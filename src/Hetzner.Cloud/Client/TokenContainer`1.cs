@@ -11,7 +11,7 @@ namespace Hetzner.Cloud.Client
     /// A container for a collection of tokens.
     /// </summary>
     /// <typeparam name="TTokenBase"></typeparam>
-    internal sealed class TokenContainer<TTokenBase> where TTokenBase : TokenBase
+    public sealed class TokenContainer<TTokenBase> where TTokenBase : TokenBase
     {
         /// <summary>
         /// The collection of tokens

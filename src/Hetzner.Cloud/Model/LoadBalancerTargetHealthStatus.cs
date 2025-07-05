@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Health status of the services on this target. Only present for target types \&quot;server\&quot; and \&quot;ip\&quot;.
     /// </summary>
-    internal partial class LoadBalancerTargetHealthStatus : IValidatableObject
+    public partial class LoadBalancerTargetHealthStatus : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerTargetHealthStatus" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="listenPort">listenPort</param>
         /// <param name="status">status</param>
         [JsonConstructor]
-        internal LoadBalancerTargetHealthStatus(Option<int?> listenPort = default, Option<StatusEnum?> status = default)
+        public LoadBalancerTargetHealthStatus(Option<int?> listenPort = default, Option<StatusEnum?> status = default)
         {
             ListenPortOption = listenPort;
             StatusOption = status;
@@ -49,7 +49,7 @@ namespace Hetzner.Cloud.Model
         /// <summary>
         /// Defines Status
         /// </summary>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Healthy for value: healthy
@@ -182,7 +182,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerTargetHealthStatus" />
     /// </summary>
-    internal class LoadBalancerTargetHealthStatusJsonConverter : JsonConverter<LoadBalancerTargetHealthStatus>
+    public class LoadBalancerTargetHealthStatusJsonConverter : JsonConverter<LoadBalancerTargetHealthStatus>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerTargetHealthStatus" />
@@ -279,5 +279,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerTargetHealthStatus))]
-    internal partial class LoadBalancerTargetHealthStatusSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerTargetHealthStatusSerializationContext : JsonSerializerContext { }
 }

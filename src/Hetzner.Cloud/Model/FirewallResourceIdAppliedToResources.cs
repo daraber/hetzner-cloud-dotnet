@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// FirewallResourceIdAppliedToResources
     /// </summary>
-    internal partial class FirewallResourceIdAppliedToResources : IValidatableObject
+    public partial class FirewallResourceIdAppliedToResources : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallResourceIdAppliedToResources" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="server">server</param>
         /// <param name="type">Type of resource.</param>
         [JsonConstructor]
-        internal FirewallResourceIdAppliedToResources(Option<ResourceId?> server = default, Option<TypeEnum?> type = default)
+        public FirewallResourceIdAppliedToResources(Option<ResourceId?> server = default, Option<TypeEnum?> type = default)
         {
             ServerOption = server;
             TypeOption = type;
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// Type of resource.
         /// </summary>
         /// <value>Type of resource.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Server for value: server
@@ -155,7 +155,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="FirewallResourceIdAppliedToResources" />
     /// </summary>
-    internal class FirewallResourceIdAppliedToResourcesJsonConverter : JsonConverter<FirewallResourceIdAppliedToResources>
+    public class FirewallResourceIdAppliedToResourcesJsonConverter : JsonConverter<FirewallResourceIdAppliedToResources>
     {
         /// <summary>
         /// Deserializes json to <see cref="FirewallResourceIdAppliedToResources" />
@@ -257,5 +257,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(FirewallResourceIdAppliedToResources))]
-    internal partial class FirewallResourceIdAppliedToResourcesSerializationContext : JsonSerializerContext { }
+    public partial class FirewallResourceIdAppliedToResourcesSerializationContext : JsonSerializerContext { }
 }

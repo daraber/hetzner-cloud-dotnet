@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/firewalls/{id}/actions/apply_to_resources
     /// </summary>
-    internal partial class ApplyToResourcesRequest : IValidatableObject
+    public partial class ApplyToResourcesRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplyToResourcesRequest" /> class.
         /// </summary>
         /// <param name="applyTo">Resources to apply the [Firewall](#firewalls) to.  Extends existing resources. </param>
         [JsonConstructor]
-        internal ApplyToResourcesRequest(List<FirewallResource> applyTo)
+        public ApplyToResourcesRequest(List<FirewallResource> applyTo)
         {
             ApplyTo = applyTo;
             OnCreated();
@@ -78,7 +78,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ApplyToResourcesRequest" />
     /// </summary>
-    internal class ApplyToResourcesRequestJsonConverter : JsonConverter<ApplyToResourcesRequest>
+    public class ApplyToResourcesRequestJsonConverter : JsonConverter<ApplyToResourcesRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ApplyToResourcesRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ApplyToResourcesRequest))]
-    internal partial class ApplyToResourcesRequestSerializationContext : JsonSerializerContext { }
+    public partial class ApplyToResourcesRequestSerializationContext : JsonSerializerContext { }
 }

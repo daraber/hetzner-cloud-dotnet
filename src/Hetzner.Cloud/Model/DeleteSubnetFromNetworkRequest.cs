@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/networks/{id}/actions/delete_subnet
     /// </summary>
-    internal partial class DeleteSubnetFromNetworkRequest : IValidatableObject
+    public partial class DeleteSubnetFromNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteSubnetFromNetworkRequest" /> class.
         /// </summary>
         /// <param name="ipRange">IP range in CIDR block notation of the subnet to delete.</param>
         [JsonConstructor]
-        internal DeleteSubnetFromNetworkRequest(string ipRange)
+        public DeleteSubnetFromNetworkRequest(string ipRange)
         {
             IpRange = ipRange;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeleteSubnetFromNetworkRequest" />
     /// </summary>
-    internal class DeleteSubnetFromNetworkRequestJsonConverter : JsonConverter<DeleteSubnetFromNetworkRequest>
+    public class DeleteSubnetFromNetworkRequestJsonConverter : JsonConverter<DeleteSubnetFromNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeleteSubnetFromNetworkRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeleteSubnetFromNetworkRequest))]
-    internal partial class DeleteSubnetFromNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class DeleteSubnetFromNetworkRequestSerializationContext : JsonSerializerContext { }
 }

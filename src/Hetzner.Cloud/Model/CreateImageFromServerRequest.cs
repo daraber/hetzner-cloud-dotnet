@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/create_image
     /// </summary>
-    internal partial class CreateImageFromServerRequest : IValidatableObject
+    public partial class CreateImageFromServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateImageFromServerRequest" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="type">Type of Image to create. (default to TypeEnum.Snapshot)</param>
         [JsonConstructor]
-        internal CreateImageFromServerRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<TypeEnum?> type = default)
+        public CreateImageFromServerRequest(Option<string?> description = default, Option<Dictionary<string, string>?> labels = default, Option<TypeEnum?> type = default)
         {
             DescriptionOption = description;
             LabelsOption = labels;
@@ -52,7 +52,7 @@ namespace Hetzner.Cloud.Model
         /// Type of Image to create.
         /// </summary>
         /// <value>Type of Image to create.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Backup for value: backup
@@ -189,7 +189,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateImageFromServerRequest" />
     /// </summary>
-    internal class CreateImageFromServerRequestJsonConverter : JsonConverter<CreateImageFromServerRequest>
+    public class CreateImageFromServerRequestJsonConverter : JsonConverter<CreateImageFromServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateImageFromServerRequest" />
@@ -304,5 +304,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateImageFromServerRequest))]
-    internal partial class CreateImageFromServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateImageFromServerRequestSerializationContext : JsonSerializerContext { }
 }

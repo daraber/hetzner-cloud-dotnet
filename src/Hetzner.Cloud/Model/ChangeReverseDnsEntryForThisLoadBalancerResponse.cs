@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_dns_ptr
     /// </summary>
-    internal partial class ChangeReverseDnsEntryForThisLoadBalancerResponse : IValidatableObject
+    public partial class ChangeReverseDnsEntryForThisLoadBalancerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeReverseDnsEntryForThisLoadBalancerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeReverseDnsEntryForThisLoadBalancerResponse(Action action)
+        public ChangeReverseDnsEntryForThisLoadBalancerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeReverseDnsEntryForThisLoadBalancerResponse" />
     /// </summary>
-    internal class ChangeReverseDnsEntryForThisLoadBalancerResponseJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisLoadBalancerResponse>
+    public class ChangeReverseDnsEntryForThisLoadBalancerResponseJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisLoadBalancerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeReverseDnsEntryForThisLoadBalancerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeReverseDnsEntryForThisLoadBalancerResponse))]
-    internal partial class ChangeReverseDnsEntryForThisLoadBalancerResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeReverseDnsEntryForThisLoadBalancerResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// MetricsTimeSeriesValue
     /// </summary>
-    internal partial class MetricsTimeSeriesValue : IValidatableObject
+    public partial class MetricsTimeSeriesValue : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MetricsTimeSeriesValue" /> class.
         /// </summary>
         /// <param name="values">Metrics Timestamps with values</param>
         [JsonConstructor]
-        internal MetricsTimeSeriesValue(List<List<MetricsTimeSeriesValue>> values)
+        public MetricsTimeSeriesValue(List<List<MetricsTimeSeriesValue>> values)
         {
             Values = values;
             OnCreated();
@@ -78,7 +78,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="MetricsTimeSeriesValue" />
     /// </summary>
-    internal class MetricsTimeSeriesValueJsonConverter : JsonConverter<MetricsTimeSeriesValue>
+    public class MetricsTimeSeriesValueJsonConverter : JsonConverter<MetricsTimeSeriesValue>
     {
         /// <summary>
         /// Deserializes json to <see cref="MetricsTimeSeriesValue" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(MetricsTimeSeriesValue))]
-    internal partial class MetricsTimeSeriesValueSerializationContext : JsonSerializerContext { }
+    public partial class MetricsTimeSeriesValueSerializationContext : JsonSerializerContext { }
 }

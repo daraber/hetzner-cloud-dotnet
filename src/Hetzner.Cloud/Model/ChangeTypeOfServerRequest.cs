@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/change_type
     /// </summary>
-    internal partial class ChangeTypeOfServerRequest : IValidatableObject
+    public partial class ChangeTypeOfServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeTypeOfServerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="serverType">ID or name of Server type the Server should migrate to</param>
         /// <param name="upgradeDisk">If false, do not upgrade the disk (this allows downgrading the Server type later)</param>
         [JsonConstructor]
-        internal ChangeTypeOfServerRequest(string serverType, bool upgradeDisk)
+        public ChangeTypeOfServerRequest(string serverType, bool upgradeDisk)
         {
             ServerType = serverType;
             UpgradeDisk = upgradeDisk;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeTypeOfServerRequest" />
     /// </summary>
-    internal class ChangeTypeOfServerRequestJsonConverter : JsonConverter<ChangeTypeOfServerRequest>
+    public class ChangeTypeOfServerRequestJsonConverter : JsonConverter<ChangeTypeOfServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeTypeOfServerRequest" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeTypeOfServerRequest))]
-    internal partial class ChangeTypeOfServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeTypeOfServerRequestSerializationContext : JsonSerializerContext { }
 }

@@ -12,7 +12,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// A token constructed from a token from a bearer token.
     /// </summary>
-    internal class BearerToken : TokenBase
+    public class BearerToken : TokenBase
     {
         private string _raw;
 

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/attach_iso
     /// </summary>
-    internal partial class AttachIsoToServerRequest : IValidatableObject
+    public partial class AttachIsoToServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachIsoToServerRequest" /> class.
         /// </summary>
         /// <param name="iso">ID or name of ISO to attach to the Server as listed in GET &#x60;/isos&#x60;</param>
         [JsonConstructor]
-        internal AttachIsoToServerRequest(string iso)
+        public AttachIsoToServerRequest(string iso)
         {
             Iso = iso;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachIsoToServerRequest" />
     /// </summary>
-    internal class AttachIsoToServerRequestJsonConverter : JsonConverter<AttachIsoToServerRequest>
+    public class AttachIsoToServerRequestJsonConverter : JsonConverter<AttachIsoToServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachIsoToServerRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachIsoToServerRequest))]
-    internal partial class AttachIsoToServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class AttachIsoToServerRequestSerializationContext : JsonSerializerContext { }
 }

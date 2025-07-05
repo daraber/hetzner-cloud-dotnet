@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/ssh_keys/{id}
     /// </summary>
-    internal partial class ReplaceSshKeyRequest : IValidatableObject
+    public partial class ReplaceSshKeyRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceSshKeyRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New name Name to set</param>
         [JsonConstructor]
-        internal ReplaceSshKeyRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceSshKeyRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceSshKeyRequest" />
     /// </summary>
-    internal class ReplaceSshKeyRequestJsonConverter : JsonConverter<ReplaceSshKeyRequest>
+    public class ReplaceSshKeyRequestJsonConverter : JsonConverter<ReplaceSshKeyRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceSshKeyRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceSshKeyRequest))]
-    internal partial class ReplaceSshKeyRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceSshKeyRequestSerializationContext : JsonSerializerContext { }
 }

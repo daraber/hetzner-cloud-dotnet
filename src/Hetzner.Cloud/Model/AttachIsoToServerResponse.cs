@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/attach_iso
     /// </summary>
-    internal partial class AttachIsoToServerResponse : IValidatableObject
+    public partial class AttachIsoToServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachIsoToServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AttachIsoToServerResponse(Action action)
+        public AttachIsoToServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AttachIsoToServerResponse" />
     /// </summary>
-    internal class AttachIsoToServerResponseJsonConverter : JsonConverter<AttachIsoToServerResponse>
+    public class AttachIsoToServerResponseJsonConverter : JsonConverter<AttachIsoToServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AttachIsoToServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AttachIsoToServerResponse))]
-    internal partial class AttachIsoToServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class AttachIsoToServerResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// ListPricesResponsePricingLoadBalancerTypes
     /// </summary>
-    internal partial class ListPricesResponsePricingLoadBalancerTypes : IValidatableObject
+    public partial class ListPricesResponsePricingLoadBalancerTypes : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPricesResponsePricingLoadBalancerTypes" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Name of the [Load Balancer Types](#load-balancer-types) the price is for.</param>
         /// <param name="prices">Price of the [Load Balancer Types](#load-balancer-types) per [Location](#locations).</param>
         [JsonConstructor]
-        internal ListPricesResponsePricingLoadBalancerTypes(long id, string name, List<PricePerTime> prices)
+        public ListPricesResponsePricingLoadBalancerTypes(long id, string name, List<PricePerTime> prices)
         {
             Id = id;
             Name = name;
@@ -106,7 +106,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListPricesResponsePricingLoadBalancerTypes" />
     /// </summary>
-    internal class ListPricesResponsePricingLoadBalancerTypesJsonConverter : JsonConverter<ListPricesResponsePricingLoadBalancerTypes>
+    public class ListPricesResponsePricingLoadBalancerTypesJsonConverter : JsonConverter<ListPricesResponsePricingLoadBalancerTypes>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListPricesResponsePricingLoadBalancerTypes" />
@@ -224,5 +224,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListPricesResponsePricingLoadBalancerTypes))]
-    internal partial class ListPricesResponsePricingLoadBalancerTypesSerializationContext : JsonSerializerContext { }
+    public partial class ListPricesResponsePricingLoadBalancerTypesSerializationContext : JsonSerializerContext { }
 }

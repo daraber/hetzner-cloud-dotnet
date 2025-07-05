@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// [Datacenter](#datacenters) the [Primary IP](#primary-ips) is located at. | Datacenter this Resource is located at
     /// </summary>
-    internal partial class Datacenter : IValidatableObject
+    public partial class Datacenter : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Datacenter" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Unique name for the [Datacenter](#datacenters).  Can be used as a more descriptive identifier. </param>
         /// <param name="serverTypes">serverTypes</param>
         [JsonConstructor]
-        internal Datacenter(string description, long id, Location location, string name, DatacenterServerTypes serverTypes)
+        public Datacenter(string description, long id, Location location, string name, DatacenterServerTypes serverTypes)
         {
             Description = description;
             Id = id;
@@ -135,7 +135,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Datacenter" />
     /// </summary>
-    internal class DatacenterJsonConverter : JsonConverter<Datacenter>
+    public class DatacenterJsonConverter : JsonConverter<Datacenter>
     {
         /// <summary>
         /// Deserializes json to <see cref="Datacenter" />
@@ -283,5 +283,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Datacenter))]
-    internal partial class DatacenterSerializationContext : JsonSerializerContext { }
+    public partial class DatacenterSerializationContext : JsonSerializerContext { }
 }

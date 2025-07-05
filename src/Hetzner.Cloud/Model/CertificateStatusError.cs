@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// If issuance or renewal reports &#x60;failed&#x60;, this property contains information about what happened
     /// </summary>
-    internal partial class CertificateStatusError : IValidatableObject
+    public partial class CertificateStatusError : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateStatusError" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="code">code</param>
         /// <param name="message">message</param>
         [JsonConstructor]
-        internal CertificateStatusError(Option<string?> code = default, Option<string?> message = default)
+        public CertificateStatusError(Option<string?> code = default, Option<string?> message = default)
         {
             CodeOption = code;
             MessageOption = message;
@@ -100,7 +100,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CertificateStatusError" />
     /// </summary>
-    internal class CertificateStatusErrorJsonConverter : JsonConverter<CertificateStatusError>
+    public class CertificateStatusErrorJsonConverter : JsonConverter<CertificateStatusError>
     {
         /// <summary>
         /// Deserializes json to <see cref="CertificateStatusError" />
@@ -201,5 +201,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CertificateStatusError))]
-    internal partial class CertificateStatusErrorSerializationContext : JsonSerializerContext { }
+    public partial class CertificateStatusErrorSerializationContext : JsonSerializerContext { }
 }

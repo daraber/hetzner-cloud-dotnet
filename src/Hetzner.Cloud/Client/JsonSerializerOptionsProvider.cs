@@ -9,7 +9,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// Provides the JsonSerializerOptions
     /// </summary>
-    internal class JsonSerializerOptionsProvider
+    public class JsonSerializerOptionsProvider
     {
         /// <summary>
         /// the JsonSerializerOptions

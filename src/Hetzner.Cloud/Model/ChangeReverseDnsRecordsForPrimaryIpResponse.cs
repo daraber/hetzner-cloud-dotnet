@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/primary_ips/{id}/actions/change_dns_ptr
     /// </summary>
-    internal partial class ChangeReverseDnsRecordsForPrimaryIpResponse : IValidatableObject
+    public partial class ChangeReverseDnsRecordsForPrimaryIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeReverseDnsRecordsForPrimaryIpResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangeReverseDnsRecordsForPrimaryIpResponse(Action action)
+        public ChangeReverseDnsRecordsForPrimaryIpResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeReverseDnsRecordsForPrimaryIpResponse" />
     /// </summary>
-    internal class ChangeReverseDnsRecordsForPrimaryIpResponseJsonConverter : JsonConverter<ChangeReverseDnsRecordsForPrimaryIpResponse>
+    public class ChangeReverseDnsRecordsForPrimaryIpResponseJsonConverter : JsonConverter<ChangeReverseDnsRecordsForPrimaryIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeReverseDnsRecordsForPrimaryIpResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeReverseDnsRecordsForPrimaryIpResponse))]
-    internal partial class ChangeReverseDnsRecordsForPrimaryIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangeReverseDnsRecordsForPrimaryIpResponseSerializationContext : JsonSerializerContext { }
 }

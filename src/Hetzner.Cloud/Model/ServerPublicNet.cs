@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Public network information. The Server&#39;s IPv4 address can be found in &#x60;public_net-&gt;ipv4-&gt;ip&#x60;
     /// </summary>
-    internal partial class ServerPublicNet : IValidatableObject
+    public partial class ServerPublicNet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerPublicNet" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ipv4">ipv4</param>
         /// <param name="ipv6">ipv6</param>
         [JsonConstructor]
-        internal ServerPublicNet(List<long> floatingIps, Option<List<ServerPublicNetFirewall>?> firewalls = default, Ipv4? ipv4 = default, Ipv6? ipv6 = default)
+        public ServerPublicNet(List<long> floatingIps, Option<List<ServerPublicNetFirewall>?> firewalls = default, Ipv4? ipv4 = default, Ipv6? ipv6 = default)
         {
             FloatingIps = floatingIps;
             FirewallsOption = firewalls;
@@ -114,7 +114,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ServerPublicNet" />
     /// </summary>
-    internal class ServerPublicNetJsonConverter : JsonConverter<ServerPublicNet>
+    public class ServerPublicNetJsonConverter : JsonConverter<ServerPublicNet>
     {
         /// <summary>
         /// Deserializes json to <see cref="ServerPublicNet" />
@@ -248,5 +248,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ServerPublicNet))]
-    internal partial class ServerPublicNetSerializationContext : JsonSerializerContext { }
+    public partial class ServerPublicNetSerializationContext : JsonSerializerContext { }
 }

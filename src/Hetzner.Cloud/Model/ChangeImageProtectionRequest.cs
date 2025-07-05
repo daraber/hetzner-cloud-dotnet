@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/images/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangeImageProtectionRequest : IValidatableObject
+    public partial class ChangeImageProtectionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeImageProtectionRequest" /> class.
         /// </summary>
         /// <param name="delete">If true, prevents the snapshot from being deleted</param>
         [JsonConstructor]
-        internal ChangeImageProtectionRequest(Option<bool?> delete = default)
+        public ChangeImageProtectionRequest(Option<bool?> delete = default)
         {
             DeleteOption = delete;
             OnCreated();
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeImageProtectionRequest" />
     /// </summary>
-    internal class ChangeImageProtectionRequestJsonConverter : JsonConverter<ChangeImageProtectionRequest>
+    public class ChangeImageProtectionRequestJsonConverter : JsonConverter<ChangeImageProtectionRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeImageProtectionRequest" />
@@ -171,5 +171,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeImageProtectionRequest))]
-    internal partial class ChangeImageProtectionRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeImageProtectionRequestSerializationContext : JsonSerializerContext { }
 }

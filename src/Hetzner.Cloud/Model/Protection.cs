@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Protection configuration for the Resource
     /// </summary>
-    internal partial class Protection : IValidatableObject
+    public partial class Protection : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Protection" /> class.
         /// </summary>
         /// <param name="delete">Prevent the Resource from being deleted.</param>
         [JsonConstructor]
-        internal Protection(bool delete)
+        public Protection(bool delete)
         {
             Delete = delete;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Protection" />
     /// </summary>
-    internal class ProtectionJsonConverter : JsonConverter<Protection>
+    public class ProtectionJsonConverter : JsonConverter<Protection>
     {
         /// <summary>
         /// Deserializes json to <see cref="Protection" />
@@ -166,5 +166,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Protection))]
-    internal partial class ProtectionSerializationContext : JsonSerializerContext { }
+    public partial class ProtectionSerializationContext : JsonSerializerContext { }
 }

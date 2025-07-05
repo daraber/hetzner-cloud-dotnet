@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/load_balancer_types/{id}
     /// </summary>
-    internal partial class GetLoadBalancerTypeResponse : IValidatableObject
+    public partial class GetLoadBalancerTypeResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLoadBalancerTypeResponse" /> class.
         /// </summary>
         /// <param name="loadBalancerType">loadBalancerType</param>
         [JsonConstructor]
-        internal GetLoadBalancerTypeResponse(Option<LoadBalancerType?> loadBalancerType = default)
+        public GetLoadBalancerTypeResponse(Option<LoadBalancerType?> loadBalancerType = default)
         {
             LoadBalancerTypeOption = loadBalancerType;
             OnCreated();
@@ -84,7 +84,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetLoadBalancerTypeResponse" />
     /// </summary>
-    internal class GetLoadBalancerTypeResponseJsonConverter : JsonConverter<GetLoadBalancerTypeResponse>
+    public class GetLoadBalancerTypeResponseJsonConverter : JsonConverter<GetLoadBalancerTypeResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetLoadBalancerTypeResponse" />
@@ -175,5 +175,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetLoadBalancerTypeResponse))]
-    internal partial class GetLoadBalancerTypeResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetLoadBalancerTypeResponseSerializationContext : JsonSerializerContext { }
 }

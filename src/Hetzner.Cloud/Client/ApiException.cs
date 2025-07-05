@@ -17,7 +17,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// API Exception
     /// </summary>
-    internal class ApiException : Exception
+    public class ApiException : Exception
     {
         /// <summary>
         /// The reason the api request failed

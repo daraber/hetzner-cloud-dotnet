@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/floating_ips/{id}/actions/assign
     /// </summary>
-    internal partial class AssignFloatingIpToServerResponse : IValidatableObject
+    public partial class AssignFloatingIpToServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignFloatingIpToServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AssignFloatingIpToServerResponse(Action action)
+        public AssignFloatingIpToServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AssignFloatingIpToServerResponse" />
     /// </summary>
-    internal class AssignFloatingIpToServerResponseJsonConverter : JsonConverter<AssignFloatingIpToServerResponse>
+    public class AssignFloatingIpToServerResponseJsonConverter : JsonConverter<AssignFloatingIpToServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AssignFloatingIpToServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AssignFloatingIpToServerResponse))]
-    internal partial class AssignFloatingIpToServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class AssignFloatingIpToServerResponseSerializationContext : JsonSerializerContext { }
 }

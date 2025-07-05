@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/add_service
     /// </summary>
-    internal partial class AddServiceResponse : IValidatableObject
+    public partial class AddServiceResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddServiceResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AddServiceResponse(Action action)
+        public AddServiceResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AddServiceResponse" />
     /// </summary>
-    internal class AddServiceResponseJsonConverter : JsonConverter<AddServiceResponse>
+    public class AddServiceResponseJsonConverter : JsonConverter<AddServiceResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AddServiceResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AddServiceResponse))]
-    internal partial class AddServiceResponseSerializationContext : JsonSerializerContext { }
+    public partial class AddServiceResponseSerializationContext : JsonSerializerContext { }
 }

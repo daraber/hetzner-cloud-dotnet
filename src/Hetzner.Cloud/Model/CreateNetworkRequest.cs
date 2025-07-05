@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/networks
     /// </summary>
-    internal partial class CreateNetworkRequest : IValidatableObject
+    public partial class CreateNetworkRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateNetworkRequest" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="routes">Array of routes set in this [Network](#networks).</param>
         /// <param name="subnets">Array of subnets to allocate.</param>
         [JsonConstructor]
-        internal CreateNetworkRequest(string ipRange, string name, Option<bool?> exposeRoutesToVswitch = default, Option<Dictionary<string, string>?> labels = default, Option<List<Route>?> routes = default, Option<List<Subnet>?> subnets = default)
+        public CreateNetworkRequest(string ipRange, string name, Option<bool?> exposeRoutesToVswitch = default, Option<Dictionary<string, string>?> labels = default, Option<List<Route>?> routes = default, Option<List<Subnet>?> subnets = default)
         {
             IpRange = ipRange;
             Name = name;
@@ -160,7 +160,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateNetworkRequest" />
     /// </summary>
-    internal class CreateNetworkRequestJsonConverter : JsonConverter<CreateNetworkRequest>
+    public class CreateNetworkRequestJsonConverter : JsonConverter<CreateNetworkRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateNetworkRequest" />
@@ -321,5 +321,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateNetworkRequest))]
-    internal partial class CreateNetworkRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateNetworkRequestSerializationContext : JsonSerializerContext { }
 }

@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/networks/{id}/actions/delete_subnet
     /// </summary>
-    internal partial class DeleteSubnetFromNetworkResponse : IValidatableObject
+    public partial class DeleteSubnetFromNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteSubnetFromNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal DeleteSubnetFromNetworkResponse(Action action)
+        public DeleteSubnetFromNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="DeleteSubnetFromNetworkResponse" />
     /// </summary>
-    internal class DeleteSubnetFromNetworkResponseJsonConverter : JsonConverter<DeleteSubnetFromNetworkResponse>
+    public class DeleteSubnetFromNetworkResponseJsonConverter : JsonConverter<DeleteSubnetFromNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="DeleteSubnetFromNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(DeleteSubnetFromNetworkResponse))]
-    internal partial class DeleteSubnetFromNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class DeleteSubnetFromNetworkResponseSerializationContext : JsonSerializerContext { }
 }

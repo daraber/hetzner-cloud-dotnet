@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/networks/{id}/actions/add_route
     /// </summary>
-    internal partial class AddRouteToNetworkResponse : IValidatableObject
+    public partial class AddRouteToNetworkResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddRouteToNetworkResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal AddRouteToNetworkResponse(Action action)
+        public AddRouteToNetworkResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AddRouteToNetworkResponse" />
     /// </summary>
-    internal class AddRouteToNetworkResponseJsonConverter : JsonConverter<AddRouteToNetworkResponse>
+    public class AddRouteToNetworkResponseJsonConverter : JsonConverter<AddRouteToNetworkResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="AddRouteToNetworkResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AddRouteToNetworkResponse))]
-    internal partial class AddRouteToNetworkResponseSerializationContext : JsonSerializerContext { }
+    public partial class AddRouteToNetworkResponseSerializationContext : JsonSerializerContext { }
 }

@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IPlacementGroupsApi : IApi
+    public interface IPlacementGroupsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -166,7 +166,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreatePlacementgroupApiResponse"/>
     /// </summary>
-    internal interface ICreatePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreatePlacementgroupResponse?>
+    public interface ICreatePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreatePlacementgroupResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -178,7 +178,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeletePlacementgroupApiResponse"/>
     /// </summary>
-    internal interface IDeletePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeletePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -190,7 +190,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetPlacementgroupApiResponse"/>
     /// </summary>
-    internal interface IGetPlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetPlacementgroupResponse?>
+    public interface IGetPlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetPlacementgroupResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -202,7 +202,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListPlacementgroupsApiResponse"/>
     /// </summary>
-    internal interface IListPlacementgroupsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPlacementgroupsResponse?>
+    public interface IListPlacementgroupsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListPlacementgroupsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -214,7 +214,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplacePlacementgroupApiResponse"/>
     /// </summary>
-    internal interface IReplacePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplacePlacementgroupResponse?>
+    public interface IReplacePlacementgroupApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplacePlacementgroupResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -226,7 +226,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class PlacementGroupsApiEvents
+    public class PlacementGroupsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -332,7 +332,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class PlacementGroupsApi : IPlacementGroupsApi
+    public sealed partial class PlacementGroupsApi : IPlacementGroupsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -546,7 +546,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreatePlacementgroupApiResponse"/>
         /// </summary>
-        internal partial class CreatePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreatePlacementgroupApiResponse
+        public partial class CreatePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreatePlacementgroupApiResponse
         {
             /// <summary>
             /// The logger
@@ -755,7 +755,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeletePlacementgroupApiResponse"/>
         /// </summary>
-        internal partial class DeletePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeletePlacementgroupApiResponse
+        public partial class DeletePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeletePlacementgroupApiResponse
         {
             /// <summary>
             /// The logger
@@ -941,7 +941,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetPlacementgroupApiResponse"/>
         /// </summary>
-        internal partial class GetPlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPlacementgroupApiResponse
+        public partial class GetPlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetPlacementgroupApiResponse
         {
             /// <summary>
             /// The logger
@@ -1235,7 +1235,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListPlacementgroupsApiResponse"/>
         /// </summary>
-        internal partial class ListPlacementgroupsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPlacementgroupsApiResponse
+        public partial class ListPlacementgroupsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListPlacementgroupsApiResponse
         {
             /// <summary>
             /// The logger
@@ -1486,7 +1486,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplacePlacementgroupApiResponse"/>
         /// </summary>
-        internal partial class ReplacePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplacePlacementgroupApiResponse
+        public partial class ReplacePlacementgroupApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplacePlacementgroupApiResponse
         {
             /// <summary>
             /// The logger

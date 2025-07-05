@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Image the server is based on.
     /// </summary>
-    internal partial class ImageOptional : IValidatableObject
+    public partial class ImageOptional : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageOptional" /> class.
@@ -53,7 +53,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="osVersion">Operating system version</param>
         /// <param name="rapidDeploy">Indicates that rapid deploy of the Image is available</param>
         [JsonConstructor]
-        internal ImageOptional(Architecture architecture, string created, string description, decimal diskSize, long id, Dictionary<string, string> labels, OsFlavorEnum osFlavor, Protection protection, StatusEnum status, TypeEnum type, long? boundTo = default, CreatedFrom? createdFrom = default, string? deleted = default, string? deprecated = default, decimal? imageSize = default, string? name = default, string? osVersion = default, Option<bool?> rapidDeploy = default)
+        public ImageOptional(Architecture architecture, string created, string description, decimal diskSize, long id, Dictionary<string, string> labels, OsFlavorEnum osFlavor, Protection protection, StatusEnum status, TypeEnum type, long? boundTo = default, CreatedFrom? createdFrom = default, string? deleted = default, string? deprecated = default, decimal? imageSize = default, string? name = default, string? osVersion = default, Option<bool?> rapidDeploy = default)
         {
             Architecture = architecture;
             Created = created;
@@ -88,7 +88,7 @@ namespace Hetzner.Cloud.Model
         /// Flavor of operating system contained in the Image
         /// </summary>
         /// <value>Flavor of operating system contained in the Image</value>
-        internal enum OsFlavorEnum
+        public enum OsFlavorEnum
         {
             /// <summary>
             /// Enum Alma for value: alma
@@ -233,7 +233,7 @@ namespace Hetzner.Cloud.Model
         /// Whether the Image can be used or if it&#39;s still being created or unavailable
         /// </summary>
         /// <value>Whether the Image can be used or if it&#39;s still being created or unavailable</value>
-        internal enum StatusEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Enum Available for value: available
@@ -321,7 +321,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the Image
         /// </summary>
         /// <value>Type of the Image</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum App for value: app
@@ -597,7 +597,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ImageOptional" />
     /// </summary>
-    internal class ImageOptionalJsonConverter : JsonConverter<ImageOptional>
+    public class ImageOptionalJsonConverter : JsonConverter<ImageOptional>
     {
         /// <summary>
         /// Deserializes json to <see cref="ImageOptional" />
@@ -909,5 +909,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ImageOptional))]
-    internal partial class ImageOptionalSerializationContext : JsonSerializerContext { }
+    public partial class ImageOptionalSerializationContext : JsonSerializerContext { }
 }

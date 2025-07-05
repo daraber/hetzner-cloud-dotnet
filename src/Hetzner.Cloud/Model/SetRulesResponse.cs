@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/firewalls/{id}/actions/set_rules
     /// </summary>
-    internal partial class SetRulesResponse : IValidatableObject
+    public partial class SetRulesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SetRulesResponse" /> class.
         /// </summary>
         /// <param name="actions">actions</param>
         [JsonConstructor]
-        internal SetRulesResponse(List<Action> actions)
+        public SetRulesResponse(List<Action> actions)
         {
             Actions = actions;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="SetRulesResponse" />
     /// </summary>
-    internal class SetRulesResponseJsonConverter : JsonConverter<SetRulesResponse>
+    public class SetRulesResponseJsonConverter : JsonConverter<SetRulesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="SetRulesResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(SetRulesResponse))]
-    internal partial class SetRulesResponseSerializationContext : JsonSerializerContext { }
+    public partial class SetRulesResponseSerializationContext : JsonSerializerContext { }
 }

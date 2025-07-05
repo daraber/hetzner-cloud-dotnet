@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IFirewallsApi : IApi
+    public interface IFirewallsApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -349,7 +349,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IApplyToResourcesApiResponse"/>
     /// </summary>
-    internal interface IApplyToResourcesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ApplyToResourcesResponse?>
+    public interface IApplyToResourcesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ApplyToResourcesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -361,7 +361,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateFirewallApiResponse"/>
     /// </summary>
-    internal interface ICreateFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateFirewallResponse?>
+    public interface ICreateFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateFirewallResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -373,7 +373,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteFirewallApiResponse"/>
     /// </summary>
-    internal interface IDeleteFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -385,7 +385,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForFirewallApiResponse"/>
     /// </summary>
-    internal interface IGetActionForFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForFirewallResponse?>
+    public interface IGetActionForFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForFirewallResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -397,7 +397,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetFirewallApiResponse"/>
     /// </summary>
-    internal interface IGetFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetFirewallResponse?>
+    public interface IGetFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetFirewallResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -409,7 +409,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetFirewallActionApiResponse"/>
     /// </summary>
-    internal interface IGetFirewallActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetFirewallActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -421,7 +421,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForFirewallApiResponse"/>
     /// </summary>
-    internal interface IListActionsForFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForFirewallResponse?>
+    public interface IListActionsForFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForFirewallResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -433,7 +433,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListFirewallActionsApiResponse"/>
     /// </summary>
-    internal interface IListFirewallActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListFirewallActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -445,7 +445,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListFirewallsApiResponse"/>
     /// </summary>
-    internal interface IListFirewallsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListFirewallsResponse?>
+    public interface IListFirewallsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListFirewallsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -457,7 +457,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRemoveFromResourcesApiResponse"/>
     /// </summary>
-    internal interface IRemoveFromResourcesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveFromResourcesResponse?>
+    public interface IRemoveFromResourcesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveFromResourcesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -469,7 +469,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceFirewallApiResponse"/>
     /// </summary>
-    internal interface IReplaceFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceFirewallResponse?>
+    public interface IReplaceFirewallApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceFirewallResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -481,7 +481,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ISetRulesApiResponse"/>
     /// </summary>
-    internal interface ISetRulesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.SetRulesResponse?>
+    public interface ISetRulesApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.SetRulesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -493,7 +493,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class FirewallsApiEvents
+    public class FirewallsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -739,7 +739,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class FirewallsApi : IFirewallsApi
+    public sealed partial class FirewallsApi : IFirewallsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -960,7 +960,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ApplyToResourcesApiResponse"/>
         /// </summary>
-        internal partial class ApplyToResourcesApiResponse : Hetzner.Cloud.Client.ApiResponse, IApplyToResourcesApiResponse
+        public partial class ApplyToResourcesApiResponse : Hetzner.Cloud.Client.ApiResponse, IApplyToResourcesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1204,7 +1204,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateFirewallApiResponse"/>
         /// </summary>
-        internal partial class CreateFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateFirewallApiResponse
+        public partial class CreateFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -1413,7 +1413,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteFirewallApiResponse"/>
         /// </summary>
-        internal partial class DeleteFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteFirewallApiResponse
+        public partial class DeleteFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -1606,7 +1606,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForFirewallApiResponse"/>
         /// </summary>
-        internal partial class GetActionForFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForFirewallApiResponse
+        public partial class GetActionForFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -1824,7 +1824,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetFirewallApiResponse"/>
         /// </summary>
-        internal partial class GetFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFirewallApiResponse
+        public partial class GetFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -2042,7 +2042,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetFirewallActionApiResponse"/>
         /// </summary>
-        internal partial class GetFirewallActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFirewallActionApiResponse
+        public partial class GetFirewallActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetFirewallActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2317,7 +2317,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForFirewallApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForFirewallApiResponse
+        public partial class ListActionsForFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -2594,7 +2594,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListFirewallActionsApiResponse"/>
         /// </summary>
-        internal partial class ListFirewallActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFirewallActionsApiResponse
+        public partial class ListFirewallActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFirewallActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2875,7 +2875,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListFirewallsApiResponse"/>
         /// </summary>
-        internal partial class ListFirewallsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFirewallsApiResponse
+        public partial class ListFirewallsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListFirewallsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3126,7 +3126,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RemoveFromResourcesApiResponse"/>
         /// </summary>
-        internal partial class RemoveFromResourcesApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveFromResourcesApiResponse
+        public partial class RemoveFromResourcesApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveFromResourcesApiResponse
         {
             /// <summary>
             /// The logger
@@ -3377,7 +3377,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceFirewallApiResponse"/>
         /// </summary>
-        internal partial class ReplaceFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceFirewallApiResponse
+        public partial class ReplaceFirewallApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceFirewallApiResponse
         {
             /// <summary>
             /// The logger
@@ -3628,7 +3628,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="SetRulesApiResponse"/>
         /// </summary>
-        internal partial class SetRulesApiResponse : Hetzner.Cloud.Client.ApiResponse, ISetRulesApiResponse
+        public partial class SetRulesApiResponse : Hetzner.Cloud.Client.ApiResponse, ISetRulesApiResponse
         {
             /// <summary>
             /// The logger

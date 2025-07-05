@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_dns_ptr
     /// </summary>
-    internal partial class ChangeReverseDnsEntryForThisLoadBalancerRequest : IValidatableObject
+    public partial class ChangeReverseDnsEntryForThisLoadBalancerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeReverseDnsEntryForThisLoadBalancerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ip">Public IP address for which the reverse DNS entry should be set</param>
         /// <param name="dnsPtr">Hostname to set as a reverse DNS PTR entry</param>
         [JsonConstructor]
-        internal ChangeReverseDnsEntryForThisLoadBalancerRequest(string ip, string? dnsPtr = default)
+        public ChangeReverseDnsEntryForThisLoadBalancerRequest(string ip, string? dnsPtr = default)
         {
             Ip = ip;
             DnsPtr = dnsPtr;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeReverseDnsEntryForThisLoadBalancerRequest" />
     /// </summary>
-    internal class ChangeReverseDnsEntryForThisLoadBalancerRequestJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisLoadBalancerRequest>
+    public class ChangeReverseDnsEntryForThisLoadBalancerRequestJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisLoadBalancerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeReverseDnsEntryForThisLoadBalancerRequest" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeReverseDnsEntryForThisLoadBalancerRequest))]
-    internal partial class ChangeReverseDnsEntryForThisLoadBalancerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeReverseDnsEntryForThisLoadBalancerRequestSerializationContext : JsonSerializerContext { }
 }

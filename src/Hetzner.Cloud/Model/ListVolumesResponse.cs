@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/volumes
     /// </summary>
-    internal partial class ListVolumesResponse : IValidatableObject
+    public partial class ListVolumesResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListVolumesResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="volumes">volumes</param>
         [JsonConstructor]
-        internal ListVolumesResponse(Meta meta, List<Volume> volumes)
+        public ListVolumesResponse(Meta meta, List<Volume> volumes)
         {
             Meta = meta;
             Volumes = volumes;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListVolumesResponse" />
     /// </summary>
-    internal class ListVolumesResponseJsonConverter : JsonConverter<ListVolumesResponse>
+    public class ListVolumesResponseJsonConverter : JsonConverter<ListVolumesResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListVolumesResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListVolumesResponse))]
-    internal partial class ListVolumesResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListVolumesResponseSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/servers/{id}
     /// </summary>
-    internal partial class ReplaceServerRequest : IValidatableObject
+    public partial class ReplaceServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceServerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New name to set</param>
         [JsonConstructor]
-        internal ReplaceServerRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceServerRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceServerRequest" />
     /// </summary>
-    internal class ReplaceServerRequestJsonConverter : JsonConverter<ReplaceServerRequest>
+    public class ReplaceServerRequestJsonConverter : JsonConverter<ReplaceServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceServerRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceServerRequest))]
-    internal partial class ReplaceServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceServerRequestSerializationContext : JsonSerializerContext { }
 }

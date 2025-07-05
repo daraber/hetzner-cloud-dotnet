@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Iso
     /// </summary>
-    internal partial class Iso : IValidatableObject
+    public partial class Iso : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Iso" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Unique identifier of the ISO. Only set for public ISOs</param>
         /// <param name="type">Type of the ISO</param>
         [JsonConstructor]
-        internal Iso(string description, long id, ArchitectureOptional? architecture = default, DeprecationInfo? deprecation = default, string? name = default, TypeEnum? type = default)
+        public Iso(string description, long id, ArchitectureOptional? architecture = default, DeprecationInfo? deprecation = default, string? name = default, TypeEnum? type = default)
         {
             Description = description;
             Id = id;
@@ -64,7 +64,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the ISO
         /// </summary>
         /// <value>Type of the ISO</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum Private for value: private
@@ -205,7 +205,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="Iso" />
     /// </summary>
-    internal class IsoJsonConverter : JsonConverter<Iso>
+    public class IsoJsonConverter : JsonConverter<Iso>
     {
         /// <summary>
         /// Deserializes json to <see cref="Iso" />
@@ -368,5 +368,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(Iso))]
-    internal partial class IsoSerializationContext : JsonSerializerContext { }
+    public partial class IsoSerializationContext : JsonSerializerContext { }
 }

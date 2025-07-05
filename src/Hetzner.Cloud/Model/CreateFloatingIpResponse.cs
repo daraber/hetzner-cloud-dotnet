@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/floating_ips
     /// </summary>
-    internal partial class CreateFloatingIpResponse : IValidatableObject
+    public partial class CreateFloatingIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFloatingIpResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="floatingIp">floatingIp</param>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal CreateFloatingIpResponse(FloatingIp floatingIp, Option<Action?> action = default)
+        public CreateFloatingIpResponse(FloatingIp floatingIp, Option<Action?> action = default)
         {
             FloatingIp = floatingIp;
             ActionOption = action;
@@ -93,7 +93,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateFloatingIpResponse" />
     /// </summary>
-    internal class CreateFloatingIpResponseJsonConverter : JsonConverter<CreateFloatingIpResponse>
+    public class CreateFloatingIpResponseJsonConverter : JsonConverter<CreateFloatingIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateFloatingIpResponse" />
@@ -199,5 +199,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateFloatingIpResponse))]
-    internal partial class CreateFloatingIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class CreateFloatingIpResponseSerializationContext : JsonSerializerContext { }
 }

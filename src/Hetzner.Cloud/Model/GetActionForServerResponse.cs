@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/servers/{id}/actions/{action_id}
     /// </summary>
-    internal partial class GetActionForServerResponse : IValidatableObject
+    public partial class GetActionForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetActionForServerResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal GetActionForServerResponse(Action action)
+        public GetActionForServerResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetActionForServerResponse" />
     /// </summary>
-    internal class GetActionForServerResponseJsonConverter : JsonConverter<GetActionForServerResponse>
+    public class GetActionForServerResponseJsonConverter : JsonConverter<GetActionForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetActionForServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetActionForServerResponse))]
-    internal partial class GetActionForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetActionForServerResponseSerializationContext : JsonSerializerContext { }
 }

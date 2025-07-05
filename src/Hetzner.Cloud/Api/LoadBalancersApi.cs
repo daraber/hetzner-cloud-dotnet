@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface ILoadBalancersApi : IApi
+    public interface ILoadBalancersApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -626,7 +626,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAddServiceApiResponse"/>
     /// </summary>
-    internal interface IAddServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddServiceResponse?>
+    public interface IAddServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddServiceResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -638,7 +638,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAddTargetApiResponse"/>
     /// </summary>
-    internal interface IAddTargetApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddTargetResponse?>
+    public interface IAddTargetApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AddTargetResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -650,7 +650,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IAttachLoadBalancerToNetworkApiResponse"/>
     /// </summary>
-    internal interface IAttachLoadBalancerToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachLoadBalancerToNetworkResponse?>
+    public interface IAttachLoadBalancerToNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.AttachLoadBalancerToNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -662,7 +662,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeAlgorithmApiResponse"/>
     /// </summary>
-    internal interface IChangeAlgorithmApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeAlgorithmResponse?>
+    public interface IChangeAlgorithmApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeAlgorithmResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -674,7 +674,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeLoadBalancerProtectionApiResponse"/>
     /// </summary>
-    internal interface IChangeLoadBalancerProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeLoadBalancerProtectionResponse?>
+    public interface IChangeLoadBalancerProtectionApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeLoadBalancerProtectionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -686,7 +686,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeReverseDnsEntryForThisLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IChangeReverseDnsEntryForThisLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsEntryForThisLoadBalancerResponse?>
+    public interface IChangeReverseDnsEntryForThisLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeReverseDnsEntryForThisLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -698,7 +698,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IChangeTypeOfLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IChangeTypeOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeTypeOfLoadBalancerResponse?>
+    public interface IChangeTypeOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.ChangeTypeOfLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -710,7 +710,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="ICreateLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface ICreateLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateLoadBalancerResponse?>
+    public interface ICreateLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.CreateLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -722,7 +722,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IDeleteLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse
+    public interface IDeleteLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 204 NoContent
@@ -734,7 +734,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDeleteServiceApiResponse"/>
     /// </summary>
-    internal interface IDeleteServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteServiceResponse?>
+    public interface IDeleteServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DeleteServiceResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -746,7 +746,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDetachLoadBalancerFromNetworkApiResponse"/>
     /// </summary>
-    internal interface IDetachLoadBalancerFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachLoadBalancerFromNetworkResponse?>
+    public interface IDetachLoadBalancerFromNetworkApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DetachLoadBalancerFromNetworkResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -758,7 +758,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IDisablePublicInterfaceOfLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IDisablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisablePublicInterfaceOfLoadBalancerResponse?>
+    public interface IDisablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.DisablePublicInterfaceOfLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -770,7 +770,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IEnablePublicInterfaceOfLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IEnablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnablePublicInterfaceOfLoadBalancerResponse?>
+    public interface IEnablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.EnablePublicInterfaceOfLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -782,7 +782,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetActionForLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IGetActionForLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForLoadBalancerResponse?>
+    public interface IGetActionForLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionForLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -794,7 +794,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IGetLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLoadBalancerResponse?>
+    public interface IGetLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -806,7 +806,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetLoadBalancerActionApiResponse"/>
     /// </summary>
-    internal interface IGetLoadBalancerActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
+    public interface IGetLoadBalancerActionApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetActionResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -818,7 +818,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetMetricsForLoadbalancerApiResponse"/>
     /// </summary>
-    internal interface IGetMetricsForLoadbalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetMetricsForLoadbalancerResponse?>
+    public interface IGetMetricsForLoadbalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetMetricsForLoadbalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -830,7 +830,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListActionsForLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IListActionsForLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForLoadBalancerResponse?>
+    public interface IListActionsForLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsForLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -842,7 +842,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListLoadBalancerActionsApiResponse"/>
     /// </summary>
-    internal interface IListLoadBalancerActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
+    public interface IListLoadBalancerActionsApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListActionsResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -854,7 +854,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListLoadBalancersApiResponse"/>
     /// </summary>
-    internal interface IListLoadBalancersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLoadBalancersResponse?>
+    public interface IListLoadBalancersApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListLoadBalancersResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -866,7 +866,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IRemoveTargetApiResponse"/>
     /// </summary>
-    internal interface IRemoveTargetApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveTargetResponse?>
+    public interface IRemoveTargetApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.RemoveTargetResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -878,7 +878,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IReplaceLoadBalancerApiResponse"/>
     /// </summary>
-    internal interface IReplaceLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceLoadBalancerResponse?>
+    public interface IReplaceLoadBalancerApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ReplaceLoadBalancerResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -890,7 +890,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IUpdateServiceApiResponse"/>
     /// </summary>
-    internal interface IUpdateServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UpdateServiceResponse?>
+    public interface IUpdateServiceApiResponse : Hetzner.Cloud.Client.IApiResponse, ICreated<Hetzner.Cloud.Model.UpdateServiceResponse?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -902,7 +902,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class LoadBalancersApiEvents
+    public class LoadBalancersApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -1368,7 +1368,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class LoadBalancersApi : ILoadBalancersApi
+    public sealed partial class LoadBalancersApi : ILoadBalancersApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -1589,7 +1589,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AddServiceApiResponse"/>
         /// </summary>
-        internal partial class AddServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddServiceApiResponse
+        public partial class AddServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddServiceApiResponse
         {
             /// <summary>
             /// The logger
@@ -1840,7 +1840,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AddTargetApiResponse"/>
         /// </summary>
-        internal partial class AddTargetApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddTargetApiResponse
+        public partial class AddTargetApiResponse : Hetzner.Cloud.Client.ApiResponse, IAddTargetApiResponse
         {
             /// <summary>
             /// The logger
@@ -2091,7 +2091,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="AttachLoadBalancerToNetworkApiResponse"/>
         /// </summary>
-        internal partial class AttachLoadBalancerToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachLoadBalancerToNetworkApiResponse
+        public partial class AttachLoadBalancerToNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IAttachLoadBalancerToNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2342,7 +2342,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeAlgorithmApiResponse"/>
         /// </summary>
-        internal partial class ChangeAlgorithmApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeAlgorithmApiResponse
+        public partial class ChangeAlgorithmApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeAlgorithmApiResponse
         {
             /// <summary>
             /// The logger
@@ -2593,7 +2593,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeLoadBalancerProtectionApiResponse"/>
         /// </summary>
-        internal partial class ChangeLoadBalancerProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeLoadBalancerProtectionApiResponse
+        public partial class ChangeLoadBalancerProtectionApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeLoadBalancerProtectionApiResponse
         {
             /// <summary>
             /// The logger
@@ -2844,7 +2844,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeReverseDnsEntryForThisLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class ChangeReverseDnsEntryForThisLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsEntryForThisLoadBalancerApiResponse
+        public partial class ChangeReverseDnsEntryForThisLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeReverseDnsEntryForThisLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3095,7 +3095,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ChangeTypeOfLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class ChangeTypeOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeTypeOfLoadBalancerApiResponse
+        public partial class ChangeTypeOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IChangeTypeOfLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3339,7 +3339,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="CreateLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class CreateLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateLoadBalancerApiResponse
+        public partial class CreateLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, ICreateLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3548,7 +3548,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class DeleteLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteLoadBalancerApiResponse
+        public partial class DeleteLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -3767,7 +3767,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DeleteServiceApiResponse"/>
         /// </summary>
-        internal partial class DeleteServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteServiceApiResponse
+        public partial class DeleteServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IDeleteServiceApiResponse
         {
             /// <summary>
             /// The logger
@@ -4018,7 +4018,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DetachLoadBalancerFromNetworkApiResponse"/>
         /// </summary>
-        internal partial class DetachLoadBalancerFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachLoadBalancerFromNetworkApiResponse
+        public partial class DetachLoadBalancerFromNetworkApiResponse : Hetzner.Cloud.Client.ApiResponse, IDetachLoadBalancerFromNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -4236,7 +4236,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="DisablePublicInterfaceOfLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class DisablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisablePublicInterfaceOfLoadBalancerApiResponse
+        public partial class DisablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IDisablePublicInterfaceOfLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4454,7 +4454,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="EnablePublicInterfaceOfLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class EnablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnablePublicInterfaceOfLoadBalancerApiResponse
+        public partial class EnablePublicInterfaceOfLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IEnablePublicInterfaceOfLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4679,7 +4679,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetActionForLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class GetActionForLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForLoadBalancerApiResponse
+        public partial class GetActionForLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetActionForLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -4897,7 +4897,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class GetLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerApiResponse
+        public partial class GetLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5115,7 +5115,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetLoadBalancerActionApiResponse"/>
         /// </summary>
-        internal partial class GetLoadBalancerActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerActionApiResponse
+        public partial class GetLoadBalancerActionApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetLoadBalancerActionApiResponse
         {
             /// <summary>
             /// The logger
@@ -5393,7 +5393,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetMetricsForLoadbalancerApiResponse"/>
         /// </summary>
-        internal partial class GetMetricsForLoadbalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetMetricsForLoadbalancerApiResponse
+        public partial class GetMetricsForLoadbalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetMetricsForLoadbalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5668,7 +5668,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListActionsForLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class ListActionsForLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForLoadBalancerApiResponse
+        public partial class ListActionsForLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IListActionsForLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -5945,7 +5945,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListLoadBalancerActionsApiResponse"/>
         /// </summary>
-        internal partial class ListLoadBalancerActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancerActionsApiResponse
+        public partial class ListLoadBalancerActionsApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancerActionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -6226,7 +6226,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListLoadBalancersApiResponse"/>
         /// </summary>
-        internal partial class ListLoadBalancersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancersApiResponse
+        public partial class ListLoadBalancersApiResponse : Hetzner.Cloud.Client.ApiResponse, IListLoadBalancersApiResponse
         {
             /// <summary>
             /// The logger
@@ -6477,7 +6477,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="RemoveTargetApiResponse"/>
         /// </summary>
-        internal partial class RemoveTargetApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveTargetApiResponse
+        public partial class RemoveTargetApiResponse : Hetzner.Cloud.Client.ApiResponse, IRemoveTargetApiResponse
         {
             /// <summary>
             /// The logger
@@ -6728,7 +6728,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ReplaceLoadBalancerApiResponse"/>
         /// </summary>
-        internal partial class ReplaceLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceLoadBalancerApiResponse
+        public partial class ReplaceLoadBalancerApiResponse : Hetzner.Cloud.Client.ApiResponse, IReplaceLoadBalancerApiResponse
         {
             /// <summary>
             /// The logger
@@ -6979,7 +6979,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="UpdateServiceApiResponse"/>
         /// </summary>
-        internal partial class UpdateServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IUpdateServiceApiResponse
+        public partial class UpdateServiceApiResponse : Hetzner.Cloud.Client.ApiResponse, IUpdateServiceApiResponse
         {
             /// <summary>
             /// The logger

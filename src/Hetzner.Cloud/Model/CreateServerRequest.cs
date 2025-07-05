@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers
     /// </summary>
-    internal partial class CreateServerRequest : IValidatableObject
+    public partial class CreateServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateServerRequest" /> class.
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="userData">Cloud-Init user data to use during Server creation. This field is limited to 32KiB.</param>
         /// <param name="volumes">Volume IDs which should be attached to the Server at the creation time. Volumes must be in the same Location.</param>
         [JsonConstructor]
-        internal CreateServerRequest(string image, string name, string serverType, Option<bool?> automount = default, Option<string?> datacenter = default, Option<List<CreateServerRequestFirewalls>?> firewalls = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<List<long>?> networks = default, Option<long?> placementGroup = default, Option<CreateServerRequestPublicNet?> publicNet = default, Option<List<string>?> sshKeys = default, Option<bool?> startAfterCreate = default, Option<string?> userData = default, Option<List<long>?> volumes = default)
+        public CreateServerRequest(string image, string name, string serverType, Option<bool?> automount = default, Option<string?> datacenter = default, Option<List<CreateServerRequestFirewalls>?> firewalls = default, Option<Dictionary<string, string>?> labels = default, Option<string?> location = default, Option<List<long>?> networks = default, Option<long?> placementGroup = default, Option<CreateServerRequestPublicNet?> publicNet = default, Option<List<string>?> sshKeys = default, Option<bool?> startAfterCreate = default, Option<string?> userData = default, Option<List<long>?> volumes = default)
         {
             Image = image;
             Name = name;
@@ -318,7 +318,7 @@ runcmd:
     /// <summary>
     /// A Json converter for type <see cref="CreateServerRequest" />
     /// </summary>
-    internal class CreateServerRequestJsonConverter : JsonConverter<CreateServerRequest>
+    public class CreateServerRequestJsonConverter : JsonConverter<CreateServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateServerRequest" />
@@ -598,5 +598,5 @@ runcmd:
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateServerRequest))]
-    internal partial class CreateServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateServerRequestSerializationContext : JsonSerializerContext { }
 }

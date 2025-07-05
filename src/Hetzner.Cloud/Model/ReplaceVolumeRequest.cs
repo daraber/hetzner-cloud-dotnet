@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/volumes/{id}
     /// </summary>
-    internal partial class ReplaceVolumeRequest : IValidatableObject
+    public partial class ReplaceVolumeRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceVolumeRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New Volume name</param>
         [JsonConstructor]
-        internal ReplaceVolumeRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplaceVolumeRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceVolumeRequest" />
     /// </summary>
-    internal class ReplaceVolumeRequestJsonConverter : JsonConverter<ReplaceVolumeRequest>
+    public class ReplaceVolumeRequestJsonConverter : JsonConverter<ReplaceVolumeRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceVolumeRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceVolumeRequest))]
-    internal partial class ReplaceVolumeRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceVolumeRequestSerializationContext : JsonSerializerContext { }
 }

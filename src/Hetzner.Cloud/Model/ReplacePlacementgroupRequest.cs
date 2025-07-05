@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for PUT https://api.hetzner.cloud/v1/placement_groups/{id}
     /// </summary>
-    internal partial class ReplacePlacementgroupRequest : IValidatableObject
+    public partial class ReplacePlacementgroupRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacePlacementgroupRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labels">User-defined labels (&#x60;key/value&#x60; pairs) for the Resource. For more information, see \&quot;[Labels](#labels)\&quot;. </param>
         /// <param name="name">New PlacementGroup name</param>
         [JsonConstructor]
-        internal ReplacePlacementgroupRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
+        public ReplacePlacementgroupRequest(Option<Dictionary<string, string>?> labels = default, Option<string?> name = default)
         {
             LabelsOption = labels;
             NameOption = name;
@@ -104,7 +104,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplacePlacementgroupRequest" />
     /// </summary>
-    internal class ReplacePlacementgroupRequestJsonConverter : JsonConverter<ReplacePlacementgroupRequest>
+    public class ReplacePlacementgroupRequestJsonConverter : JsonConverter<ReplacePlacementgroupRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplacePlacementgroupRequest" />
@@ -207,5 +207,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplacePlacementgroupRequest))]
-    internal partial class ReplacePlacementgroupRequestSerializationContext : JsonSerializerContext { }
+    public partial class ReplacePlacementgroupRequestSerializationContext : JsonSerializerContext { }
 }

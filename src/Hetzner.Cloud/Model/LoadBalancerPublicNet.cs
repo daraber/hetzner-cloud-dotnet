@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Public network information
     /// </summary>
-    internal partial class LoadBalancerPublicNet : IValidatableObject
+    public partial class LoadBalancerPublicNet : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoadBalancerPublicNet" /> class.
@@ -38,7 +38,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ipv4">ipv4</param>
         /// <param name="ipv6">ipv6</param>
         [JsonConstructor]
-        internal LoadBalancerPublicNet(bool enabled, LoadBalancerPublicNetIpv4 ipv4, LoadBalancerPublicNetIpv6 ipv6)
+        public LoadBalancerPublicNet(bool enabled, LoadBalancerPublicNetIpv4 ipv4, LoadBalancerPublicNetIpv6 ipv6)
         {
             Enabled = enabled;
             Ipv4 = ipv4;
@@ -96,7 +96,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="LoadBalancerPublicNet" />
     /// </summary>
-    internal class LoadBalancerPublicNetJsonConverter : JsonConverter<LoadBalancerPublicNet>
+    public class LoadBalancerPublicNetJsonConverter : JsonConverter<LoadBalancerPublicNet>
     {
         /// <summary>
         /// Deserializes json to <see cref="LoadBalancerPublicNet" />
@@ -214,5 +214,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(LoadBalancerPublicNet))]
-    internal partial class LoadBalancerPublicNetSerializationContext : JsonSerializerContext { }
+    public partial class LoadBalancerPublicNetSerializationContext : JsonSerializerContext { }
 }

@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Additional configuration for protocol http
     /// </summary>
-    internal partial class UpdateLoadBalancerServiceHealthCheckHttp : IValidatableObject
+    public partial class UpdateLoadBalancerServiceHealthCheckHttp : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateLoadBalancerServiceHealthCheckHttp" /> class.
@@ -40,7 +40,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="statusCodes">List of returned HTTP status codes in order to pass the health check. Supports the wildcards &#x60;?&#x60; for exactly one character and &#x60;*&#x60; for multiple ones.</param>
         /// <param name="tls">Use HTTPS for health check</param>
         [JsonConstructor]
-        internal UpdateLoadBalancerServiceHealthCheckHttp(Option<string?> domain = default, Option<string?> path = default, Option<string?> response = default, Option<List<string>?> statusCodes = default, Option<bool?> tls = default)
+        public UpdateLoadBalancerServiceHealthCheckHttp(Option<string?> domain = default, Option<string?> path = default, Option<string?> response = default, Option<List<string>?> statusCodes = default, Option<bool?> tls = default)
         {
             DomainOption = domain;
             PathOption = path;
@@ -158,7 +158,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="UpdateLoadBalancerServiceHealthCheckHttp" />
     /// </summary>
-    internal class UpdateLoadBalancerServiceHealthCheckHttpJsonConverter : JsonConverter<UpdateLoadBalancerServiceHealthCheckHttp>
+    public class UpdateLoadBalancerServiceHealthCheckHttpJsonConverter : JsonConverter<UpdateLoadBalancerServiceHealthCheckHttp>
     {
         /// <summary>
         /// Deserializes json to <see cref="UpdateLoadBalancerServiceHealthCheckHttp" />
@@ -294,5 +294,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(UpdateLoadBalancerServiceHealthCheckHttp))]
-    internal partial class UpdateLoadBalancerServiceHealthCheckHttpSerializationContext : JsonSerializerContext { }
+    public partial class UpdateLoadBalancerServiceHealthCheckHttpSerializationContext : JsonSerializerContext { }
 }

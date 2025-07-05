@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Resource a Firewall should be applied to.
     /// </summary>
-    internal partial class FirewallResourceId : IValidatableObject
+    public partial class FirewallResourceId : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallResourceId" /> class.
@@ -39,7 +39,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="labelSelector">labelSelector</param>
         /// <param name="server">server</param>
         [JsonConstructor]
-        internal FirewallResourceId(TypeEnum type, Option<List<FirewallResourceIdAppliedToResources>?> appliedToResources = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
+        public FirewallResourceId(TypeEnum type, Option<List<FirewallResourceIdAppliedToResources>?> appliedToResources = default, Option<LabelSelector?> labelSelector = default, Option<ResourceId?> server = default)
         {
             Type = type;
             AppliedToResourcesOption = appliedToResources;
@@ -54,7 +54,7 @@ namespace Hetzner.Cloud.Model
         /// The type of resource to apply.
         /// </summary>
         /// <value>The type of resource to apply.</value>
-        internal enum TypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Enum LabelSelector for value: label_selector
@@ -195,7 +195,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="FirewallResourceId" />
     /// </summary>
-    internal class FirewallResourceIdJsonConverter : JsonConverter<FirewallResourceId>
+    public class FirewallResourceIdJsonConverter : JsonConverter<FirewallResourceId>
     {
         /// <summary>
         /// Deserializes json to <see cref="FirewallResourceId" />
@@ -330,5 +330,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(FirewallResourceId))]
-    internal partial class FirewallResourceIdSerializationContext : JsonSerializerContext { }
+    public partial class FirewallResourceIdSerializationContext : JsonSerializerContext { }
 }

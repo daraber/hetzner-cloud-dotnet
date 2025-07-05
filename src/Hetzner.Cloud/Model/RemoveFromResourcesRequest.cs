@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/firewalls/{id}/actions/remove_from_resources
     /// </summary>
-    internal partial class RemoveFromResourcesRequest : IValidatableObject
+    public partial class RemoveFromResourcesRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoveFromResourcesRequest" /> class.
         /// </summary>
         /// <param name="removeFrom">Resources to remove the [Firewall](#firewalls) from.</param>
         [JsonConstructor]
-        internal RemoveFromResourcesRequest(List<FirewallResource> removeFrom)
+        public RemoveFromResourcesRequest(List<FirewallResource> removeFrom)
         {
             RemoveFrom = removeFrom;
             OnCreated();
@@ -78,7 +78,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="RemoveFromResourcesRequest" />
     /// </summary>
-    internal class RemoveFromResourcesRequestJsonConverter : JsonConverter<RemoveFromResourcesRequest>
+    public class RemoveFromResourcesRequestJsonConverter : JsonConverter<RemoveFromResourcesRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="RemoveFromResourcesRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(RemoveFromResourcesRequest))]
-    internal partial class RemoveFromResourcesRequestSerializationContext : JsonSerializerContext { }
+    public partial class RemoveFromResourcesRequestSerializationContext : JsonSerializerContext { }
 }

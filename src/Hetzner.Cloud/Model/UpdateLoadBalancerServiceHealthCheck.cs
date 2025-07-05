@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Service health check
     /// </summary>
-    internal partial class UpdateLoadBalancerServiceHealthCheck : IValidatableObject
+    public partial class UpdateLoadBalancerServiceHealthCheck : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateLoadBalancerServiceHealthCheck" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="retries">Unsuccessful retries needed until a target is considered unhealthy; an unhealthy target needs the same number of successful retries to become healthy again</param>
         /// <param name="timeout">Time in seconds after an attempt is considered a timeout</param>
         [JsonConstructor]
-        internal UpdateLoadBalancerServiceHealthCheck(Option<UpdateLoadBalancerServiceHealthCheckHttp?> http = default, Option<int?> interval = default, Option<int?> port = default, Option<ProtocolEnum?> protocol = default, Option<int?> retries = default, Option<int?> timeout = default)
+        public UpdateLoadBalancerServiceHealthCheck(Option<UpdateLoadBalancerServiceHealthCheckHttp?> http = default, Option<int?> interval = default, Option<int?> port = default, Option<ProtocolEnum?> protocol = default, Option<int?> retries = default, Option<int?> timeout = default)
         {
             HttpOption = http;
             IntervalOption = interval;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Type of the health check
         /// </summary>
         /// <value>Type of the health check</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Http for value: http
@@ -241,7 +241,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="UpdateLoadBalancerServiceHealthCheck" />
     /// </summary>
-    internal class UpdateLoadBalancerServiceHealthCheckJsonConverter : JsonConverter<UpdateLoadBalancerServiceHealthCheck>
+    public class UpdateLoadBalancerServiceHealthCheckJsonConverter : JsonConverter<UpdateLoadBalancerServiceHealthCheck>
     {
         /// <summary>
         /// Deserializes json to <see cref="UpdateLoadBalancerServiceHealthCheck" />
@@ -382,5 +382,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(UpdateLoadBalancerServiceHealthCheck))]
-    internal partial class UpdateLoadBalancerServiceHealthCheckSerializationContext : JsonSerializerContext { }
+    public partial class UpdateLoadBalancerServiceHealthCheckSerializationContext : JsonSerializerContext { }
 }

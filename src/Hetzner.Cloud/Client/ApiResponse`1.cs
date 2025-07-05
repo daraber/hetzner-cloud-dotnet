@@ -19,7 +19,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// Provides a non-generic contract for the ApiResponse wrapper.
     /// </summary>
-    internal partial interface IApiResponse
+    public partial interface IApiResponse
     {
         /// <summary>
         /// The IsSuccessStatusCode from the api response
@@ -71,7 +71,7 @@ namespace Hetzner.Cloud.Client
     /// <summary>
     /// API Response
     /// </summary>
-    internal partial class ApiResponse : IApiResponse
+    public partial class ApiResponse : IApiResponse
     {
         /// <summary>
         /// Gets the status code (HTTP status code)
@@ -154,7 +154,7 @@ namespace Hetzner.Cloud.Client
     /// An interface for responses of type 
     /// </summary>
     /// <typeparam name="TType"></typeparam>
-    internal interface IOk<TType> : IApiResponse
+    public interface IOk<TType> : IApiResponse
     {
         /// <summary>
         /// Deserializes the response if the response is Ok
@@ -174,7 +174,7 @@ namespace Hetzner.Cloud.Client
     /// An interface for responses of type 
     /// </summary>
     /// <typeparam name="TType"></typeparam>
-    internal interface ICreated<TType> : IApiResponse
+    public interface ICreated<TType> : IApiResponse
     {
         /// <summary>
         /// Deserializes the response if the response is Created

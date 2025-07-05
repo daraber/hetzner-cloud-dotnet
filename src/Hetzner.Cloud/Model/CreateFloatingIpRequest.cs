@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/floating_ips
     /// </summary>
-    internal partial class CreateFloatingIpRequest : IValidatableObject
+    public partial class CreateFloatingIpRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFloatingIpRequest" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="name">Name of the Resource. Must be unique per Project.</param>
         /// <param name="server">[Server](#servers) the [Floating IP](#floating-ips) is assigned to.  &#x60;null&#x60; if not assigned. </param>
         [JsonConstructor]
-        internal CreateFloatingIpRequest(IpType type, Option<string?> description = default, Option<string?> homeLocation = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default, Option<long?> server = default)
+        public CreateFloatingIpRequest(IpType type, Option<string?> description = default, Option<string?> homeLocation = default, Option<Dictionary<string, string>?> labels = default, Option<string?> name = default, Option<long?> server = default)
         {
             Type = type;
             DescriptionOption = description;
@@ -167,7 +167,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="CreateFloatingIpRequest" />
     /// </summary>
-    internal class CreateFloatingIpRequestJsonConverter : JsonConverter<CreateFloatingIpRequest>
+    public class CreateFloatingIpRequestJsonConverter : JsonConverter<CreateFloatingIpRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="CreateFloatingIpRequest" />
@@ -318,5 +318,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(CreateFloatingIpRequest))]
-    internal partial class CreateFloatingIpRequestSerializationContext : JsonSerializerContext { }
+    public partial class CreateFloatingIpRequestSerializationContext : JsonSerializerContext { }
 }

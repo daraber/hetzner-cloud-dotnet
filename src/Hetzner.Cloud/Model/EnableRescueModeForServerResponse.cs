@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/servers/{id}/actions/enable_rescue
     /// </summary>
-    internal partial class EnableRescueModeForServerResponse : IValidatableObject
+    public partial class EnableRescueModeForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnableRescueModeForServerResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="action">action</param>
         /// <param name="rootPassword">Password that will be set for this Server once the Action succeeds</param>
         [JsonConstructor]
-        internal EnableRescueModeForServerResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
+        public EnableRescueModeForServerResponse(Option<Action?> action = default, Option<string?> rootPassword = default)
         {
             ActionOption = action;
             RootPasswordOption = rootPassword;
@@ -102,7 +102,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="EnableRescueModeForServerResponse" />
     /// </summary>
-    internal class EnableRescueModeForServerResponseJsonConverter : JsonConverter<EnableRescueModeForServerResponse>
+    public class EnableRescueModeForServerResponseJsonConverter : JsonConverter<EnableRescueModeForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="EnableRescueModeForServerResponse" />
@@ -205,5 +205,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(EnableRescueModeForServerResponse))]
-    internal partial class EnableRescueModeForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class EnableRescueModeForServerResponseSerializationContext : JsonSerializerContext { }
 }

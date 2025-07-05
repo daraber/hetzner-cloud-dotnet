@@ -28,7 +28,7 @@ namespace Hetzner.Cloud.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    internal interface IServerTypesApi : IApi
+    public interface IServerTypesApi : IApi
     {
         /// <summary>
         /// The class containing the events
@@ -89,7 +89,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IGetServerTypeApiResponse"/>
     /// </summary>
-    internal interface IGetServerTypeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetServerTypeResponse?>
+    public interface IGetServerTypeApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.GetServerTypeResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -101,7 +101,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// The <see cref="IListServerTypesApiResponse"/>
     /// </summary>
-    internal interface IListServerTypesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListServerTypesResponse?>
+    public interface IListServerTypesApiResponse : Hetzner.Cloud.Client.IApiResponse, IOk<Hetzner.Cloud.Model.ListServerTypesResponse?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -113,7 +113,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal class ServerTypesApiEvents
+    public class ServerTypesApiEvents
     {
         /// <summary>
         /// The event raised after the server response
@@ -159,7 +159,7 @@ namespace Hetzner.Cloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    internal sealed partial class ServerTypesApi : IServerTypesApi
+    public sealed partial class ServerTypesApi : IServerTypesApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -347,7 +347,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="GetServerTypeApiResponse"/>
         /// </summary>
-        internal partial class GetServerTypeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerTypeApiResponse
+        public partial class GetServerTypeApiResponse : Hetzner.Cloud.Client.ApiResponse, IGetServerTypeApiResponse
         {
             /// <summary>
             /// The logger
@@ -602,7 +602,7 @@ namespace Hetzner.Cloud.Api
         /// <summary>
         /// The <see cref="ListServerTypesApiResponse"/>
         /// </summary>
-        internal partial class ListServerTypesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServerTypesApiResponse
+        public partial class ListServerTypesApiResponse : Hetzner.Cloud.Client.ApiResponse, IListServerTypesApiResponse
         {
             /// <summary>
             /// The logger

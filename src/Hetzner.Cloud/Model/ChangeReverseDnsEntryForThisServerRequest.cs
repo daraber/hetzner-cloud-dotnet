@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/servers/{id}/actions/change_dns_ptr
     /// </summary>
-    internal partial class ChangeReverseDnsEntryForThisServerRequest : IValidatableObject
+    public partial class ChangeReverseDnsEntryForThisServerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeReverseDnsEntryForThisServerRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="ip">Primary IP address for which the reverse DNS entry should be set</param>
         /// <param name="dnsPtr">Hostname to set as a reverse DNS PTR entry, reset to original value if &#x60;null&#x60;</param>
         [JsonConstructor]
-        internal ChangeReverseDnsEntryForThisServerRequest(string ip, string? dnsPtr = default)
+        public ChangeReverseDnsEntryForThisServerRequest(string ip, string? dnsPtr = default)
         {
             Ip = ip;
             DnsPtr = dnsPtr;
@@ -90,7 +90,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeReverseDnsEntryForThisServerRequest" />
     /// </summary>
-    internal class ChangeReverseDnsEntryForThisServerRequestJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisServerRequest>
+    public class ChangeReverseDnsEntryForThisServerRequestJsonConverter : JsonConverter<ChangeReverseDnsEntryForThisServerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeReverseDnsEntryForThisServerRequest" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeReverseDnsEntryForThisServerRequest))]
-    internal partial class ChangeReverseDnsEntryForThisServerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeReverseDnsEntryForThisServerRequestSerializationContext : JsonSerializerContext { }
 }

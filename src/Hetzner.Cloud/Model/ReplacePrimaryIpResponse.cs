@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/primary_ips/{id}
     /// </summary>
-    internal partial class ReplacePrimaryIpResponse : IValidatableObject
+    public partial class ReplacePrimaryIpResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacePrimaryIpResponse" /> class.
         /// </summary>
         /// <param name="primaryIp">primaryIp</param>
         [JsonConstructor]
-        internal ReplacePrimaryIpResponse(PrimaryIP primaryIp)
+        public ReplacePrimaryIpResponse(PrimaryIP primaryIp)
         {
             PrimaryIp = primaryIp;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplacePrimaryIpResponse" />
     /// </summary>
-    internal class ReplacePrimaryIpResponseJsonConverter : JsonConverter<ReplacePrimaryIpResponse>
+    public class ReplacePrimaryIpResponseJsonConverter : JsonConverter<ReplacePrimaryIpResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplacePrimaryIpResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplacePrimaryIpResponse))]
-    internal partial class ReplacePrimaryIpResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplacePrimaryIpResponseSerializationContext : JsonSerializerContext { }
 }

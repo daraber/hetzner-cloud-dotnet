@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to PUT https://api.hetzner.cloud/v1/firewalls/{id}
     /// </summary>
-    internal partial class ReplaceFirewallResponse : IValidatableObject
+    public partial class ReplaceFirewallResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceFirewallResponse" /> class.
         /// </summary>
         /// <param name="firewall">firewall</param>
         [JsonConstructor]
-        internal ReplaceFirewallResponse(Firewall firewall)
+        public ReplaceFirewallResponse(Firewall firewall)
         {
             Firewall = firewall;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ReplaceFirewallResponse" />
     /// </summary>
-    internal class ReplaceFirewallResponseJsonConverter : JsonConverter<ReplaceFirewallResponse>
+    public class ReplaceFirewallResponseJsonConverter : JsonConverter<ReplaceFirewallResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ReplaceFirewallResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ReplaceFirewallResponse))]
-    internal partial class ReplaceFirewallResponseSerializationContext : JsonSerializerContext { }
+    public partial class ReplaceFirewallResponseSerializationContext : JsonSerializerContext { }
 }

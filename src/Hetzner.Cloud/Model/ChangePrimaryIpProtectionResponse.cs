@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to POST https://api.hetzner.cloud/v1/primary_ips/{id}/actions/change_protection
     /// </summary>
-    internal partial class ChangePrimaryIpProtectionResponse : IValidatableObject
+    public partial class ChangePrimaryIpProtectionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangePrimaryIpProtectionResponse" /> class.
         /// </summary>
         /// <param name="action">action</param>
         [JsonConstructor]
-        internal ChangePrimaryIpProtectionResponse(Action action)
+        public ChangePrimaryIpProtectionResponse(Action action)
         {
             Action = action;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangePrimaryIpProtectionResponse" />
     /// </summary>
-    internal class ChangePrimaryIpProtectionResponseJsonConverter : JsonConverter<ChangePrimaryIpProtectionResponse>
+    public class ChangePrimaryIpProtectionResponseJsonConverter : JsonConverter<ChangePrimaryIpProtectionResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangePrimaryIpProtectionResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangePrimaryIpProtectionResponse))]
-    internal partial class ChangePrimaryIpProtectionResponseSerializationContext : JsonSerializerContext { }
+    public partial class ChangePrimaryIpProtectionResponseSerializationContext : JsonSerializerContext { }
 }

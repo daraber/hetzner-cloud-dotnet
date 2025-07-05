@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/servers/{id}/metrics
     /// </summary>
-    internal partial class GetMetricsForServerResponse : IValidatableObject
+    public partial class GetMetricsForServerResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMetricsForServerResponse" /> class.
         /// </summary>
         /// <param name="metrics">metrics</param>
         [JsonConstructor]
-        internal GetMetricsForServerResponse(Metrics metrics)
+        public GetMetricsForServerResponse(Metrics metrics)
         {
             Metrics = metrics;
             OnCreated();
@@ -77,7 +77,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="GetMetricsForServerResponse" />
     /// </summary>
-    internal class GetMetricsForServerResponseJsonConverter : JsonConverter<GetMetricsForServerResponse>
+    public class GetMetricsForServerResponseJsonConverter : JsonConverter<GetMetricsForServerResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="GetMetricsForServerResponse" />
@@ -168,5 +168,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(GetMetricsForServerResponse))]
-    internal partial class GetMetricsForServerResponseSerializationContext : JsonSerializerContext { }
+    public partial class GetMetricsForServerResponseSerializationContext : JsonSerializerContext { }
 }

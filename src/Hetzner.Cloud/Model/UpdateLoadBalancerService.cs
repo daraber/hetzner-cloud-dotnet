@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// An update to a service for a Load Balancer.
     /// </summary>
-    internal partial class UpdateLoadBalancerService : IValidatableObject
+    public partial class UpdateLoadBalancerService : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateLoadBalancerService" /> class.
@@ -41,7 +41,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="protocol">Protocol of the Load Balancer</param>
         /// <param name="proxyprotocol">Is Proxyprotocol enabled or not</param>
         [JsonConstructor]
-        internal UpdateLoadBalancerService(int listenPort, Option<int?> destinationPort = default, Option<UpdateLoadBalancerServiceHealthCheck?> healthCheck = default, Option<Http?> http = default, Option<ProtocolEnum?> protocol = default, Option<bool?> proxyprotocol = default)
+        public UpdateLoadBalancerService(int listenPort, Option<int?> destinationPort = default, Option<UpdateLoadBalancerServiceHealthCheck?> healthCheck = default, Option<Http?> http = default, Option<ProtocolEnum?> protocol = default, Option<bool?> proxyprotocol = default)
         {
             ListenPort = listenPort;
             DestinationPortOption = destinationPort;
@@ -58,7 +58,7 @@ namespace Hetzner.Cloud.Model
         /// Protocol of the Load Balancer
         /// </summary>
         /// <value>Protocol of the Load Balancer</value>
-        internal enum ProtocolEnum
+        public enum ProtocolEnum
         {
             /// <summary>
             /// Enum Http for value: http
@@ -246,7 +246,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="UpdateLoadBalancerService" />
     /// </summary>
-    internal class UpdateLoadBalancerServiceJsonConverter : JsonConverter<UpdateLoadBalancerService>
+    public class UpdateLoadBalancerServiceJsonConverter : JsonConverter<UpdateLoadBalancerService>
     {
         /// <summary>
         /// Deserializes json to <see cref="UpdateLoadBalancerService" />
@@ -394,5 +394,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(UpdateLoadBalancerService))]
-    internal partial class UpdateLoadBalancerServiceSerializationContext : JsonSerializerContext { }
+    public partial class UpdateLoadBalancerServiceSerializationContext : JsonSerializerContext { }
 }

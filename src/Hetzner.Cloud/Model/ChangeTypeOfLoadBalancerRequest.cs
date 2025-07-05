@@ -29,14 +29,14 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/load_balancers/{id}/actions/change_type
     /// </summary>
-    internal partial class ChangeTypeOfLoadBalancerRequest : IValidatableObject
+    public partial class ChangeTypeOfLoadBalancerRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeTypeOfLoadBalancerRequest" /> class.
         /// </summary>
         /// <param name="loadBalancerType">ID or name of Load Balancer type the Load Balancer should migrate to</param>
         [JsonConstructor]
-        internal ChangeTypeOfLoadBalancerRequest(string loadBalancerType)
+        public ChangeTypeOfLoadBalancerRequest(string loadBalancerType)
         {
             LoadBalancerType = loadBalancerType;
             OnCreated();
@@ -79,7 +79,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ChangeTypeOfLoadBalancerRequest" />
     /// </summary>
-    internal class ChangeTypeOfLoadBalancerRequestJsonConverter : JsonConverter<ChangeTypeOfLoadBalancerRequest>
+    public class ChangeTypeOfLoadBalancerRequestJsonConverter : JsonConverter<ChangeTypeOfLoadBalancerRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="ChangeTypeOfLoadBalancerRequest" />
@@ -169,5 +169,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ChangeTypeOfLoadBalancerRequest))]
-    internal partial class ChangeTypeOfLoadBalancerRequestSerializationContext : JsonSerializerContext { }
+    public partial class ChangeTypeOfLoadBalancerRequestSerializationContext : JsonSerializerContext { }
 }

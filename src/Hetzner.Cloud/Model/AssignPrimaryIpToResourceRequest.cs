@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Request for POST https://api.hetzner.cloud/v1/primary_ips/{id}/actions/assign
     /// </summary>
-    internal partial class AssignPrimaryIpToResourceRequest : IValidatableObject
+    public partial class AssignPrimaryIpToResourceRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignPrimaryIpToResourceRequest" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="assigneeId">ID of a resource of type &#x60;assignee_type&#x60;</param>
         /// <param name="assigneeType">Type of resource assigning the Primary IP to</param>
         [JsonConstructor]
-        internal AssignPrimaryIpToResourceRequest(long assigneeId, AssigneeTypeEnum assigneeType)
+        public AssignPrimaryIpToResourceRequest(long assigneeId, AssigneeTypeEnum assigneeType)
         {
             AssigneeId = assigneeId;
             AssigneeType = assigneeType;
@@ -50,7 +50,7 @@ namespace Hetzner.Cloud.Model
         /// Type of resource assigning the Primary IP to
         /// </summary>
         /// <value>Type of resource assigning the Primary IP to</value>
-        internal enum AssigneeTypeEnum
+        public enum AssigneeTypeEnum
         {
             /// <summary>
             /// Enum Server for value: server
@@ -143,7 +143,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="AssignPrimaryIpToResourceRequest" />
     /// </summary>
-    internal class AssignPrimaryIpToResourceRequestJsonConverter : JsonConverter<AssignPrimaryIpToResourceRequest>
+    public class AssignPrimaryIpToResourceRequestJsonConverter : JsonConverter<AssignPrimaryIpToResourceRequest>
     {
         /// <summary>
         /// Deserializes json to <see cref="AssignPrimaryIpToResourceRequest" />
@@ -245,5 +245,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(AssignPrimaryIpToResourceRequest))]
-    internal partial class AssignPrimaryIpToResourceRequestSerializationContext : JsonSerializerContext { }
+    public partial class AssignPrimaryIpToResourceRequestSerializationContext : JsonSerializerContext { }
 }

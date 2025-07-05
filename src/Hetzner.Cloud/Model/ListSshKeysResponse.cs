@@ -29,7 +29,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// Response to GET https://api.hetzner.cloud/v1/ssh_keys
     /// </summary>
-    internal partial class ListSshKeysResponse : IValidatableObject
+    public partial class ListSshKeysResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ListSshKeysResponse" /> class.
@@ -37,7 +37,7 @@ namespace Hetzner.Cloud.Model
         /// <param name="meta">meta</param>
         /// <param name="sshKeys">sshKeys</param>
         [JsonConstructor]
-        internal ListSshKeysResponse(Meta meta, List<SshKey> sshKeys)
+        public ListSshKeysResponse(Meta meta, List<SshKey> sshKeys)
         {
             Meta = meta;
             SshKeys = sshKeys;
@@ -86,7 +86,7 @@ namespace Hetzner.Cloud.Model
     /// <summary>
     /// A Json converter for type <see cref="ListSshKeysResponse" />
     /// </summary>
-    internal class ListSshKeysResponseJsonConverter : JsonConverter<ListSshKeysResponse>
+    public class ListSshKeysResponseJsonConverter : JsonConverter<ListSshKeysResponse>
     {
         /// <summary>
         /// Deserializes json to <see cref="ListSshKeysResponse" />
@@ -192,5 +192,5 @@ namespace Hetzner.Cloud.Model
     /// </summary>
     [JsonSourceGenerationOptions(WriteIndented = true, GenerationMode = JsonSourceGenerationMode.Metadata | JsonSourceGenerationMode.Serialization)]
     [JsonSerializable(typeof(ListSshKeysResponse))]
-    internal partial class ListSshKeysResponseSerializationContext : JsonSerializerContext { }
+    public partial class ListSshKeysResponseSerializationContext : JsonSerializerContext { }
 }
