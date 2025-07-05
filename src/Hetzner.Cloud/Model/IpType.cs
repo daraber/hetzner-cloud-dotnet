@@ -30,7 +30,7 @@ namespace Hetzner.Cloud.Model
     /// Floating IP type | Type of [Floating IP](#floating-ips) the price is for. | Type of [Primary IP](#primary-ips) the price is for. | [Primary IP](#primary-ips) type.
     /// </summary>
     /// <value>Floating IP type | Type of [Floating IP](#floating-ips) the price is for. | Type of [Primary IP](#primary-ips) the price is for. | [Primary IP](#primary-ips) type.</value>
-    internal enum IpType
+    public enum IpType
     {
         /// <summary>
         /// Enum Ipv4 for value: ipv4
