@@ -5,7 +5,7 @@ outputDir: .
 additionalProperties:
   apiName: HetznerCloud
   library: generichost
-  nonPublicApi: true
+  nonPublicApi: false
   nullableReferenceTypes: true
   
   packageName: Hetzner.Cloud
