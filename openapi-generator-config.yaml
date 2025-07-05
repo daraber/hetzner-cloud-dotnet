@@ -1,0 +1,14 @@
+generatorName: csharp
+inputSpec: hcloud.json
+outputDir: .
+
+additionalProperties:
+  apiName: HetznerCloud
+  library: generichost
+  nonPublicApi: true
+  nullableReferenceTypes: true
+  
+  packageName: Hetzner.Cloud
+  packageVersion: 1.0.0
+  targetFramework: net9.0
+  useSourceGeneration: true
