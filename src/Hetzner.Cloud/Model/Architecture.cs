@@ -30,7 +30,7 @@ namespace Hetzner.Cloud.Model
     /// Type of cpu architecture this image is compatible with. | Type of cpu architecture
     /// </summary>
     /// <value>Type of cpu architecture this image is compatible with. | Type of cpu architecture</value>
-    internal enum Architecture
+    public enum Architecture
     {
         /// <summary>
         /// Enum Arm for value: arm

@@ -30,7 +30,7 @@ namespace Hetzner.Cloud.Model
     /// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
     /// </summary>
     /// <value>Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).</value>
-    internal enum ArchitectureOptional
+    public enum ArchitectureOptional
     {
         /// <summary>
         /// Enum Arm for value: arm
