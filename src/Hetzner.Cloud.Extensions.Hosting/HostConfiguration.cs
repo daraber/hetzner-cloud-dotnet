@@ -9,17 +9,15 @@
 
 #nullable enable
 
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 using Hetzner.Cloud.Api;
+using Hetzner.Cloud.Client;
 using Hetzner.Cloud.Model;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Hetzner.Cloud.Client
+namespace Hetzner.Cloud.Extensions.Hosting
 {
     /// <summary>
     /// Provides hosting configuration for Hetzner.Cloud
@@ -27,7 +25,7 @@ namespace Hetzner.Cloud.Client
     public class HostConfiguration
     {
         private readonly IServiceCollection _services;
-        private readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions();
+        private readonly JsonSerializerOptions _jsonOptions = new();
 
         internal bool HttpClientsAdded { get; private set; }
 
@@ -647,7 +645,7 @@ namespace Hetzner.Cloud.Client
             builders.Add(_services.AddHttpClient<IServersApi, ServersApi>(client));
             builders.Add(_services.AddHttpClient<ISshKeysApi, SshKeysApi>(client));
             builders.Add(_services.AddHttpClient<IVolumesApi, VolumesApi>(client));
-            
+
             if (builder != null)
                 foreach (IHttpClientBuilder instance in builders)
                     builder(instance);
@@ -677,7 +675,7 @@ namespace Hetzner.Cloud.Client
         /// <returns></returns>
         public HostConfiguration AddTokens<TTokenBase>(TTokenBase token) where TTokenBase : TokenBase
         {
-            return AddTokens(new TTokenBase[]{ token });
+            return AddTokens(new TTokenBase[] { token });
         }
 
         /// <summary>
@@ -700,12 +698,13 @@ namespace Hetzner.Cloud.Client
         /// <typeparam name="TTokenProvider"></typeparam>
         /// <typeparam name="TTokenBase"></typeparam>
         /// <returns></returns>
-        public HostConfiguration UseProvider<TTokenProvider, TTokenBase>() 
+        public HostConfiguration UseProvider<TTokenProvider, TTokenBase>()
             where TTokenProvider : TokenProvider<TTokenBase>
             where TTokenBase : TokenBase
         {
             _services.AddSingleton<TTokenProvider>();
-            _services.AddSingleton<TokenProvider<TTokenBase>>(services => services.GetRequiredService<TTokenProvider>());
+            _services.AddSingleton<TokenProvider<TTokenBase>>(services =>
+                services.GetRequiredService<TTokenProvider>());
 
             return this;
         }
