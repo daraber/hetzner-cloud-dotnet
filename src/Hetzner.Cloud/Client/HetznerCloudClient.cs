@@ -66,6 +66,13 @@ public class HetznerCloudClient : IHetznerCloudClient, IDisposable
     private bool _disposed;
 
     /// <summary>
+    /// Initializes a new instance of the <see cref="HetznerCloudClient"/> class with the specified API token.
+    /// </summary>
+    public HetznerCloudClient(string apiToken) : this(new HetznerCloudClientOptions(apiToken))
+    {
+    }
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="HetznerCloudClient"/> class with the specified options.
     /// </summary>
     /// <param name="options">The options to configure the client.</param>
@@ -73,12 +80,12 @@ public class HetznerCloudClient : IHetznerCloudClient, IDisposable
     {
         ArgumentNullException.ThrowIfNull(options, nameof(options));
         ArgumentException.ThrowIfNullOrWhiteSpace(options.ApiToken, nameof(options.ApiToken));
-        
+
         var bearerTokenProvider = new BearerTokenProvider(options.ApiToken);
         var jsonSerializerOptionsProvider = new JsonSerializerOptionsProvider(options.JsonSerializerOptions);
-        
+
         _httpClient = options.GetOrCreateHttpClient();
-        
+
         // TODO: Use reflection to instantiate API instances (or meta-programming)
         Actions = new ActionsApi(
             NullLogger<ActionsApi>.Instance,
